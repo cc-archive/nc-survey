@@ -1,4 +1,8 @@
-<div id="${name}" class="unselected">
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://purl.org/kid/ns#"
+>
+<div id="${screen['name']}" class="unselected" py:for="screen in screens">
   <div showOn="select" class="question">
     <h2 class="term-optional-title">What can be terminated? Part 1 (of 7) of Section 1</h2>
     <p class="question-text">
@@ -9,7 +13,7 @@
     <div class="question-options">
       <div class="option">
         <div class="option-input">
-          <input onclick="hideDiv('${name}-error');" type="radio" name="${name}" value="Yes" />
+          <input onclick="hideDiv('${screen['name']}-error');" type="radio" name="${screen['name']}" value="Yes" />
         </div>
 	
         <div class="option-text">Yes</div>
@@ -17,7 +21,7 @@
       
       <div class="option">
         <div class="option-input">
-          <input onclick="hideDiv('${name}-error');" type="radio" name="${name}" value="No" />
+          <input onclick="hideDiv('${screen['name']}-error');" type="radio" name="${screen['name']}" value="No" />
         </div>
 	
         <div class="option-text">No</div>
@@ -25,14 +29,15 @@
     </div>
     
     <div class="question-error">
-      <span id="${name}-error" class="invisible">Required Field</span>
+      <span id="${screen['name']}-error" class="invisible">Required Field</span>
     </div>
     
   </div>
   <div showOn="select" class="continue">
-    <button type="button" class="button-continue" onclick="tot(this);" totID="${name}">Next</button>
+    <button type="button" class="button-continue" onclick="tot(this);" totID="${screen['name']}">Next</button>
     <button type="button" class="button-continue" onclick="back(this);">Back</button>
   </div>
   
   <br clear="both"/>
-</div><!-- ${name} -->
+</div><!-- ${screen['name']} -->
+</html>
