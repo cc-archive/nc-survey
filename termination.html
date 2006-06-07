@@ -1,0 +1,1491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st March 2002), see www.w3.org" />
+    <meta http-equiv="Content-Type" content=
+    "text/html;charset=utf-8" />
+
+    <title>New Termination Application | Termination</title>
+    <!-- <base href="http://termination.creativecommons.org/" /> -->
+
+    <link rel="stylesheet" href="includes/front-new.css" type="text/css" />
+    <link rel="stylesheet" href="includes/style.css" type="text/css" />
+
+
+    <script type="text/javascript" src="includes/prototype.js"></script>
+    <script type="text/javascript" src="includes/scriptaculous.js?load=effects"></script>
+    <script type="text/javascript" src="includes/utility.js"></script>
+    <script type="text/javascript" src="includes/main.js"></script>
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="banner">
+        <div style="float:left;width:48%;">
+          <a href=
+          "http://creativecommons.org/"><img
+          src="images/top-logo.gif" border="0" width="149"
+          height="75" alt="Creative Commons" /></a>
+        </div>
+
+        <div style="float:left;width:50%;text-align:right;">
+          <div style="margin-bottom:10px;">
+            <a href="http://creativecommons.org/support/"><img src=
+            "images/support-commons.gif" alt="Support the Commons"
+            width="194" height="35" border="0" /></a>
+          </div>
+
+          <div style="margin:0px;margin-bottom:4px;">
+            <a href="http://creativecommons.org/worldwide/"><img src="images/worldwide.gif"
+            width="130" height="12" border="0" alt=
+            "Creative Commons Worldwide" /></a>
+          </div>
+        </div>
+      </div>
+      <div id="page-body">
+        <a name="documentContent"></a> 
+
+        <h2 class="term-title">
+        <!-- Creative Commons Termination Of Transfer Web Application -->
+        Returning Author's Rights: The Creative
+        Commons Termination of Transfer Calculation Tool</h2>
+
+        <form id="term_form" name="term_form" action="javascript:main_submit(this);" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="work_for_hire" value="unset" />
+          <input type="hidden" name="back_list" value="" />
+          <input type="hidden" name="cdate" value="" />
+          <input type="hidden" name="gdate" value="" />
+          <input type="hidden" name="termtype" value="" />
+          <input type="hidden" name="twopen" value="" />
+          <input type="hidden" name="twclose" value="" />
+          <input type="hidden" name="nwopen" value="" />
+          <input type="hidden" name="nwclose" value="" />
+          <input type="hidden" id="num_authors" name="num_authors" value="" />
+
+          <div id="history">
+            <div id="h-wfh-emp" class="unselected"><h2>Employee Created Work: <span id="h-wfh-emp-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-wfh-com" class="unselected"><h2>Commissioned Work: <span id="h-wfh-com-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-wfh-pre" class="unselected"><h2>Work Created Before 1978: <span id="h-wfh-pre-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-wfh-wri" class="unselected"><h2>Signed Written Agreement: <span id="h-wfh-wri-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-wfh-catA" class="unselected"><h2>Category A Work: <span id="h-wfh-catA-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-wfh-catB" class="unselected"><h2>Category B Work: <span id="h-wfh-catB-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-wfh-catC" class="unselected"><h2>Category C Work: <span id="h-wfh-catC-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-cdate" class="unselected"><h2>Copyright Date: <span id="h-cdate-ans" class="answer">MM/DD/YYYY</span></h2></div>
+            <div id="h-gdate" class="unselected"><h2>Grant Date: <span id="h-gdate-ans" class="answer">MM/DD/YYYY</span></h2></div>
+            <div id="h-names" class="unselected"><h2>Authors: <span id="h-names-ans" class="answer">NAMES</span></h2></div>
+            <div id="h-basic" class="unselected">
+              <h2>Title: <span id="h-basic-title" class="answer">TITLE</span></h2>
+              <h2>OCN: <span id="h-basic-ocn" class="answer">OCN</span></h2>
+              <h2>Grantee: <span id="h-basic-grantee" class="answer">GRANTEE</span></h2>
+              <h2>Description: <span id="h-basic-desc" class="answer">GRANT DESCRIPTION</span></h2>
+            </div>
+            <div id="h-agrant" class="unselected"><h2>Author Grant: <span id="h-agrant-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-grantors" class="unselected"><h2>Grantor(s): <span id="h-grantors-ans" class="answer">AUTHOR NAMES</span></h2></div>
+            <div id="h-auth-info" class="unselected"><h2>Family Tree: <span id="h-auth-info-ans" class="answer">AUTHOR NAME</span></h2></div>
+            <div id="h-auth-info-alive" class="unselected"><h2>Author Alive: <span id="h-auth-info-alive-ans" class="answer">YES/NO</span></h2></div>
+            <div id="h-auth-info-spouse" class="unselected">
+              <h2>Spouse: <span id="h-auth-info-spouse-name">SPOUSE NAME</span></h2>
+              <h2>Spouse Alive: <span id="h-auth-info-spouse-alive">YES/NO</span></h2>
+              <h2>Number of Children: <span id="h-auth-info-num-children">9999</span></h2>
+            </div>
+
+          </div>
+
+          <div id="screens">
+
+            <div id="employee" class="unselected">
+              <div showOn="select" class="question">
+                <h2 class="term-optional-title">What can be terminated? Part 1 (of 7) of Section 1</h2>
+                <p class="question-text">
+                  Did you, or the author or artist, create the <a href="glossary#work">work</a> within the 
+                  <a href="glossary#scope_of_employment">scope of your, or his or her, employment</a>?
+                </p>
+
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('employee-error');" type="radio" name="employee" value="Yes" />
+                    </div>
+
+                    <div class="option-text">Yes</div>
+                  </div>
+
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('employee-error');" type="radio" name="employee" value="No" />
+                    </div>
+
+                    <div class="option-text">No</div>
+                  </div>
+                </div>
+
+                <div class="question-error">
+                  <span id="employee-error" class="invisible">Required Field</span>
+                </div>
+
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" onclick="tot(this);" totID="employee">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- employee -->
+
+            <div id="commissioned" class="unselected">
+              <div showOn="select" class="question" style="display:none;">
+                <h2 class="term-optional-title">What can be terminated? Part 2 (of 7) of Section 1</h2>
+                <p class="question-text">
+                    Was this <a href="glossary#work">work</a>
+                    created by you or the author or artist in
+                    response to a special order or commission by
+                    some other person or company?
+                </p>
+
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('commissioned-error');" type="radio" name="commissioned" value="Yes" />
+                    </div>
+
+                    <div class="option-text">Yes</div>
+                  </div>
+
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('commissioned-error');" type="radio" name="commissioned" value="No" />
+                    </div>
+
+                    <div class="option-text">No</div>
+                  </div>
+                </div>
+
+                <div class="question-error">
+                  <span id="commissioned-error" class="invisible">Required Field</span>
+                </div>
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" onclick="tot(this);" totID="commissioned">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);" >Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- commissioned -->
+
+            <div id="pre1978" class="unselected">
+              <div showOn="select" class="question">
+                <h2 class="term-optional-title">What can be terminated? Part 3 (of 7) of Section 1</h2>
+                <p class="question-text">
+                    Was the <a href="glossary#work">work</a>
+                    created by you or the artist or author before
+                    January 1st, 1978?
+                </p>
+
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('pre1978-error');" type="radio" name="pre1978" value="Yes" />
+                    </div>
+                    <div class="option-text">Yes</div>
+                  </div>
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('pre1978-error');" type="radio" name="pre1978" value="No" />
+                    </div>
+                    <div class="option-text">No</div>
+                  </div>
+                </div>
+                <div class="question-error">
+                  <span id="pre1978-error" class="invisible">Required Field</span>
+                </div>
+              </div>
+              <div showOn="select" class="continue">
+                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="pre1978">Next</button>
+                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- pre1978 -->
+
+            <div id="written_agreement" class="unselected">
+              <div showOn="select" class="question">
+                <h2 class="term-optional-title">What can be terminated? Part 4 (of 7) of Section 1</h2>
+                <p class="question-text">
+                    Did you or the author or artist who created the
+                    work enter into a written agreement with the
+                    person who specially ordered or commissioned
+                    the work to formalize the terms of the special
+                    order or commission?
+                </p>
+
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('written-error');" type="radio" name="written" value="Yes" />
+                    </div>
+                    <div class="option-text">Yes</div>
+                  </div>
+
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('written-error');" type="radio" name="written" value="No" />
+                    </div>
+
+                    <div class="option-text">No</div>
+                  </div>
+                </div>
+                <div class="question-error">
+                  <span id="written-error" class="invisible">Required Field</span>
+                </div>
+              </div>
+              <div showOn="select" class="continue">
+                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="written_agreement">Next</button>
+                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- written_agreement -->
+
+            <div id="categoryA" class="unselected">
+              <div showOn="select" class="question">
+                <h2 class="term-optional-title">What can be terminated? Part 5 (of 7) of Section 1</h2>
+                <p class="question-text">
+                    Was the work created for use as one of the
+                    following?
+                </p>
+
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('categoryA-error');" type="radio" name="categoryA" value="Yes" />
+                    </div>
+
+                    <div class="option-text">Yes</div>
+                  </div>
+
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('categoryA-error');" type="radio" name="categoryA" value="No" />
+                    </div>
+                    <div class="option-text">No</div>
+                  </div>
+                </div>
+
+                <div class="question-error">
+                  <span id="categoryA-error" class="invisible">Required Field</span>
+                </div>
+              </div>
+              <div showOn="select" style="clear:left;">
+                <!-- category list (part A) -->
+
+                <ul class="term-category-list">
+                  <li>part of a motion picture or other audiovisual work</li>
+                  <li>a translation</li>
+                  <li>a test</li>
+                  <li>answer material for a test</li>
+                  <li>an atlas</li>
+                  <li>as an instructional text (text and/or graphics)</li>
+                </ul>
+              </div>
+              <div showOn="select" class="continue">
+                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="categoryA">Next</button>
+                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- categoryA -->
+
+            <div id="categoryB" class="unselected">
+              <div showOn="select" class="question">
+                <h2 class="term-optional-title">What can be terminated? Part 6 (of 7) of Section 1</h2>
+                <p class="question-text">
+                    Was the work created for use as one of the
+                    following?
+                </p>
+
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('categoryB-error');" type="radio" name="categoryB" value="Yes" />
+                    </div>
+
+                    <div class="option-text">Yes</div>
+                  </div>
+
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('categoryB-error');" type="radio" name="categoryB" value="No" />
+                    </div>
+
+                    <div class="option-text">No</div>
+                  </div>
+                </div>
+
+                <div class="question-error">
+                  <span id="categoryB-error" class="invisible">Required Field</span>
+                </div>
+              </div><!-- category list (part B) -->
+              <div showOn="select">
+                <ul class="term-category-list">
+                  <li>a "compilation," such as: 
+                    <ul>
+                      <li>catalogs</li>
+                      <li>directories</li>
+                    </ul>
+                  </li>
+                  <li>a "contribution to a collective work," such as a contribution to a(n): 
+                    <ul>
+                      <li>magazine</li>
+                      <li>anthology</li>
+                      <li>encyclopedia</li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  The examples given for the types of things that
+                  qualify as compilations and collective works are
+                  illustrative only. If you think that the work you
+                  or the author or artist created is likely to be a
+                  compilation or collective work, you should check
+                  "yes" even if it is not listed as one of the examples.
+                </p>
+                <p>
+                  Remember that this tool is not definitive and is
+                  not legal advice or a substitute for legal advice.
+                </p>
+              </div>
+              <div showOn="select" class="continue">
+                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="categoryB">Next</button>
+                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- categoryB -->
+
+            <div id="categoryC" class="unselected">
+              <div showOn="select" class="question">
+                <h2 class="term-optional-class">What can be terminated? Part 7 (of 7) of Section 1</h2>
+                <div class="question-text">Was the work created for use as one of the following?</div>
+
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('categoryC-error');" type="radio" name="categoryC" value="Yes" />
+                    </div>
+
+                    <div class="option-text">Yes</div>
+                  </div>
+
+                  <div class="option">
+                    <div class="option-input">
+                      <input onclick="hideDiv('categoryC-error');" type="radio" name="categoryC" value="No" />
+                    </div>
+
+                    <div class="option-text">No</div>
+                  </div>
+                </div>
+
+                <div class="question-error">
+                  <span id="categoryC-error" class="invisible">Required Field</span>
+                </div>
+              </div><!-- category list (part C) -->
+              <div showOn="select">
+                <ul class="term-category-list">
+                  <li>a "supplementary work" (relating to an existing work by another author), such as: 
+                    <ul>
+                      <li>forewords</li>
+                      <li>afterwords</li>
+                      <li>pictorial illustrations</li>
+                      <li>maps</li>
+                      <li>charts</li>
+                      <li>tables</li>
+                      <li>editorial notes</li>
+                      <li>musical arrangements</li>
+                      <li>answer material for tests</li>
+                      <li>bibliographies</li>
+                      <li>appendixes</li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  The examples of types of things qualify as
+                  "supplementary works" are illustrative only.
+                  <a href="glossary#supplementalwork">Click here
+                  for more information about the definition of
+                  "supplementary works."</a> If you think that
+                  the work you or the author or artist created
+                  is likely to be a supplementary, you should
+                  check "yes" even if it is not listed as one
+                  of the examples.
+                </p>
+                <p>
+                  Remember that this tool is not definitive and is
+                  not legal advice or a substitute for legal
+                  advice.
+                </p>
+              </div>
+              <div showOn="select" class="continue">
+                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="categoryC">Next</button>
+                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- categoryC -->
+
+            <div id="copyright_date" class="unselected">
+              <div showOn="select" class="question">
+                <h2 class="term-optional-title">When can the transfer be terminated? Part 1 (of 2) of Section 2</h2>
+
+                <div class="question-header"></div>
+                <p class="question-text">
+                  When was the work created?<br/>
+                  <br/>
+                  (Please enter your best recollection as to the date of creation.
+                  The most important date is the year.
+                  If you also know the month and/or the date of creation of the work,
+                  then please include these details.)
+                </p>
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input id="cmonth" type="text" class="filter-date" name="cmonth" size="2" maxlength="2" onkeyup="nextDateField(this,event);" value="" /> /
+                      <input id="cday" type="text" class="filter-date" name="cday" size="2" maxlength="2" onkeyup="nextDateField(this,event);" value="" /> /
+                      <input id="cyear" type="text" class="filter-date" name="cyear" size="4" maxlength="4" value="" />
+                    </div>
+                    <div class="option-text">
+                      <input type="text" class="date-text" size="2" value="mm" disabled /> /
+                      <input type="text" class="date-text" size="2" value="dd" disabled /> /
+                      <input type="text" class="date-text" size="4" value="yyyy" disabled />
+                    </div>
+                  </div>
+                </div>
+                <div class="question-error">
+                  <span id="cdate-error" class="invisible">Please enter a valid date</span>
+                </div>
+                <div class="question-footer"></div>
+              </div>
+              <div showOn="select" class="continue">
+                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="copyright_date">Next</button>
+                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- copyright_date -->
+
+            <div id="grant_date" class="unselected">
+              <div showOn="select" class="question">
+                <h2 showOn="select" class="term-optional-title">When can the transfer be terminated? Part 2 (of 2) of Section 2</h2>
+
+                <div class="question-header"></div>
+                <p class="question-text">
+                  What is the date of the
+                  <a href="glossary#agreement">agreement or transfer</a>
+                  that you or the author or artist entered into
+                  in relation to the work?
+                </p>
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                      <input id="gmonth" type="text" class="filter-date" name="gmonth" size="2" maxlength="2" onkeyup="nextDateField(this,event);" value="" /> /
+                      <input id="gday" type="text" class="filter-date" name="gday" size="2" maxlength="2" onkeyup="nextDateField(this,event);" value="" /> /
+                      <input id="gyear" type="text" class="filter-date" name="gyear" size="4" maxlength="4" value="" />
+                    </div>
+                    <div class="option-text">
+                      <input type="text" class="date-text" size="2" value="mm" disabled /> /
+                      <input type="text" class="date-text" size="2" value="dd" disabled /> /
+                      <input type="text" class="date-text" size="4" value="yyyy" disabled />
+                    </div>
+                  </div>
+                </div>
+                <div class="question-error">
+                  <span id="gdate-error" class="invisible">Please enter a valid date</span>
+                </div>
+                <div class="question-footer"></div>
+              </div>
+              <div showOn="select" class="continue">
+                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="grant_date">Next</button>
+                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- grant_date -->
+
+            <div id="author_names" class="unselected">
+              <div showOn="select">
+                <h2 class="term-optional-title">Tell us about the work - Part 1 (of 2) Section 3</h2>
+                <p>
+                  Please list the <a href="glossary#author">author or artist</a>
+                  or, if there is more than one author or artist,
+                  all of the authors or artists of the work:
+                </p>
+
+                <div style="float:left; padding-left:25px; padding-right:10px; padding-top:5px;">
+                  <a href="#" onclick="
+
+                    // clone node
+                    var new_node = document.getElementById('author_name1').cloneNode(true);
+
+                    new_node.value = '';
+
+                    // update node
+                    var num = 1 + document.getElementById('authors_container').getElementsByTagName('input').length;
+
+                    // hardcoding for 1 input... bad
+                    new_node.id = new_node.id.replace(/1/, num);
+                    var new_input = new_node.getElementsByTagName('input')[0];
+                    new_input.name = new_input.name.replace(/1/, num);
+                    new_input.id = new_input.id.replace(/1/, num);
+                    new_input.value = '';
+                    var new_err = new_node.getElementsByTagName('span')[0];
+                    new_err.id = new_err.id.replace(/1/, num);
+                    new_err.style.display = 'none';
+
+                    document.getElementById('author_name1').parentNode.appendChild(new_node);
+
+                    return false;
+
+                  ">[ + ]</a>
+                  <a href="#" onclick="
+
+                    var num = document.getElementById('authors_container').getElementsByTagName('input').length;
+
+                    if (num == 1) {
+                      return false;
+                    }
+                    var last_node = document.getElementById('author_name' + num);
+                    last_node.parentNode.removeChild(last_node);
+
+                    return false;
+
+                  ">[ - ]</a>
+
+                </div>
+                <div style="float:left; padding-left:15px;">
+                  <div id="authors_container">
+                    <div id="author_name1">
+                      <input class="names" type="text" size="25" id="author_name1_input" value="" name="author_name1" />
+                      <span class="name_errors" id="author_name1-error">Required Field</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" totID="author_names" onclick="tot(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- author_names -->
+
+            <div id="basic" class="unselected">
+              <div showOn="select">
+                <h2 class="term-optional-title">Tell us about the work - Part 2 (of 2) Section 3</h2>
+                <p>Please provide the following details to the extent you know them:</p>
+
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">Title of Work:</div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input id="title" type="text" name="title" class="gather-text" maxlength="50" tabindex="2" value="" />
+                      </div>
+                      <div class="option-text"></div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span id="title-error" class="invisible">Required Field</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">Original Copyright Registration Number:</div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input id="ocn" type="text" name="ocn" class="gather-text" maxlength="15" tabindex="3" value="" />
+                      </div>
+                      <div class="option-text"></div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span id="ocn-error" class="invisible">Required Field</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text"><a href="glossary#grantee">Original Grantee</a>:</div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input id="grantee" type="text" name="grantee" class="gather-text" maxlength="50" tabindex="4" value="" />
+                      </div>
+                      <div class="option-text"></div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span id="grantee-error" class="invisible">Required Field</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">
+                    Description of the <a href="glossary#agreement">Agreement or Transfer</a>:
+                  </div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input id="grantname" type="text" name="grantname" class="gather-text" maxlength="50" tabindex="5" value="" />
+                      </div>
+                      <div class="option-text"></div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span id="grantname-error" class="invisible">Required Field</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+
+              </div>
+              <div showOn="select" class="continue">
+                <button tabindex="6" type="button" class="button-continue" totID="basic" onclick="tot(this);">Next</button>
+                <button tabindex="7" type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- basic_info -->
+
+            <div id="author_grant" class="unselected">
+              <div showOn="select">
+                <h2 showOn="select" class="term-optional-title">Who can terminate? Part 1 (of 3) of Section 4</h2>
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">
+                    Was the agreement or transfer made by the author or,
+                    in the case of multiple authors, by one or more of the authors?
+                  </div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input onclick="hideDiv('author_grant-error');" type="radio" name="author_grant" value="Yes" />
+                      </div>
+                      <div class="option-text">Yes</div>
+                    </div>
+                    <div class="option">
+                      <div class="option-input">
+                        <input onclick="hideDiv('author_grant-error');" type="radio" name="author_grant" value="No" />
+                      </div>
+                      <div class="option-text">No</div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span id="author_grant-error" class="invisible">Please select Yes or No</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" totID="author_grant" onclick="tot(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- author_grant -->
+
+            <div id="grantors" class="unselected">
+
+              <div showOn="select">
+                <h2 class="term-optional-title">Who can terminate? Part 1(b) (of 3) of Section 4</h2>
+
+                <p>
+                  Please indicate all authors who joined in the grant:
+                  <span class="question-error"><span id="grantor-error" class="invisible">You must select at least one</span></span>
+                </p>
+                <div id="grantor-container"></div>
+
+                <div class="invisible">
+                  <div id="grantor-template" class="question">
+                    <div class="question-text"><span id="grantor-name">AUTHOR NAME</span></div>
+                    <div class="question-options">
+                      <div class="option">
+                        <input type="checkbox" value="Yes" unchecked name="grantor" />
+                      </div>
+                    </div>
+                    <div class="question-footer"></div>
+                  </div>
+                </div>
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" totID="grantor" onclick="tot(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- grantors -->
+
+            <div id="successor_grant" class="unselected">
+              <h2 showOn="deselect">Successor Grant: <span id="successor_grant-answer">YES/NO</span></h2>
+
+              <div showOn="select">
+                <h2 class="term-optional-title">Who can terminate? Part 3 (of 3) of Section 4</h2>
+
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">
+                    Was the transfer made by the author's widow or widower,
+                    children, next of kin or executors?
+                  </div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input onclick="hideDiv('successor_grant-error');" type="radio" name="successor_grant" value="Yes" />
+                      </div>
+                      <div class="option-text">Yes</div>
+                    </div>
+                    <div class="option">
+                      <div class="option-input">
+                        <input onclick="hideDiv('successor_grant-error');" type="radio" name="successor_grant" value="No" />
+                      </div>
+                      <div class="option-text">No</div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span id="successor_grant-error" class="invisible">Please select Yes or No</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" totID="successor_grant" onclick="tot(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- successor_grant -->
+
+            <div id="author_alive" class="unselected">
+
+              <div showOn="select">
+                <h2 class="term-optional-title">Who can terminate? Part 2 (of 3) of Section 4</h2>
+
+                <p>
+                  The purpose of the following questions in Section 4
+                  is to determine who may be able to exercise the right
+                  to terminate the agreement or transfer.
+                </p>
+
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">Is <span id="author_alive-name">AUTHOR NAME</span> still living?</div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input type="radio" value="Yes" unchecked name="author_alive" />
+                      </div>
+                      <div class="option-text">Yes</div>
+                    </div>
+                    <div class="option">
+                      <div class="option-input">
+                        <input type="radio" value="No" unchecked name="author_alive" />
+                      </div>
+                      <div class="option-text">No</div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span class="invisible" id="author_alive-error">Please Select Yes or No</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" totID="author_alive" onclick="tot(this);">Next</button>
+                <button type="button" class="button-continue" totID="author_alive-back" onclick="tot(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- author_alive -->
+
+            <div id="author_spouse_info" class="unselected">
+
+              <div showOn="select">
+                <h2 class="term-optional-title">Who can terminate? Part 2(b) (of 3) of Section 4</h2>
+
+                <p>
+                  If the author or artist, is no longer living,
+                  it may be that one of the author or artist's
+                  family members is able to terminate the
+                  agreement or transfer
+                </p>
+
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">Is <span id="author_spouse_info-name1">AUTHOR NAME</span>'s Spouse still living?</div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input type="radio" value="Yes" unchecked
+                        name="author_spouse_alive" />
+                      </div>
+                      <div class="option-text">Yes</div>
+                    </div>
+                    <div class="option">
+                      <div class="option-input">
+                        <input type="radio" value="No" unchecked name="author_spouse_alive" />
+                      </div>
+                      <div class="option-text">No</div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span class="invisible" id="author_spouse_alive-error">Please Select Yes or No</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">Name of <span id="author_spouse_info-name2">AUTHOR NAME</span>'s Spouse:</div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input type="text" class="gather-text" maxlength="50" id="author_spouse_name" name="author_spouse_name" />
+                      </div>
+                      <div class="option-text"></div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span class="invisible" id="author_spouse_name-error">Required Field</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+                <div class="question">
+                  <div class="question-header"></div>
+                  <div class="question-text">Number of Children (living and deceased):</div>
+                  <div class="question-options">
+                    <div class="option">
+                      <div class="option-input">
+                        <input type="text" class="gather-text" size="2" maxlength="2" id="author_num_children" name="author_num_children" />
+                      </div>
+                      <div class="option-text"></div>
+                    </div>
+                  </div>
+                  <div class="question-error">
+                    <span class="invisible" id="author_num_children-error">Required Field</span>
+                  </div>
+                  <div class="question-footer"></div>
+                </div>
+
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" totID="author_spouse_info" onclick="tot(this);">Next</button>
+                <button type="button" class="button-continue" totID="author_spouse_info-back" onclick="tot(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- author_spouse_info -->
+
+            <div id="author_children" class="unselected">
+
+              <div showOn="select">
+                <h2 class="term-optional-title">Who can terminate? Part 2(c) (of 3) of Section 4</h2>
+
+                <script type="text/javascript">
+
+                  // create an error vtable for this section
+                  vtable_0.children = {};
+
+                  function author0_children_next(node) {
+
+                    // Run error checks
+                    if ( !check_errors( vtable_0.children ) ) {
+                      return false;
+
+                    // We can submit if all children are still living
+                    } else if ( getDeceasedChildren( cX_0.children_container ).length == 0 ) {
+                      next(node.parentNode);
+
+                      // Move to next screen to get grandchildren info
+                    } else {
+
+                      // We're concerned only with grandchildren of Deceased Children
+                      var deceased_children = getDeceasedChildren( cX_0.children_container );
+
+                      // clear all existing grandchildren nodes (otherwise it gets a bit too hairy)
+                      clearNode( cX_0.num_grandchildren_container );
+                      vtable_0.num_grandchildren = {};
+
+                      // Add grandchildren nodes
+                      for( var i in deceased_children ) {
+
+                        var dec_child = deceased_children[i];
+
+                        addChild(
+                          dec_child.id.match(/child\d+/),
+                          vtable_0.num_grandchildren,
+                          cX_0.num_grandchildren_container,
+                          cX_0.childX_num_children
+                        );
+
+                        // whether the node exists or not, we'll update the name-text span
+                        var child_name_span = document.getElementById(dec_child.id + '_num_children_name_text').childNodes.item(0);
+                        child_name_span.data = vtable_0.children[dec_child.id]();
+                      }
+
+                      // Move to next Screen
+                      next(node);
+
+                    }
+
+                  }
+
+                </script>
+
+                <div class="question">
+                  Please enter the following information regarding
+                  <span id="author0_children_name1">AUTHOR NAME</span>'s
+                  <span id="author0_children_text">#</span> Children:
+                </div>
+
+                <!-- childX nodes are appended here (dynamically) -->
+                <div id="author0_children_container"></div>
+                <script type="text/javascript">
+                  cX_0.children_container = document.getElementById('author0_children_container');
+                  clearNode(cX_0.children_container);
+                </script>
+
+                <div class="childX" id="author0_childX">
+
+                  <div class="question">
+                    <div class="question-header"></div>
+                    <div class="question-text">Child's Name:</div>
+                    <div class="question-options">
+                      <div class="option">
+                        <div class="option-input">
+                          <input type="text" class="gather-text"
+                          maxlength="50" name="author0_childX" />
+                        </div>
+                        <div class="option-text"></div>
+                      </div>
+                    </div>
+                    <div class="question-error">
+                      <span class="invisible" id="author0_childX-error">Required Field</span>
+                    </div>
+                    <div class="question-footer"></div>
+                  </div>
+
+                  <div class="question">
+                    <div class="question-header"></div>
+                    <div class="question-text">Is this Child still living?</div>
+                    <div class="question-options">
+                      <div class="option">
+                        <div class="option-input">
+                          <input type="checkbox" value="Yes" unchecked
+                          name="author0_childX_alive" />
+                        </div>
+                        <div class="option-text">Yes</div>
+                      </div>
+                      <div class="option">
+                        <div class="option-input">
+                          <input type="checkbox" value="No" unchecked
+                          name="author0_childX_alive" />
+                        </div>
+                        <div class="option-text">No</div>
+                      </div>
+                    </div>
+                    <div class="question-error">
+                      <span class="invisible" id="author0_childX_alive-error">Please Select Yes or No</span>
+                    </div>
+                    <div class="question-footer"></div>
+                  </div>
+
+                </div><!-- author#_childX -->
+                <script type="text/javascript">
+                  cX_0.childX = document.getElementById('author0_childX');
+                </script>
+
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" onclick="author0_children_next(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- author_children -->
+
+            <div id="author_num_grandchildren" class="unselected">
+
+              <div showOn="select">
+                <h2 class="term-optional-title">Who can terminate? Part 2(d) (of 3) of Section 4</h2>
+
+                <script type="text/javascript">
+
+                  // create an error vtable for this section
+                  vtable_0.num_grandchildren = {};
+
+                  function author0_num_grandchildren_next(node) {
+
+                    // Run error checks
+                    if ( !check_errors( vtable_0.num_grandchildren ) ) {
+                      return false;
+
+                    // We can submit if there are no living grandchildren
+                    } else if ( noLivingGrandchildren( cX_0.num_grandchildren_container ) ) {
+                      next(node.parentNode);
+
+                    // Move to next screen to get grandchildren info
+                    } else {
+
+                      // We're concerned only with grandchildren of Deceased Children
+                      // this function call is redundant (called above...) - ideally we'd only do it once. Sorry.
+                      var deceased_children = getDeceasedChildren( cX_0.children_container );
+
+                      // clear all existing grandchildren nodes (otherwise it gets a bit too hairy)
+                      clearNode( cX_0.grandchildren_container );
+
+                      // clear out the error checkers
+                      vtable_0.grandchildren = {};
+
+                      // Add grandchildren nodes if they don't already exist
+                      for( var i in deceased_children ) {
+
+                        var dec_child = deceased_children[i];
+                        var num_children = vtable_0.num_grandchildren[dec_child.id + '_num_children']();
+
+                        // we're done if the deceased child has no living children
+                        if ( num_children == 0 ) {
+                          continue;
+                        }
+
+                        // Add a header for this child
+                        addChild(
+                          dec_child.id.match(/child\d+/),
+                          vtable_0.grandchildren,
+                          cX_0.grandchildren_container,
+                          cX_0.grandchildX_header
+                        );
+
+                        // update the name-text spans
+                        var child_name_span = document.getElementById(dec_child.id + '_grand_name_span').childNodes.item(0);
+                        child_name_span.data = vtable_0.children[dec_child.id]();
+
+                        var child_num_span = document.getElementById(dec_child.id + '_grand_num_children_span').childNodes.item(0);
+                        if ( num_children == 1 ) {
+                          child_num_span.data = '1 living child';
+                        } else {
+                          child_num_span.data = num_children + ' living children';
+                        }
+
+                        // add a number of grandchild nodes
+                        for (var j = 0; j < num_children; j++ ) {
+                          addChild(
+                            (dec_child.id.match(/child\d+/) + '-' + j),
+                            vtable_0.grandchildren,
+                            cX_0.grandchildren_container,
+                            cX_0.grandchildX
+                          );
+                        }
+
+                      }
+
+                      // Move to next Screen
+                      next(node);
+
+                    }
+                  }
+
+                </script>
+
+                <div id="author0_num_grandchildren_container"></div>
+                <script type="text/javascript">
+                  cX_0.num_grandchildren_container = document.getElementById('author0_num_grandchildren_container');
+                  clearNode(cX_0.num_grandchildren_container);
+                </script>
+
+                <div id="author0_childX_num_children" class="invisible">
+
+                  <div class="question">
+                    <div class="question-header"></div>
+                    <div class="question-text">How many <b>living</b> children does
+                      <span id="author0_childX_num_children_name_text">[Child]</span>
+                      currently have?
+                    </div>
+                    <div class="question-options">
+                      <div class="option">
+                        <div class="option-input">
+                          <input type="text" class="gather-text" size="2" maxlength="2" name="author0_childX_num_children" />
+                        </div>
+                        <div class="option-text"></div>
+                      </div>
+                    </div>
+                    <div class="question-error">
+                      <span class="invisible" id="author0_childX_num_children-error">Required Field</span>
+                    </div>
+                    <div class="question-footer"></div>
+                  </div>
+
+                </div>
+                <script type="text/javascript">
+                  cX_0.childX_num_children = document.getElementById('author0_childX_num_children');
+                </script>
+
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" onclick="author0_num_grandchildren_next(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- author_num_grandchildren -->
+
+            <div id="author_grandchildren" class="unselected">
+
+              <div showOn="select">
+                <h2 class="term-optional-title">Who can terminate? Part 2(e) (of 3) of Section 4</h2>
+
+                <script type="text/javascript">
+                  // create an error vtable for this section
+                  vtable_0.grandchildren = {};
+
+                  function author0_grandchildren_next(node) {
+
+                    // Run error checks
+                    if ( !check_errors( vtable_0.grandchildren ) ) {
+                      return false;
+
+                    } else {
+                      next(node.parentNode);
+                    }
+                  }
+
+                </script>
+
+                <div id="author0_grandchildren_container"></div>
+                <script type="text/javascript">
+                  cX_0.grandchildren_container = document.getElementById('author0_grandchildren_container');
+                  clearNode(cX_0.grandchildren_container);
+                </script>
+
+                <div class="grandchildX-header" id="author0_childX_grand_header">
+                  Please provide the names of
+                  <span id="author0_childX_grand_name_span">[CHILD]</span>'s
+                  <span id="author0_childX_grand_num_children_span">[### children/child]</span>:
+                </div>
+                <script type="text/javascript">
+                  cX_0.grandchildX_header = document.getElementById('author0_childX_grand_header');
+                </script>
+
+                <div class="grandchildX" id="author0_grandchildX">
+
+                  <div class="question">
+                    <div class="question-header"></div>
+                    <div class="question-text">Grandchild Name:</div>
+                    <div class="question-options">
+                      <div class="option">
+                        <div class="option-input">
+                          <input type="text" class="gather-text" maxlength="50" name="author0_grandchildX" />
+                        </div>
+                        <div class="option-text"></div>
+                      </div>
+                    </div>
+                    <div class="question-error">
+                      <span class="invisible" id="author0_grandchildX-error">Required Field</span>
+                    </div>
+                    <div class="question-footer"></div>
+                  </div>
+
+                </div><!-- grandchildX -->
+                <script type="text/javascript">
+                  cX_0.grandchildX = document.getElementById('author0_grandchildX');
+                </script>
+              </div>
+              <div showOn="select" class="continue">
+                <button type="button" class="button-continue" onclick="author0_grandchildren_next(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="both"/>
+            </div><!-- author_grandchildren -->
+
+            <div id="error-scope_of_employment" class="unselected">
+
+              <p>
+                If a creative, copyrighted work was created within
+                the scope of employment, then the rights in the work
+                cannot be returned to the author under the
+                termination of transfer provisions of US copyright law.
+              </p>
+
+              <p>
+                Based on the information you have provided, it seems
+                that you believe that the work was created within the
+                scope of employment and thus, the work cannot have the rights
+                returned to the author.  As a general rule, a work
+                created by an employee within the scope of their employment
+                is a work for hire and agreements and transfers in respect
+                of works for hire cannot be terminated.
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive
+                nor is it legal advice; so it may be that the work was
+                not created in circumstances of employment and you may
+                need to obtain some advice on the circumstances surrounding
+                the creation of the creative work in question to see if
+                you have a termination right.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+            <div id="error-commissioned-pre1978" class="unselected">
+
+              <p>
+                Based on the information you have provided, it does not
+                appear that the rights can be returned to the author or artist.
+                As a general rule, works that were created by special order
+                or commission before January 1, 1978 are likely to be works for hire
+                and agreements and transfers in relation to works for hire
+                cannot be terminated.
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive
+                nor is it legal advice; so it may be that the circumstances
+                surrounding the creation of the work mean that the work
+                is not a work for hire and you may need to obtain some
+                advice on the circumstances surrounding the creation of
+                the creative work in question to see if you have a
+                termination right.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+            <div id="error-commissioned-categoryA" class="unselected">
+
+              <p>
+                Based on the information you have provided, it does not
+                appear that the rights can be returned to the author or
+                artist. As a general rule, works that were created by special
+                order or commission after January 1, 1978 under the terms of
+                a written agreement and that are a work that are part of a
+                motion picture or other audiovisual work, a translation, a
+                test, answer material for a test, an atlas, an instructional
+                text, are works for hire and agreements and transfers in
+                relation to works for hire are not capable of being
+                terminated.
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive nor is
+                it legal advice; so it may be that the circumstances
+                surrounding the creation of the work mean that the work is
+                not a work for hire and you may need to obtain some advice on
+                the circumstances surrounding the creation of the creative
+                work in question to see if you have a termination right.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+            <div id="error-commissioned-categoryB" class="unselected">
+
+              <p>
+                Based on the information you have provided, it does not
+                appear that the rights can be returned to the author or
+                artist. As a general rule, works that were created by special
+                order or commission after January 1, 1978 under the terms of
+                a written agreement and that are a work that either a
+                compilation or a contribution to a collective work are works
+                for hire and agreements and transfers in relation to works
+                for hire are not capable of being terminated.
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive nor is
+                it legal advice; so it may be that the circumstances
+                surrounding the creation of the work mean that the work is
+                not a work for hire and you may need to obtain some advice on
+                the circumstances surrounding the creation of the creative
+                work in question to see if you have a termination right.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+            <div id="error-commissioned-categoryC" class="unselected">
+              <p>
+                Based on the information you have provided, it does not
+                appear that the rights can be returned to the author or
+                artist. As a general rule, works that were created by special
+                order or commission after January 1, 1978 under the terms of
+                a written agreement and that are a supplementary work are
+                works for hire and agreements and transfers in relation to
+                works for hire are not capable of being terminated.
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive nor is
+                it legal advice; so it may be that the circumstances
+                surrounding the creation of the work mean that the work is
+                not a work for hire and you may need to obtain some advice on
+                the circumstances surrounding the creation of the creative
+                work in question to see if you have a termination right.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+            <div id="error-after_window" class="unselected">
+              <p>
+                Based on the information you have provided, it does not
+                appear that a current right to terminate the agreement
+                exists.
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive nor is
+                it legal advice. You may need to obtain some advice on the
+                circumstances surrounding the creation of the creative work
+                in question to see if you have a current or future
+                termination right.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+            <div id="error-before_window" class="unselected">
+              <p>
+                Based on the information you have provided, it does not
+                appear that a current right to terminate the agreement exists
+                but one may arise in future beginning on
+                <span id="error-before_window-notice_window_open">[date]</span>
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive nor is
+                it legal advice; so it may be that the information you input
+                changes over time and/or that the circumstances surrounding
+                the work's creation do not give rise to a right to terminate
+                at a future date. You may need to obtain some advice on the
+                circumstances surrounding the creation of the creative work
+                in question to see if you have a termination right.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+            <div id="error-invalid_grantor-203" class="unselected">
+              <p>
+                Based on the information you have provided, it does not
+                appear that any agreement or transfer entered into in
+                relation to the work may be able to be terminated. As a
+                general rule, only agreements and transfers entered into
+                after January 1st, 1978 that are signed by the author(s) may
+                be terminated. [MIA - TEXT REVIEW NEEDED]
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive nor is
+                it legal advice; so it may be that the circumstances
+                surrounding the execution of the agreement or transfer mean
+                that it can be terminated. You may need to obtain some advice
+                on the circumstances surrounding the signing of the agreement
+                or transfer to see if termination is possible.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+            <div id="error-invalid_grantor-304" class="unselected">
+              <p>
+                Based on the information you have provided, it does not
+                appear that any agreement or transfer entered into in
+                relation to the work may be able to be terminated. As a
+                general rule, only agreements and transfers that are signed
+                either by the author(s) or their widows, widowers, children,
+                next of kin or executors may be terminated.
+              </p>
+
+              <p>
+                Please note, however, that this tool is not definitive nor is
+                it legal advice; so it may be that the circumstances
+                surrounding the execution of the agreement or transfer mean
+                that it can be terminated. You may need to obtain some advice
+                on the circumstances surrounding the signing of the agreement
+                or transfer to see if termination is possible.
+              </p>
+
+              <a href="termination.html">Click here to start over</a>
+            </div>
+
+           </div><!-- screens -->
+
+           <script type="text/javascript">
+            //<![CDATA[
+            if (window.name == 'back' && back_list().length > 0) {
+              showDiv(back_list().pop());
+            } else {
+              if (window.name == 'next') { while(back_list().pop()); }
+              //showFirstScreen();
+            }
+            tot();
+            //]]>
+           </script>
+          </div>
+        </form>
+      </div>
+      <div id="footer" align="center">
+        <a href="/about/">About</a> |
+        <a href="/contact">Contact</a> |
+        <a href="/sitemap">Sitemap &amp; Site Search</a> |
+        <a href="/policies">Policies</a> |
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+    <div id="tinyfoot" align="center">
+      <div id="cc-footer">
+        <p>
+          <a rel="license" href=
+          "http://creativecommons.org/licenses/by/2.5/"><img src=
+          "http://creativecommons.org/images/public/somerights20.png"
+           width="88" height="31" alt="Creative Commons License"
+          style="border:none" /></a><br />
+          Except where otherwise <a class="subfoot" href=
+          "/policies#license">noted</a>, this site is<br />
+          licensed under a <a rel="license" href=
+          "http://creativecommons.org/licenses/by/2.5/" class=
+          "subfoot">Creative Commons Attribution 2.5
+          License</a>
+        </p>
+
+        <!--
+          <rdf:RDF xmlns="http://web.resource.org/cc/"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <Work rdf:about="">
+          <license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
+          </Work>
+          <License rdf:about="http://creativecommons.org/licenses/by/2.5/">
+             <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+             <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+             <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+             <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+             <requires rdf:resource="http://web.resource.org/cc/Notice" />
+          </License>
+          </rdf:RDF>
+        -->
+
+      </div>
+    </div>
+  </body>
+</html>
