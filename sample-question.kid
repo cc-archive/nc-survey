@@ -3,7 +3,7 @@
       xmlns:py="http://purl.org/kid/ns#"
 >
 <div id="${screen['name']}" class="unselected" py:for="screen in screens">
-  <div showOn="select" class="question">
+  <div showOn="select" class="question" style="{'display: none' if screen is not screens[0]}">
     <h2 class="term-optional-title">What can be terminated? Part 1 (of 7) of Section 1</h2>
     <p class="question-text">
       Did you, or the author or artist, create the <a href="glossary#work">work</a> within the 
