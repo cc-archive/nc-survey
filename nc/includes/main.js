@@ -17,16 +17,17 @@ function tot(node) {
   // Asheesh is just doing a serial survey
   // Empty response sets are allowed
   // We'll simply create nodes with ID screen1, screen2, etc.
-  alert("screen is " + screen);
-  assert(screen.substr(0,7) == "screen_");
   var screen_num = screen.substr(7) * 1; // times one to typecast
 
   // Set a backtrail...
   back_list().push(screen);
-  // ... and then jump ahead:
-  selectNode(document.getElementById('screen_' + (screen_num + 1)));
 
-  // FIXME!  There's no end case now.
+  // Now, is there a next screen?
+  var next = document.getElementById('screen_' + (screen_num + 1));
+  if (next == null) { next = document.getElementById('submit'); }
+  // ... and then jump ahead:
+  selectNode(next);
+  deselectNode(document.getElementById(screen));
 
   // FIXME!  We should store the data somewhere!
  
