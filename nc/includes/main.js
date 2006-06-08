@@ -10,6 +10,13 @@ function assert(fact) {
      }
 }
 
+function extract_screen_id(s) {
+   if (s.substr(0, 7) == "screen_") {
+       return (s.substr(7) * 1); // times one to typecast
+    }
+    return null;
+}
+
 function tot(node) {
   
   var screen = getScreenID(node);
@@ -17,8 +24,8 @@ function tot(node) {
   if (typeof(screen) == typeof("lol")) {
   // Asheesh is just doing a serial survey
   // Empty response sets are allowed; there are no errors!  So no error checking on form data.
-  // We'll simply create nodes with ID screen1, screen2, etc.
-  var screen_num = screen.substr(7) * 1; // times one to typecast
+  // We'll simply create nodes with ID screen_1, screen_2, etc.
+  var screen_num = extract_screen_id(screen);
 
   // Set a backtrail...
   back_list().push(screen);
@@ -49,11 +56,13 @@ function strip_ids (node) {
 
 
 function getScreenID (node) {
-/*  if (!node) { return false; }
-  testr = node;
-  do {
-    testr = testr.parentNode;
-  } while (testr.parentNode.id != 'screens'); */
-  if (node && node.getAttribute) { return node.getAttribute('totID'); }
-  else { /* alert('couldnt find screen id!'); */ return false; }
+   var indicator = "";
+   while (node && node.parentNode) {
+       indicator = extract_screen_id(node.parentNode.id);
+       if (indicator != null) {
+           return node.parentNode.id;
+	}
+	node = node.parentNode;
+    }
+    return null;
 }
