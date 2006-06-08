@@ -15,15 +15,15 @@ function tot(node) {
   var screen = getScreenID(node);
 
   // Asheesh is just doing a serial survey
-  // Empty response sets are allowed
+  // Empty response sets are allowed; there are no errors!  So no error checking on form data.
   // We'll simply create nodes with ID screen1, screen2, etc.
   var screen_num = screen.substr(7) * 1; // times one to typecast
 
   // Set a backtrail...
   back_list().push(screen);
 
-  // Now, is there a next screen?
   var next = document.getElementById('screen_' + (screen_num + 1));
+  // Now, is there a next screen?  If not, look for the "submit" div.
   if (next == null) { next = document.getElementById('submit'); }
   // ... and then jump ahead:
   selectNode(next);
