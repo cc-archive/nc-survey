@@ -11,9 +11,10 @@ function assert(fact) {
 }
 
 function tot(node) {
-
+  
   var screen = getScreenID(node);
-
+  
+  if (typeof(screen) == typeof("lol")) {
   // Asheesh is just doing a serial survey
   // Empty response sets are allowed; there are no errors!  So no error checking on form data.
   // We'll simply create nodes with ID screen1, screen2, etc.
@@ -30,6 +31,7 @@ function tot(node) {
   deselectNode(document.getElementById(screen));
 
   // FIXME!  We should store the data somewhere!
+  }
  
 }
 
