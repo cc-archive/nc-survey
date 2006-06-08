@@ -450,462 +450,6 @@ Check all the following that you believe would qualify as an "allowable NC user"
               <br clear="both"/>
             </div><!-- categoryC -->
 
-            <div id="copyright_date" class="unselected">
-              <div showOn="select" class="question">
-                <h2 class="term-optional-title">When can the transfer be terminated? Part 1 (of 2) of Section 2</h2>
-
-                <div class="question-header"></div>
-                <p class="question-text">
-                  When was the work created?<br/>
-                  <br/>
-                  (Please enter your best recollection as to the date of creation.
-                  The most important date is the year.
-                  If you also know the month and/or the date of creation of the work,
-                  then please include these details.)
-                </p>
-                <div class="question-options">
-                  <div class="option">
-                    <div class="option-input">
-                      <input id="cmonth" type="text" class="filter-date" name="cmonth" size="2" maxlength="2" onkeyup="nextDateField(this,event);" value="" /> /
-                      <input id="cday" type="text" class="filter-date" name="cday" size="2" maxlength="2" onkeyup="nextDateField(this,event);" value="" /> /
-                      <input id="cyear" type="text" class="filter-date" name="cyear" size="4" maxlength="4" value="" />
-                    </div>
-                    <div class="option-text">
-                      <input type="text" class="date-text" size="2" value="mm" disabled /> /
-                      <input type="text" class="date-text" size="2" value="dd" disabled /> /
-                      <input type="text" class="date-text" size="4" value="yyyy" disabled />
-                    </div>
-                  </div>
-                </div>
-                <div class="question-error">
-                  <span id="cdate-error" class="invisible">Please enter a valid date</span>
-                </div>
-                <div class="question-footer"></div>
-              </div>
-              <div showOn="select" class="continue">
-                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="copyright_date">Next</button>
-                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- copyright_date -->
-
-            <div id="grant_date" class="unselected">
-              <div showOn="select" class="question">
-                <h2 showOn="select" class="term-optional-title">When can the transfer be terminated? Part 2 (of 2) of Section 2</h2>
-
-                <div class="question-header"></div>
-                <p class="question-text">
-                  What is the date of the
-                  <a href="glossary#agreement">agreement or transfer</a>
-                  that you or the author or artist entered into
-                  in relation to the work?
-                </p>
-                <div class="question-options">
-                  <div class="option">
-                    <div class="option-input">
-                      <input id="gmonth" type="text" class="filter-date" name="gmonth" size="2" maxlength="2" onkeyup="nextDateField(this,event);" value="" /> /
-                      <input id="gday" type="text" class="filter-date" name="gday" size="2" maxlength="2" onkeyup="nextDateField(this,event);" value="" /> /
-                      <input id="gyear" type="text" class="filter-date" name="gyear" size="4" maxlength="4" value="" />
-                    </div>
-                    <div class="option-text">
-                      <input type="text" class="date-text" size="2" value="mm" disabled /> /
-                      <input type="text" class="date-text" size="2" value="dd" disabled /> /
-                      <input type="text" class="date-text" size="4" value="yyyy" disabled />
-                    </div>
-                  </div>
-                </div>
-                <div class="question-error">
-                  <span id="gdate-error" class="invisible">Please enter a valid date</span>
-                </div>
-                <div class="question-footer"></div>
-              </div>
-              <div showOn="select" class="continue">
-                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="grant_date">Next</button>
-                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- grant_date -->
-
-            <div id="author_names" class="unselected">
-              <div showOn="select">
-                <h2 class="term-optional-title">Tell us about the work - Part 1 (of 2) Section 3</h2>
-                <p>
-                  Please list the <a href="glossary#author">author or artist</a>
-                  or, if there is more than one author or artist,
-                  all of the authors or artists of the work:
-                </p>
-
-                <div style="float:left; padding-left:25px; padding-right:10px; padding-top:5px;">
-                  <a href="#" onclick="
-
-                    // clone node
-                    var new_node = document.getElementById('author_name1').cloneNode(true);
-
-                    new_node.value = '';
-
-                    // update node
-                    var num = 1 + document.getElementById('authors_container').getElementsByTagName('input').length;
-
-                    // hardcoding for 1 input... bad
-                    new_node.id = new_node.id.replace(/1/, num);
-                    var new_input = new_node.getElementsByTagName('input')[0];
-                    new_input.name = new_input.name.replace(/1/, num);
-                    new_input.id = new_input.id.replace(/1/, num);
-                    new_input.value = '';
-                    var new_err = new_node.getElementsByTagName('span')[0];
-                    new_err.id = new_err.id.replace(/1/, num);
-                    new_err.style.display = 'none';
-
-                    document.getElementById('author_name1').parentNode.appendChild(new_node);
-
-                    return false;
-
-                  ">[ + ]</a>
-                  <a href="#" onclick="
-
-                    var num = document.getElementById('authors_container').getElementsByTagName('input').length;
-
-                    if (num == 1) {
-                      return false;
-                    }
-                    var last_node = document.getElementById('author_name' + num);
-                    last_node.parentNode.removeChild(last_node);
-
-                    return false;
-
-                  ">[ - ]</a>
-
-                </div>
-                <div style="float:left; padding-left:15px;">
-                  <div id="authors_container">
-                    <div id="author_name1">
-                      <input class="names" type="text" size="25" id="author_name1_input" value="" name="author_name1" />
-                      <span class="name_errors" id="author_name1-error">Required Field</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div showOn="select" class="continue">
-                <button type="button" class="button-continue" totID="author_names" onclick="tot(this);">Next</button>
-                <button type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- author_names -->
-
-            <div id="basic" class="unselected">
-              <div showOn="select">
-                <h2 class="term-optional-title">Tell us about the work - Part 2 (of 2) Section 3</h2>
-                <p>Please provide the following details to the extent you know them:</p>
-
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">Title of Work:</div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input id="title" type="text" name="title" class="gather-text" maxlength="50" tabindex="2" value="" />
-                      </div>
-                      <div class="option-text"></div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span id="title-error" class="invisible">Required Field</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">Original Copyright Registration Number:</div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input id="ocn" type="text" name="ocn" class="gather-text" maxlength="15" tabindex="3" value="" />
-                      </div>
-                      <div class="option-text"></div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span id="ocn-error" class="invisible">Required Field</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text"><a href="glossary#grantee">Original Grantee</a>:</div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input id="grantee" type="text" name="grantee" class="gather-text" maxlength="50" tabindex="4" value="" />
-                      </div>
-                      <div class="option-text"></div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span id="grantee-error" class="invisible">Required Field</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">
-                    Description of the <a href="glossary#agreement">Agreement or Transfer</a>:
-                  </div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input id="grantname" type="text" name="grantname" class="gather-text" maxlength="50" tabindex="5" value="" />
-                      </div>
-                      <div class="option-text"></div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span id="grantname-error" class="invisible">Required Field</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-
-              </div>
-              <div showOn="select" class="continue">
-                <button tabindex="6" type="button" class="button-continue" totID="basic" onclick="tot(this);">Next</button>
-                <button tabindex="7" type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- basic_info -->
-
-            <div id="author_grant" class="unselected">
-              <div showOn="select">
-                <h2 showOn="select" class="term-optional-title">Who can terminate? Part 1 (of 3) of Section 4</h2>
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">
-                    Was the agreement or transfer made by the author or,
-                    in the case of multiple authors, by one or more of the authors?
-                  </div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input onclick="hideDiv('author_grant-error');" type="radio" name="author_grant" value="Yes" />
-                      </div>
-                      <div class="option-text">Yes</div>
-                    </div>
-                    <div class="option">
-                      <div class="option-input">
-                        <input onclick="hideDiv('author_grant-error');" type="radio" name="author_grant" value="No" />
-                      </div>
-                      <div class="option-text">No</div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span id="author_grant-error" class="invisible">Please select Yes or No</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-              </div>
-              <div showOn="select" class="continue">
-                <button type="button" class="button-continue" totID="author_grant" onclick="tot(this);">Next</button>
-                <button type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- author_grant -->
-
-            <div id="grantors" class="unselected">
-
-              <div showOn="select">
-                <h2 class="term-optional-title">Who can terminate? Part 1(b) (of 3) of Section 4</h2>
-
-                <p>
-                  Please indicate all authors who joined in the grant:
-                  <span class="question-error"><span id="grantor-error" class="invisible">You must select at least one</span></span>
-                </p>
-                <div id="grantor-container"></div>
-
-                <div class="invisible">
-                  <div id="grantor-template" class="question">
-                    <div class="question-text"><span id="grantor-name">AUTHOR NAME</span></div>
-                    <div class="question-options">
-                      <div class="option">
-                        <input type="checkbox" value="Yes" unchecked name="grantor" />
-                      </div>
-                    </div>
-                    <div class="question-footer"></div>
-                  </div>
-                </div>
-              </div>
-              <div showOn="select" class="continue">
-                <button type="button" class="button-continue" totID="grantor" onclick="tot(this);">Next</button>
-                <button type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- grantors -->
-
-            <div id="successor_grant" class="unselected">
-              <h2 showOn="deselect">Successor Grant: <span id="successor_grant-answer">YES/NO</span></h2>
-
-              <div showOn="select">
-                <h2 class="term-optional-title">Who can terminate? Part 3 (of 3) of Section 4</h2>
-
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">
-                    Was the transfer made by the author's widow or widower,
-                    children, next of kin or executors?
-                  </div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input onclick="hideDiv('successor_grant-error');" type="radio" name="successor_grant" value="Yes" />
-                      </div>
-                      <div class="option-text">Yes</div>
-                    </div>
-                    <div class="option">
-                      <div class="option-input">
-                        <input onclick="hideDiv('successor_grant-error');" type="radio" name="successor_grant" value="No" />
-                      </div>
-                      <div class="option-text">No</div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span id="successor_grant-error" class="invisible">Please select Yes or No</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-
-              </div>
-              <div showOn="select" class="continue">
-                <button type="button" class="button-continue" totID="successor_grant" onclick="tot(this);">Next</button>
-                <button type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- successor_grant -->
-
-            <div id="author_alive" class="unselected">
-
-              <div showOn="select">
-                <h2 class="term-optional-title">Who can terminate? Part 2 (of 3) of Section 4</h2>
-
-                <p>
-                  The purpose of the following questions in Section 4
-                  is to determine who may be able to exercise the right
-                  to terminate the agreement or transfer.
-                </p>
-
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">Is <span id="author_alive-name">AUTHOR NAME</span> still living?</div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input type="radio" value="Yes" unchecked name="author_alive" />
-                      </div>
-                      <div class="option-text">Yes</div>
-                    </div>
-                    <div class="option">
-                      <div class="option-input">
-                        <input type="radio" value="No" unchecked name="author_alive" />
-                      </div>
-                      <div class="option-text">No</div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span class="invisible" id="author_alive-error">Please Select Yes or No</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-
-              </div>
-              <div showOn="select" class="continue">
-                <button type="button" class="button-continue" totID="author_alive" onclick="tot(this);">Next</button>
-                <button type="button" class="button-continue" totID="author_alive-back" onclick="tot(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- author_alive -->
-
-            <div id="author_spouse_info" class="unselected">
-
-              <div showOn="select">
-                <h2 class="term-optional-title">Who can terminate? Part 2(b) (of 3) of Section 4</h2>
-
-                <p>
-                  If the author or artist, is no longer living,
-                  it may be that one of the author or artist's
-                  family members is able to terminate the
-                  agreement or transfer
-                </p>
-
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">Is <span id="author_spouse_info-name1">AUTHOR NAME</span>'s Spouse still living?</div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input type="radio" value="Yes" unchecked
-                        name="author_spouse_alive" />
-                      </div>
-                      <div class="option-text">Yes</div>
-                    </div>
-                    <div class="option">
-                      <div class="option-input">
-                        <input type="radio" value="No" unchecked name="author_spouse_alive" />
-                      </div>
-                      <div class="option-text">No</div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span class="invisible" id="author_spouse_alive-error">Please Select Yes or No</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">Name of <span id="author_spouse_info-name2">AUTHOR NAME</span>'s Spouse:</div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input type="text" class="gather-text" maxlength="50" id="author_spouse_name" name="author_spouse_name" />
-                      </div>
-                      <div class="option-text"></div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span class="invisible" id="author_spouse_name-error">Required Field</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-                <div class="question">
-                  <div class="question-header"></div>
-                  <div class="question-text">Number of Children (living and deceased):</div>
-                  <div class="question-options">
-                    <div class="option">
-                      <div class="option-input">
-                        <input type="text" class="gather-text" size="2" maxlength="2" id="author_num_children" name="author_num_children" />
-                      </div>
-                      <div class="option-text"></div>
-                    </div>
-                  </div>
-                  <div class="question-error">
-                    <span class="invisible" id="author_num_children-error">Required Field</span>
-                  </div>
-                  <div class="question-footer"></div>
-                </div>
-
-              </div>
-              <div showOn="select" class="continue">
-                <button type="button" class="button-continue" totID="author_spouse_info" onclick="tot(this);">Next</button>
-                <button type="button" class="button-continue" totID="author_spouse_info-back" onclick="tot(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- author_spouse_info -->
-
            </div><!-- screens -->
             <div id="screen_2" class="unselected">
               <div showOn="select" class="question">
@@ -1283,9 +827,9 @@ Check all the following that you believe would qualify as an "allowable NC user"
                       <input id="cyear" type="text" class="filter-date" name="cyear" size="4" maxlength="4" value="" />
                     </div>
                     <div class="option-text">
-                      <input type="text" class="date-text" size="2" value="mm" disabled /> /
-                      <input type="text" class="date-text" size="2" value="dd" disabled /> /
-                      <input type="text" class="date-text" size="4" value="yyyy" disabled />
+                      <input type="text" class="date-text" size="2" value="mm" disabled="disabled" /> /
+                      <input type="text" class="date-text" size="2" value="dd" disabled="disabled" /> /
+                      <input type="text" class="date-text" size="4" value="yyyy" disabled="disabled" />
                     </div>
                   </div>
                 </div>
@@ -1321,9 +865,9 @@ Check all the following that you believe would qualify as an "allowable NC user"
                       <input id="gyear" type="text" class="filter-date" name="gyear" size="4" maxlength="4" value="" />
                     </div>
                     <div class="option-text">
-                      <input type="text" class="date-text" size="2" value="mm" disabled /> /
-                      <input type="text" class="date-text" size="2" value="dd" disabled /> /
-                      <input type="text" class="date-text" size="4" value="yyyy" disabled />
+                      <input type="text" class="date-text" size="2" value="mm" disabled="disabled" /> /
+                      <input type="text" class="date-text" size="2" value="dd" disabled="disabled" /> /
+                      <input type="text" class="date-text" size="4" value="yyyy" disabled="disabled" />
                     </div>
                   </div>
                 </div>
@@ -1542,7 +1086,7 @@ Check all the following that you believe would qualify as an "allowable NC user"
                     <div class="question-text"><span id="grantor-name">AUTHOR NAME</span></div>
                     <div class="question-options">
                       <div class="option">
-                        <input type="checkbox" value="Yes" unchecked name="grantor" />
+                        <input type="checkbox" value="Yes" unchecked="unchecked" name="grantor" />
                       </div>
                     </div>
                     <div class="question-footer"></div>
@@ -1615,13 +1159,13 @@ Check all the following that you believe would qualify as an "allowable NC user"
                   <div class="question-options">
                     <div class="option">
                       <div class="option-input">
-                        <input type="radio" value="Yes" unchecked name="author_alive" />
+                        <input type="radio" value="Yes" unchecked="unchecked" name="author_alive" />
                       </div>
                       <div class="option-text">Yes</div>
                     </div>
                     <div class="option">
                       <div class="option-input">
-                        <input type="radio" value="No" unchecked name="author_alive" />
+                        <input type="radio" value="No" unchecked="unchecked" name="author_alive" />
                       </div>
                       <div class="option-text">No</div>
                     </div>
@@ -1659,14 +1203,14 @@ Check all the following that you believe would qualify as an "allowable NC user"
                   <div class="question-options">
                     <div class="option">
                       <div class="option-input">
-                        <input type="radio" value="Yes" unchecked
+                        <input type="radio" value="Yes" unchecked="unchecked"
                         name="author_spouse_alive" />
                       </div>
                       <div class="option-text">Yes</div>
                     </div>
                     <div class="option">
                       <div class="option-input">
-                        <input type="radio" value="No" unchecked name="author_spouse_alive" />
+                        <input type="radio" value="No" unchecked="unchecked" name="author_spouse_alive" />
                       </div>
                       <div class="option-text">No</div>
                     </div>
@@ -1813,14 +1357,14 @@ Check all the following that you believe would qualify as an "allowable NC user"
                     <div class="question-options">
                       <div class="option">
                         <div class="option-input">
-                          <input type="checkbox" value="Yes" unchecked
+                          <input type="checkbox" value="Yes" unchecked="unchecked"
                           name="author0_childX_alive" />
                         </div>
                         <div class="option-text">Yes</div>
                       </div>
                       <div class="option">
                         <div class="option-input">
-                          <input type="checkbox" value="No" unchecked
+                          <input type="checkbox" value="No" unchecked="unchecked"
                           name="author0_childX_alive" />
                         </div>
                         <div class="option-text">No</div>
