@@ -66,3 +66,7 @@ function getScreenID (node) {
     }
     return null;
 }
+
+function submit (node) {
+	alert("Uh, no submission yet.");
+}
