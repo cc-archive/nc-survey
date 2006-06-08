@@ -17,12 +17,9 @@ function tot(node) {
   // Asheesh is just doing a serial survey
   // Empty response sets are allowed
   // We'll simply create nodes with ID screen1, screen2, etc.
-
+  alert("screen is " + screen);
   assert(screen.substr(0,7) == "screen_");
   var screen_num = screen.substr(7) * 1; // times one to typecast
-
-  /* employee should be Yes/No/false */
-  employee = checkRadio(node.form.employee);
 
   // Set a backtrail...
   back_list().push(screen);
