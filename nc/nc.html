@@ -49,7 +49,6 @@
         <a name="documentContent"></a> 
 
         <h2 class="term-title">
-        <!-- Creative Commons Termination Of Transfer Web Application -->
         Non-Commercial Use survey: Let us know your thoughts on the CC-nc licenses</h2>
 
         <form id="term_form" name="term_form" action="javascript:main_submit(this);" method="post" enctype="multipart/form-data">
@@ -135,324 +134,18 @@ Check all the following that you believe would qualify as an "allowable NC user"
                     <div class="option-text">A copy shop, ISP, or similar service provider who, in the course of providing a service at the discretion of the allowable NC user, exercises a right licensed under the Creative Commons NC license</div>
                   </div>
                 
-                <div class="question-error">
-                  <span id="employee-error" class="invisible">Required Field</span>
-                </div>
-
               </div>
               <div showOn="select" class="continue">
                 <button type="button" class="button-continue" onclick="tot(this);" totID="screen_1">Next</button>
                 <button type="button" class="button-continue" onclick="back(this);">Back</button>
               </div>
 
-              <br clear="both"/>
+              <br clear="all"/>
             </div>
-
-            <div id="commissioned" class="unselected">
-              <div showOn="select" class="question" style="display:none;">
-                <h2 class="term-optional-title">What can be terminated? Part 2 (of 7) of Section 1</h2>
-                <p class="question-text">
-                    Was this <a href="glossary#work">work</a>
-                    created by you or the author or artist in
-                    response to a special order or commission by
-                    some other person or company?
-                </p>
-
-                <div class="question-options">
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('commissioned-error');" type="radio" name="commissioned" value="Yes" />
-                    </div>
-
-                    <div class="option-text">Yes</div>
-                  </div>
-
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('commissioned-error');" type="radio" name="commissioned" value="No" />
-                    </div>
-
-                    <div class="option-text">No</div>
-                  </div>
-                </div>
-
-                <div class="question-error">
-                  <span id="commissioned-error" class="invisible">Required Field</span>
-                </div>
-              </div>
-              <div showOn="select" class="continue">
-                <button type="button" class="button-continue" onclick="tot(this);" totID="commissioned">Next</button>
-                <button type="button" class="button-continue" onclick="back(this);" >Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- commissioned -->
-
-            <div id="pre1978" class="unselected">
-              <div showOn="select" class="question">
-                <h2 class="term-optional-title">What can be terminated? Part 3 (of 7) of Section 1</h2>
-                <p class="question-text">
-                    Was the <a href="glossary#work">work</a>
-                    created by you or the artist or author before
-                    January 1st, 1978?
-                </p>
-
-                <div class="question-options">
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('pre1978-error');" type="radio" name="pre1978" value="Yes" />
-                    </div>
-                    <div class="option-text">Yes</div>
-                  </div>
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('pre1978-error');" type="radio" name="pre1978" value="No" />
-                    </div>
-                    <div class="option-text">No</div>
-                  </div>
-                </div>
-                <div class="question-error">
-                  <span id="pre1978-error" class="invisible">Required Field</span>
-                </div>
-              </div>
-              <div showOn="select" class="continue">
-                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="pre1978">Next</button>
-                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- pre1978 -->
-
-            <div id="written_agreement" class="unselected">
-              <div showOn="select" class="question">
-                <h2 class="term-optional-title">What can be terminated? Part 4 (of 7) of Section 1</h2>
-                <p class="question-text">
-                    Did you or the author or artist who created the
-                    work enter into a written agreement with the
-                    person who specially ordered or commissioned
-                    the work to formalize the terms of the special
-                    order or commission?
-                </p>
-
-                <div class="question-options">
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('written-error');" type="radio" name="written" value="Yes" />
-                    </div>
-                    <div class="option-text">Yes</div>
-                  </div>
-
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('written-error');" type="radio" name="written" value="No" />
-                    </div>
-
-                    <div class="option-text">No</div>
-                  </div>
-                </div>
-                <div class="question-error">
-                  <span id="written-error" class="invisible">Required Field</span>
-                </div>
-              </div>
-              <div showOn="select" class="continue">
-                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="written_agreement">Next</button>
-                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- written_agreement -->
-
-            <div id="categoryA" class="unselected">
-              <div showOn="select" class="question">
-                <h2 class="term-optional-title">What can be terminated? Part 5 (of 7) of Section 1</h2>
-                <p class="question-text">
-                    Was the work created for use as one of the
-                    following?
-                </p>
-
-                <div class="question-options">
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('categoryA-error');" type="radio" name="categoryA" value="Yes" />
-                    </div>
-
-                    <div class="option-text">Yes</div>
-                  </div>
-
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('categoryA-error');" type="radio" name="categoryA" value="No" />
-                    </div>
-                    <div class="option-text">No</div>
-                  </div>
-                </div>
-
-                <div class="question-error">
-                  <span id="categoryA-error" class="invisible">Required Field</span>
-                </div>
-              </div>
-              <div showOn="select" style="clear:left;">
-                <!-- category list (part A) -->
-
-                <ul class="term-category-list">
-                  <li>part of a motion picture or other audiovisual work</li>
-                  <li>a translation</li>
-                  <li>a test</li>
-                  <li>answer material for a test</li>
-                  <li>an atlas</li>
-                  <li>as an instructional text (text and/or graphics)</li>
-                </ul>
-              </div>
-              <div showOn="select" class="continue">
-                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="categoryA">Next</button>
-                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- categoryA -->
-
-            <div id="categoryB" class="unselected">
-              <div showOn="select" class="question">
-                <h2 class="term-optional-title">What can be terminated? Part 6 (of 7) of Section 1</h2>
-                <p class="question-text">
-                    Was the work created for use as one of the
-                    following?
-                </p>
-
-                <div class="question-options">
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('categoryB-error');" type="radio" name="categoryB" value="Yes" />
-                    </div>
-
-                    <div class="option-text">Yes</div>
-                  </div>
-
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('categoryB-error');" type="radio" name="categoryB" value="No" />
-                    </div>
-
-                    <div class="option-text">No</div>
-                  </div>
-                </div>
-
-                <div class="question-error">
-                  <span id="categoryB-error" class="invisible">Required Field</span>
-                </div>
-              </div><!-- category list (part B) -->
-              <div showOn="select">
-                <ul class="term-category-list">
-                  <li>a "compilation," such as: 
-                    <ul>
-                      <li>catalogs</li>
-                      <li>directories</li>
-                    </ul>
-                  </li>
-                  <li>a "contribution to a collective work," such as a contribution to a(n): 
-                    <ul>
-                      <li>magazine</li>
-                      <li>anthology</li>
-                      <li>encyclopedia</li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <p>
-                  The examples given for the types of things that
-                  qualify as compilations and collective works are
-                  illustrative only. If you think that the work you
-                  or the author or artist created is likely to be a
-                  compilation or collective work, you should check
-                  "yes" even if it is not listed as one of the examples.
-                </p>
-                <p>
-                  Remember that this tool is not definitive and is
-                  not legal advice or a substitute for legal advice.
-                </p>
-              </div>
-              <div showOn="select" class="continue">
-                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="categoryB">Next</button>
-                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- categoryB -->
-
-            <div id="categoryC" class="unselected">
-              <div showOn="select" class="question">
-                <h2 class="term-optional-class">What can be terminated? Part 7 (of 7) of Section 1</h2>
-                <div class="question-text">Was the work created for use as one of the following?</div>
-
-                <div class="question-options">
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('categoryC-error');" type="radio" name="categoryC" value="Yes" />
-                    </div>
-
-                    <div class="option-text">Yes</div>
-                  </div>
-
-                  <div class="option">
-                    <div class="option-input">
-                      <input onclick="hideDiv('categoryC-error');" type="radio" name="categoryC" value="No" />
-                    </div>
-
-                    <div class="option-text">No</div>
-                  </div>
-                </div>
-
-                <div class="question-error">
-                  <span id="categoryC-error" class="invisible">Required Field</span>
-                </div>
-              </div><!-- category list (part C) -->
-              <div showOn="select">
-                <ul class="term-category-list">
-                  <li>a "supplementary work" (relating to an existing work by another author), such as: 
-                    <ul>
-                      <li>forewords</li>
-                      <li>afterwords</li>
-                      <li>pictorial illustrations</li>
-                      <li>maps</li>
-                      <li>charts</li>
-                      <li>tables</li>
-                      <li>editorial notes</li>
-                      <li>musical arrangements</li>
-                      <li>answer material for tests</li>
-                      <li>bibliographies</li>
-                      <li>appendixes</li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <p>
-                  The examples of types of things qualify as
-                  "supplementary works" are illustrative only.
-                  <a href="glossary#supplementalwork">Click here
-                  for more information about the definition of
-                  "supplementary works."</a> If you think that
-                  the work you or the author or artist created
-                  is likely to be a supplementary, you should
-                  check "yes" even if it is not listed as one
-                  of the examples.
-                </p>
-                <p>
-                  Remember that this tool is not definitive and is
-                  not legal advice or a substitute for legal
-                  advice.
-                </p>
-              </div>
-              <div showOn="select" class="continue">
-                <button showOn="select" type="button" class="button-continue" onclick="tot(this);" totID="categoryC">Next</button>
-                <button showOn="select" type="button" class="button-continue" onclick="back(this);">Back</button>
-              </div>
-
-              <br clear="both"/>
-            </div><!-- categoryC -->
 
            </div><!-- screens -->
             <div id="screen_2" class="unselected">
-              <div showOn="select" class="question">
+              <div  class="question">
                 <h2 class="term-optional-title">Section A: Unnature of the user</h2>
                 <p class="question-text">
 Check all the following that you believe would qualify as an "allowable NC user" under the noncommercial license condition:
@@ -491,17 +184,13 @@ Check all the following that you believe would qualify as an "allowable NC user"
                     <div class="option-text">A copy shop, ISP, or similar service provider who, in the course of providing a service at the discretion of the allowable NC user, exercises a right licensed under the Creative Commons NC license</div>
                   </div>
                 
-                <div class="question-error">
-                  <span id="employee-error" class="invisible">Required Field</span>
-                </div>
-
               </div>
-              <div showOn="select" class="continue">
+              <div  class="continue">
                 <button type="button" class="button-continue" onclick="tot(this);" totID="screen_2">Next</button>
                 <button type="button" class="button-continue" onclick="back(this);">Back</button>
               </div>
 
-              <br clear="both"/>
+              <br clear="all"/>
             </div>
 
            </div><!-- screens -->
