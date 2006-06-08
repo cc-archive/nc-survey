@@ -3,9 +3,20 @@ var authors = new Array;
 var author_index = 0;
 var grantors = new Array;
 
+/* Asheesh likes assertions */
+function assert(fact) {
+     if (!fact) {
+          alert("Assert failure!");
+     }
+}
+
 function tot(node) {
 
   var screen = getScreenID(node);
+
+  // Asheesh is just doing a serial survey
+  // Empty response sets are allowed
+  // We'll simply create nodes with ID screen1, screen2, etc.
 
   switch( screen ) {
 
