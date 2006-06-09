@@ -37,7 +37,6 @@ function tot(node) {
   selectNode(next);
   deselectNode(document.getElementById(screen));
 
-  // FIXME!  We should store the data somewhere!
   }
  
 }
