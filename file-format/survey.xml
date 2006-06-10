@@ -1,0 +1,114 @@
+<survey>
+  <title>
+    Non-Commercial Use survey: Let us know your thoughts on the CC-nc licenses
+  </title>
+  <screens>
+    <screen>
+      <title>Section A: Nature of the user</title>
+      <questions>
+	<question>
+	  <title>
+	    Check all the following that you believe would qualify as an "allowable NC user" under the noncommercial license condition:
+	  </title>
+	  <options type="checkbox" numrequired="0">
+	    <option>
+	      Individual
+	    </option>
+	    <option>
+	      Nonprofit educational institution/library
+	    </option>
+	    <option>
+	      Nonprofit organization as defined under US or equivalent law
+	    </option>
+	    <option>A copy shop, ISP, or similar service provider who, in the course of providing a service at the discretion of the allowable NC user, exercises a right licensed under the Creative Commons NC license">A copy shop, ISP, or similar service provider who, in the course of providing a service at the discretion of the allowable NC user, exercises a right licensed under the Creative Commons NC license</option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+    <screen>
+      <title>Section B. Nature of the use: advertising</title>
+      <questions>
+	<question>
+	  <title>Check the box next to the circumstances you belive *do* qualify for non-commercial use</title>
+	  <options type="checkbox" numrequired="0">
+	    <option>
+	      The NC-licensed content is being used in an advertisement for third-party products or services
+	    </option>
+	    <option>
+	      Viewing an advertisement for third-party products or services is required as a condition of accessing or viewing the NC-licensed content (e.g., "click-through" advertising)
+	    </option>
+	    <option>
+	      The NC-licensed work is being used in conjunction with advertisements for third-party products or services where the NC-licensed work is the primary draw or is a substantial amount (both qualitatively and quantitatively) of the draw (confusingly-phrased, I think) (is this supposed to say "not"?)
+	    </option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+    <screen>
+      <title>
+	Section C. Conditions on Use: For services provided
+      </title>
+      <questions>
+	<question>
+	  <title>Check the box next to the circumstances you belive *do* qualify for non-commercial use</title>
+	  <options type="checkbox" numrequired="0">
+	    <option>
+	      Money is changing hands in exchange for a service provided in connection with the NC-licensed work incidentally as part of a service involving the work by an allowable NC user (e.g., money to a for-profit copy shop for course packs by an educational institution)
+	    </option>
+	    <option>
+	      Money is changing hands for any other reason
+	    </option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+    <screen>
+      <title>
+	Section D. Conditions on use: original work
+      </title>
+      <questions>
+	<question>
+	  <title>Check the box next to the circumstances you belive money *may* change hands in the context of an NC-licensed work</title>
+	  <options type="checkbox" numrequired="0">
+	    <option>
+	      As a condition of using the NC-licensed work
+	    </option>
+	    <option>
+	      As a condition of using another work that includes an NC-licensed work, where the NC-licensed work is either the primary draw or a substantial amount (whether qualitatively or quantitatively) of the primary draw
+	    </option>
+	    <option>
+	      As a condition of using another work that includes a verbatim NC-licensed work, where the NC-licensed work is not the primary draw or is an insubstantial amount, both qualitatively and quantitatively
+	    </option>
+	    <option>
+	      As an optional contribution (e.g., a tip jar, donations, membership drive) for an allowed NC user (diverges from PDF!) that uses the verbatim NC-licensed work or another work that includes a verbatim NC-licensed work
+	    </option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+    <screen>
+      <title>
+	Section E. Conditions on use: Derivative works
+      </title>
+      <questions>
+	<question>
+	  <title>
+	    Check the box next to the circumstances you believe money *may*
+	    change hands for works without the Share-Alike license condition
+	  </title>
+	  <options>
+	    <option>
+	      As a condition of using a derivative work based on an NC-licensed work, of which the original NC-licensed work is the primary draw or a substantial amount, whether qualitatively or quantitatively, of that derivative work
+	    </option>
+	    <option>
+	      As a condition of using a derivative work based on an NC-licensed work, of which the original NC-licensed work is not the primary draw or is an insubstantial amount, both qualitatively and quantitatively, of that derivative work
+	    </option>
+	    <option>
+	      As an optional contribution (e.g., a tip jar, donations, membership drive) for an allowed NC user (DIVERGES FROM PDF!) that uses the derivative work based on the NC-licensed work
+	    </option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+  </screens>
+</survey>
