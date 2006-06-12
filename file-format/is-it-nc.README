@@ -8,3 +8,6 @@ For <answer>s that specify an action="", the action attribute represents a <ques
 
 This makes it a finite state machine, with *very* finite state.  Questions can't add to the state, simply cause 
 transitions.
+
+NOTE: I have general misgivings about this form of the app.  It's so opaque to end-users without something like the 
+original PDF being up.  Of course, if the original PDF is up, this is not a problem.
