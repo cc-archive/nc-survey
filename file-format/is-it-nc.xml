@@ -25,12 +25,12 @@
 		NC users”)
 	      </li>
 	      <li>
-		A copy shop, ISP or similar service provider who, in the
-	      course of providing a service at the direction of the
-	      allowable NC user, may exercise a right licensed under
-	      the Creative Commons license.
+		A copy shop, ISP or similar service provider who, in
+		the course of providing a service at the direction of
+		the allowable NC user, may exercise a right licensed
+		under the Creative Commons license.
 	      </li>
-	  </ul>
+	    </ul>
 	  </title>
 	  <options>
 	    <option>Yes</option>
@@ -39,51 +39,123 @@
 	</question>
       </questions>
     </screen>
+
     <screen>
-      <title>Section B. Nature of the use: advertising</title>
+      <title>Section B. Nature of the use: Advertising</title>
       <questions>
 	<question>
-	  <title>Check the box next to the circumstances you belive *do* qualify for non-commercial use</title>
-	  <options type="checkbox" numrequired="0">
+	  <title>
+	    Is the NC-licensed content being used in an advertisement
+	    for third party products or services?
+	  </title>
+	  <options>
+	    <option>Yes</option>
+	    <option>No</option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+
+    <screen>
+      <title>Section B. Nature of the use: Advertising</title>
+      <questions>
+	<question>
+	  <title>
+	    Is viewing of an advertisement for third party products or
+	    services required as a condition of accessing or viewing
+	    the NC-licensed content (eg. “click-through”
+	    advertising)?
+	  </title>
+	  <options>
+	    <option>Yes</option>
+	    <option>No</option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+
+    <screen>
+      <title>Section B. Nature of the use: Advertising</title>
+      <questions>
+	<question>
+	  <title>
+	    Is the NC-licensed work being used in connection with
+	    advertisements for third party products or services where
+	    the NC-licensed work is the primary draw or a is
+	    substantial amount, both qualitatively and quantitatively?
+	  </title>
+	  <options>
+	    <option>Yes</option>
+	    <option>No</option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+
+    <screen>
+      <title>
+	Section C. Conditions on Use: For Services Provided
+      </title>
+      <questions>
+	<question>
+	  <title>
+	    Is money changing hands in exchange for a service provided
+	    in connection with the NC-licensed work?
+	  </title>
+	  <options>
 	    <option>
-	      The NC-licensed content is being used in an advertisement for third-party products or services
+	      Yes
 	    </option>
 	    <option>
-	      Viewing an advertisement for third-party products or services is required as a condition of accessing or viewing the NC-licensed content (e.g., "click-through" advertising)
-	    </option>
-	    <option>
-	      The NC-licensed work is being used in conjunction with advertisements for third-party products or services where the NC-licensed work is the primary draw or is a substantial amount (both qualitatively and quantitatively) of the draw (confusingly-phrased, I think) (is this supposed to say "not"?)
+	      No
 	    </option>
 	  </options>
 	</question>
       </questions>
     </screen>
+
     <screen>
       <title>
-	Section C. Conditions on Use: For services provided
+	Section C. Conditions on Use: For Services Provided
       </title>
       <questions>
 	<question>
-	  <title>Check the box next to the circumstances you belive *do* qualify for non-commercial use</title>
-	  <options type="checkbox" numrequired="0">
+	  <title>
+	    Is money changing hands for a service being provided to
+	    (in the case of, for example, a for-profit copy shop) or
+	    by an allowable NC user incidental to the use of the
+	    NC-licensed work (e.g. course packs provided by an
+	    educational institutions)?
+	  </title>
+	  <options>
 	    <option>
-	      Money is changing hands in exchange for a service provided in connection with the NC-licensed work incidentally as part of a service involving the work by an allowable NC user (e.g., money to a for-profit copy shop for course packs by an educational institution)
+	      Yes
 	    </option>
 	    <option>
-	      Money is changing hands for any other reason
+	      No
 	    </option>
 	  </options>
 	</question>
       </questions>
     </screen>
+
     <screen>
       <title>
-	Section D. Conditions on use: original work
+	Section D. Conditions on Use: Original Work
       </title>
       <questions>
 	<question>
-	  <title>Check the box next to the circumstances you belive money *may* change hands in the context of an NC-licensed work</title>
-	  <options type="checkbox" numrequired="0">
+	  <title>
+	    <p>
+	      Is there any money changing hands in connection with the
+	      use of the NC licensed work?
+	    </p>
+	    <p>
+	      Money may change hands in connection with the use of an
+	      NC-licensed work in at least four ways:
+	    </p>
+	  </title>
+	  <options>
 	    <option>
 	      As a condition of using the NC-licensed work
 	    </option>

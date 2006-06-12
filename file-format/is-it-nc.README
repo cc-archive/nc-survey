@@ -13,3 +13,5 @@ NOTE: I have general misgivings about this form of the app.  It's so opaque to e
 original PDF being up.  Of course, if the original PDF is up, this is not a problem.
 
 NOTE: I'm embedding XHTML elements with no respect for namespaces.  Either forgive me or save me.
+
+<options> by default are radio buttons.
