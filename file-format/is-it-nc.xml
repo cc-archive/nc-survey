@@ -160,37 +160,88 @@
 	      As a condition of using the NC-licensed work
 	    </option>
 	    <option>
-	      As a condition of using another work that includes an NC-licensed work, where the NC-licensed work is either the primary draw or a substantial amount (whether qualitatively or quantitatively) of the primary draw
+	      As a condition of using another work that includes an
+	      NC-licensed work, where the NC-licensed work is either
+	      the primary draw or a substantial amount (whether
+	      qualitatively or quantitatively) of the primary draw
 	    </option>
 	    <option>
-	      As a condition of using another work that includes a verbatim NC-licensed work, where the NC-licensed work is not the primary draw or is an insubstantial amount, both qualitatively and quantitatively
+	      As a condition of using another work that includes a
+	      verbatim NC-licensed work, where the NC-licensed work is
+	      not the primary draw or is an insubstantial amount, both
+	      qualitatively and quantitatively
 	    </option>
 	    <option>
-	      As an optional contribution (e.g., a tip jar, donations, membership drive) for an allowed NC user (diverges from PDF!) that uses the verbatim NC-licensed work or another work that includes a verbatim NC-licensed work
+	      As an optional contribution (e.g., a tip jar, donations,
+	      membership drive) for an allowed NC user (diverges from
+	      PDF!) that uses the verbatim NC-licensed work or another
+	      work that includes a verbatim NC-licensed work
 	    </option>
 	  </options>
 	</question>
       </questions>
     </screen>
+
     <screen>
       <title>
-	Section E. Conditions on use: Derivative works
+	Section E. Conditions on Use: Derivative Works
       </title>
       <questions>
 	<question>
 	  <title>
-	    Check the box next to the circumstances you believe money *may*
-	    change hands for works without the Share-Alike license condition
+	    Does the work use a ShareAlike license condition?
+	  </title>
+	  <options>
+	    <option>Yes</option>
+	    <option>No</option>
+	  </options>
+	</question>
+      </questions>
+    </screen>
+
+    <screen>
+      <title>Section E. Conditions on Use: Derivative Works
+      </title>
+      <questions>
+	<question>
+	  Does the creation of derivative works match with the terms given in Section D?
+	</question>
+	<options>
+	  <option>Yes</option>
+	  <option>No</option>
+	</options>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>Section E. Conditions on Use: Derivative Works</title>
+      <questions>
+	<question>
+	  <title>
+	    Is the money changing hands in connection with a
+	    derivative use of an NC licensed work?  Money can change
+	    hands one of these four ways; select the one most
+	    appropriate to your use.
 	  </title>
 	  <options>
 	    <option>
-	      As a condition of using a derivative work based on an NC-licensed work, of which the original NC-licensed work is the primary draw or a substantial amount, whether qualitatively or quantitatively, of that derivative work
+	      As a condition of using a derivative work based on an
+	      NC-licensed work, of which the original NC-licensed work
+	      is the primary draw or a substantial amount, whether
+	      qualitatively or quantitatively, of that derivative work
 	    </option>
 	    <option>
-	      As a condition of using a derivative work based on an NC-licensed work, of which the original NC-licensed work is not the primary draw or is an insubstantial amount, both qualitatively and quantitatively, of that derivative work
+	      As a condition of using a derivative work based on an
+	      NC-licensed work, of which the original NC-licensed work
+	      is not the primary draw or is an insubstantial amount,
+	      both qualitatively and quantitatively, of that derivative
+	      work
 	    </option>
 	    <option>
-	      As an optional contribution (e.g., a tip jar, donations, membership drive) for an allowed NC user (DIVERGES FROM PDF!) that uses the derivative work based on the NC-licensed work
+	      As an optional contribution (e.g., a tip jar, donations,
+	      membership drive) for an allowed NC user (DIVERGES FROM
+	      PDF!) that uses the derivative work based on the
+	      NC-licensed work
 	    </option>
 	  </options>
 	</question>
