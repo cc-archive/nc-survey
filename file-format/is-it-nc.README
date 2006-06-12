@@ -1,0 +1,10 @@
+This is one big <survey> element.  The default action is to continue to the next <question>.  Some <answers>s specify 
+an action="".
+
+For now, we allow only one <question> per <screen>.  That makes the <questions> thing entirely useless.  Maybe 
+that'll change, given e.g. section B here.
+
+For <answer>s that specify an action="", the action attribute represents a <question>'s <title> to jump to.
+
+This makes it a finite state machine, with *very* finite state.  Questions can't add to the state, simply cause 
+transitions.

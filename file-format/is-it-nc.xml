@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <survey>
   <title>
-    Non-Commercial Use survey: Let us know your thoughts on the CC-nc licenses
+    PROPOSED BEST PRACTICE GUIDELINES TO CLARIFY THE MEANING OF
+    “NONCOMMERCIAL” IN THE CREATIVE COMMONS LICENSES
   </title>
   <screens>
     <screen>
@@ -8,19 +10,31 @@
       <questions>
 	<question>
 	  <title>
-	    Check all the following that you believe would qualify as an "allowable NC user" under the noncommercial license condition:
+	    Is the user an “allowable NC user” under the
+	    noncommercial license condition?
+	    <ul type="a">
+	      <li>
+		Individual
+	      </li>
+	      <li>
+		Nonprofit educational institution/library
+	      </li>
+	      <li>
+		Nonprofit organization as defined under US1 or
+		equivalent law, (together with (1) and (2) “allowable
+		NC users”)
+	      </li>
+	      <li>
+		A copy shop, ISP or similar service provider who, in the
+	      course of providing a service at the direction of the
+	      allowable NC user, may exercise a right licensed under
+	      the Creative Commons license.
+	      </li>
+	  </ul>
 	  </title>
-	  <options type="checkbox" numrequired="0">
-	    <option>
-	      Individual
-	    </option>
-	    <option>
-	      Nonprofit educational institution/library
-	    </option>
-	    <option>
-	      Nonprofit organization as defined under US or equivalent law
-	    </option>
-	    <option>A copy shop, ISP, or similar service provider who, in the course of providing a service at the discretion of the allowable NC user, exercises a right licensed under the Creative Commons NC license">A copy shop, ISP, or similar service provider who, in the course of providing a service at the discretion of the allowable NC user, exercises a right licensed under the Creative Commons NC license</option>
+	  <options>
+	    <option>Yes</option>
+	    <option>No</option>
 	  </options>
 	</question>
       </questions>
