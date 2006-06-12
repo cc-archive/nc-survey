@@ -11,3 +11,5 @@ transitions.
 
 NOTE: I have general misgivings about this form of the app.  It's so opaque to end-users without something like the 
 original PDF being up.  Of course, if the original PDF is up, this is not a problem.
+
+NOTE: I'm embedding XHTML elements with no respect for namespaces.  Either forgive me or save me.
