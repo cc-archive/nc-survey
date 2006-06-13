@@ -1,4 +1,6 @@
 /* GLOBALS */
+var xmlsource = "../file-format/is-it-nc.xml";
+
 var authors = new Array;
 var author_index = 0;
 var grantors = new Array;
@@ -81,6 +83,9 @@ function uri2dom (xmlURI) {
     return xmlDoc;
 }
 
+/**
+ * This is what gets called every update to the slick DHTML thing.
+ */
 function tot(node) {
 
   var screen = getScreenID(node);
