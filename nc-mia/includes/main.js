@@ -3,6 +3,84 @@ var authors = new Array;
 var author_index = 0;
 var grantors = new Array;
 
+/* Asheesh likes assertions */
+function assert(fact) {
+     if (!fact) {
+          alert("Assert failure!");
+     }
+}
+
+function getScreenID (node) {
+   var indicator = "";
+   while (node && node.parentNode) {
+       indicator = extract_screen_id(node.parentNode.id);
+       if (indicator != null) {
+           return node.parentNode.id;
+	}
+	node = node.parentNode;
+    }
+    return null;
+}
+
+function turnXMLIntoScreens (xmlDoc) {
+    var ret = new Array();
+    var template = document.getElementById("screen_-1");
+    var xml_screens = xmlDoc.getElementsByTagName("screen");
+
+    for (var i = 0 ; i < xml_screens.length ; i++) {
+	var data = xml_screens[i];
+	var copy = template.cloneNode(true); // deep clone = true
+
+	// I'm going to use lots of temporary variables for clarity's sake.
+
+	var screen_title = data.getElementsByTagName('title')[0].firstChild.nodeValue;
+	// HACK: Only guaranteed correct if each <screen> has exactly one <question>
+	// UNHACK: Replace this with a loop of sorts.
+	var question = data.getElementsByTagName('question')[0];
+	var question_title = question.getElementsByTagName('title')[0];
+
+	// Now populate the template
+	copy.id = "screen_" + i;
+	copy.getElementsByTagName('h2')[0].firstChild.nodeValue = screen_title;
+	question_div = copy.getElementsByTagName('div')[0];
+	question_div.getElementsByTagName('p')[0].firstChild.nodeValue = question_title;
+
+	// FIXME: Handle options
+
+	var options = question.getElementsByTagName('option');
+	
+	for (var j = 0 ; j < options.length ; j++) {
+	    
+	}
+
+	// Now append it to the list of things for returning
+	ret[ret.length - 1] = copy;
+    }
+    return ret;
+}
+
+function uri2dom (xmlURI) {
+    //load xml file; source http://www.w3schools.com/dom/dom_parser.asp
+    var xmlDoc;
+
+    // code for IE
+    if (window.ActiveXObject) {
+	xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+	xmlDoc.async=false;
+	xmlDoc.load(xmlURI);
+    }
+    // code for Mozilla, etc.
+    else if (document.implementation &&
+	     document.implementation.createDocument) {
+	xmlDoc= document.implementation.createDocument("","",null);
+	xmlDoc.load(xmlURI);
+    }
+    else {
+	alert('Your browser cannot handle this script'); // Serious problem...
+    }
+    return xmlDoc;
+}
+
 function tot(node) {
 
   var screen = getScreenID(node);
@@ -646,7 +724,7 @@ function tot(node) {
       break;
 
     default:
-      selectNode(document.getElementById('screen_0') );
+      selectNode(document.getElementById('screen_-1') );
       var container = document.getElementById('author_alive-container');
       while(container.childNodes.length) {
         container.removeChild(container.lastChild);
