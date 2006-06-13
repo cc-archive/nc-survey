@@ -43,6 +43,7 @@ function turnXMLIntoScreens (xmlDoc) {
 
 	// Now populate the template
 	copy.id = "screen_" + i;
+	copy.class = "unselected";
 	copy.getElementsByTagName('h2')[0].firstChild.nodeValue = screen_title;
 	question_div = copy.getElementsByTagName('div')[0];
 	question_div.getElementsByTagName('p')[0].firstChild.nodeValue = question_title;
@@ -56,7 +57,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	}
 
 	// Now append it to the list of things for returning
-	ret[ret.length - 1] = copy;
+	ret.push(copy);
     }
     return ret;
 }
@@ -87,6 +88,23 @@ function uri2dom (xmlURI) {
  * This is what gets called every update to the slick DHTML thing.
  */
 function tot(node) {
+
+    // When do we bother initializing the XML?
+    // On the first call to tot().
+
+    // But how do we know it's the first call?  There's no screen_0!
+    if (document.getElementById('screen_0') == null) {
+	var screens = document.getElementById('screens');
+	var xmlDoc = uri2dom(xmlsource);
+	var add_this = turnXMLIntoScreens(xmlDoc);
+	
+	for (var i = 0 ; i < add_this.length; i++) {
+	    alert(add_this[i]);
+	    screens.appendChild(add_this[i]);
+	}
+    }
+    
+    // That should do it. I'm afraid.
 
   var screen = getScreenID(node);
 
@@ -730,10 +748,6 @@ function tot(node) {
 
     default:
       selectNode(document.getElementById('screen_-1') );
-      var container = document.getElementById('author_alive-container');
-      while(container.childNodes.length) {
-        container.removeChild(container.lastChild);
-      }
       break;
 
   }
