@@ -646,7 +646,7 @@ function tot(node) {
       break;
 
     default:
-      selectNode(document.getElementById('employee') );
+      selectNode(document.getElementById('screen_0') );
       var container = document.getElementById('author_alive-container');
       while(container.childNodes.length) {
         container.removeChild(container.lastChild);
