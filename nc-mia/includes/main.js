@@ -1,4 +1,6 @@
 /* GLOBALS */
+var req; // this is for the XmlHttpRequest
+
 var xmlsource = "../file-format/is-it-nc.xml";
 var debugging = 0;
 
@@ -13,6 +15,59 @@ function assert(fact) {
      if (!fact) {
           alert("Assert failure!");
      }
+}
+
+/** Given a string s, try to find a div that matches in this order:
+ * (a) look for an exactly-matching ID
+ * (b) look for a <screen> with a case-sensitive whitespace-stripping-agnostic string-prefix-matching <title>
+ * (c) look for a <question> whose <title> matches the same way
+ * In the case of ambiguity, pick the earlier choice
+ * returns a div that can be enable()d or disable()d
+ */
+function findJumpPoint(s) {
+    s = s.trim(); // Just in case...?
+
+    // First, ID
+    var hope;
+    hope = document.getElementById(s);
+    if (hope != null) {
+	return hope;
+    }
+
+    // Second try: screen
+    var h2s = document.getElementsByTagName('h2');
+    for (var i = 0 ; i < h2s.length ; i++) {
+	var h2 = h2s[i];
+	var h2_text = h2.firstChild.nodeValue;
+	h2_text = h2_text.strip();
+
+	if (h2_text.begins_with(s)) {
+	    var screen_number = getScreenID(h2);
+	    if (screen_number != null) {
+		return document.getElementById("screen_" + screen_number);
+	    }
+	}
+	
+    }
+
+    // Third try: question
+    var paragraphs = document.getElementsByTagName('p');
+    for (var i = 0 ; i < paragraphs.length ; i++) {
+	var paragraph = paragraphs[i];
+	var paragraph_text = paragraph.firstChild.nodeValue;
+
+	paragraph_text = paragraph_text.strip();
+	if (paragraph_text.begins_with(s)) {
+	    var screen_number = getScreenID(paragraph);
+	    if (screen_number != null) {
+		return document.getElementById('screen_' + screen_number);
+	    }
+	    // FIXME: Could be fused with above code perhaps?
+	}
+    }
+
+    // Else, be very confused.
+    assert("You should not get to this code.");
 }
 
 function debug(statement) {
@@ -119,8 +174,6 @@ function turnXMLIntoScreens (xmlDoc) {
     }
     return ret;
 }
-
-var req;
 
 /* source: http://www.xml.com/pub/a/2005/02/09/xml-http-request.html */
 function loadXMLDoc(uri) 

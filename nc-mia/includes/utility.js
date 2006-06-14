@@ -424,3 +424,25 @@ function getForm(node) {
 
    alert("No Form element found!");
 }
+
+/* This one is mine. -- Asheesh. */
+String.prototype.begins_with = function(s) {
+    var len = s.length;
+    var hope = this.substring(0, len);
+    return hope == s;
+}
+
+/* These three string functions come from:
+ * Source: http://www.codingforums.com/showthread.php?s=7d47022d2b81ab7d46d3fe9e8473eef4&p=178098#post178098 */
+
+String.prototype.trim=function(){
+    return this.replace(/^\s*|\s*$/g,'');
+}
+
+String.prototype.ltrim=function(){
+    return this.replace(/^\s*/g,'');
+}
+
+String.prototype.rtrim=function(){
+    return this.replace(/\s*$/g,'');
+}
