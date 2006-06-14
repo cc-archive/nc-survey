@@ -1,1 +1,4 @@
 This is where I brainstorm the XML representations of surveys and more complicated things.
+
+I'm not too happy about the transition encoding.  It's currently
+fairly extremely inefficient.
