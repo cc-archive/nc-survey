@@ -10,6 +10,8 @@ var authors = new Array;
 var author_index = 0;
 var grantors = new Array;
 
+var jump_points = new Array;
+
 /* Asheesh likes assertions */
 function assert(fact) {
      if (!fact) {
@@ -242,6 +244,9 @@ function tot(node) {
 	
 	// Set a backtrail...
 	back_list().push(screen);
+
+	// If the option specified an "onselect", then we should honor that
+	// 
 	
 	var next = document.getElementById('screen_' + (screen_num + 1));
 	// Now, is there a next screen?  If not, look for the "submit" div.
@@ -251,52 +256,6 @@ function tot(node) {
 	deselectNode(document.getElementById(screen));
     }
 }
-
-function author_alive_next(node) {
-
-  for(var i=author_index+1; i<authors.length; i++) {
-    if(authors[i].grantor) {
-      author_index = i;
-      document.getElementById('author_alive-name').innerHTML = authors[author_index].name;
-      document.getElementById('author_alive-error').style.display = 'none';
-      var inputs = document.getElementById('author_alive').getElementsByTagName('input');
-      inputs[0].checked = false;
-      inputs[1].checked = false;
-      return true;
-    }
-  }
-  /* SUBMIT HERE OR NO? */
-  return false;
-}
-
-function author_alive_prev(node) {
-
-  for(var i=author_index-1; i >= 0; i--) {
-    if(authors[i].grantor) {
-      author_index = i;
-      document.getElementById('author_alive-name').innerHTML = authors[author_index].name;
-      document.getElementById('author_alive-error').style.display = 'none';
-      var inputs = document.getElementById('author_alive').getElementsByTagName('input');
-      inputs[0].checked = false;
-      inputs[1].checked = false;
-      return true;
-    }
-  }
-  back(node);
-}
-
-function strip_ids (node) {
-
-  // if (node.hasAttribute('id')) { node.removeAttribute('id'); }
-  node.id = '';
-
-  for(var i=0;i<node.childNodes.length;i++) {
-    strip_ids(node.childNodes.item(i));
-  }
-
-  return node;
-}
-
 
 function getScreenID (node) {
     var indicator = "";
