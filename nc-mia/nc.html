@@ -51,7 +51,7 @@
         Non-Commercial Use: Creative Commons' tool to
         help explain what qualifies</h2>
 
-        <form id="term_form" name="term_form" action="javascript:main_submit(this);" method="post" enctype="multipart/form-data">
+        <form id="term_form" name="term_form" action="http://www.quirksmode.org/cgi-bin/show_params.cgi" method="post" enctype="multipart/form-data">
           <input type="hidden" name="work_for_hire" value="unset" />
           <input type="hidden" name="back_list" value="" />
           <input type="hidden" name="cdate" value="" />
@@ -124,6 +124,53 @@
 
               <br clear="all"/>
             </div><!-- screen_-1 -->
+
+            <div id="screen_template" class="unselected">
+              <div class="question">
+		<h2 class="term-optional-title">Determine if an
+		intended use qualifies as non-commercial</h2>
+                <p class="question-text">
+		  Wait a moment for the "Next" button.
+                </p>
+
+                <div class="question-options">
+                  <div class="option" style="display: none;">
+                    <div class="option-input">
+                      <input onclick="hideDiv('employee-error');" type="radio" name="employee" value="Yes" />
+                    </div>
+
+                    <div class="option-text">Yes</div>
+                  </div>
+		</div>
+
+                <div class="question-error">
+                  <span class="invisible">Required Field</span>
+                </div>
+
+              </div>
+              <div class="continue">
+                <button type="button" class="button-continue" onclick="tot(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="all"/>
+            </div><!-- screen_template -->
+
+	    <div id="submit" class="unselected">
+	      <div  class="question">
+		<h2 class="term-optional-title">Thanks for taking the time!</h2>
+		<p class="question-text">
+		  Now click the button at the bottom to submit the survey!
+		</p>
+		
+		<div  class="continue">
+		  <button class="button-continue" lang="en" xml:lang="en" dir="ltr" name="submit" value="submit" type="submit" tabindex="9" accesskey="B">Submit</button>
+		  <button type="button" class="button-continue" onclick="back(this);">Back</button>
+		</div>
+		
+		<br clear="all"/>
+	      </div>
+	    </div>
 
            </div><!-- screens -->
 
