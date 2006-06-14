@@ -85,6 +85,8 @@ function turnXMLIntoScreens (xmlDoc) {
 	options_div.className = "question-options";
 
 	for (var j = 0 ; j < options.length ; j++) {
+	    var option_text = options[j].firstChild.nodeValue;
+
 	    var this_option = document.createElement("div");
 	    this_option.className = "option";
 	    
@@ -94,15 +96,15 @@ function turnXMLIntoScreens (xmlDoc) {
 	    var input = document.createElement("input");
 	    input.type = "radio"; // FIXME: slurp from the option in question
 	    input.onclick = "hideDiv('error');";
-	    input.name = "FIXME";
-	    input.value = options[j].firstChild.nodeValue;
+	    input.name = question_title;
+	    input.value = option_text;
 
 	    form_div.appendChild(input);
 	    this_option.appendChild(form_div);
 
 	    var text_div = document.createElement('div');
 	    text_div.className = 'option-text';
-	    text_div.appendChild(document.createTextNode(options[j].firstChild.nodeValue));
+	    text_div.appendChild(document.createTextNode(option_text));
 
 	    this_option.appendChild(text_div);
 	    options_div.appendChild(this_option);
