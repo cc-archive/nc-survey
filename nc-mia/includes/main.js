@@ -41,6 +41,16 @@ function getScreenID (node) {
     return null;
 }
 
+function findOptionTemplate(template) {
+    assert(template.id.substr(0,7) == "screen_");
+    question = template.getElementsByTagName('div')[0];
+    assert(question.className == 'question');
+    options_outer_div = question.getElementsByTagName('div')[0];
+    assert(options_outer_div.className == 'question-options');
+
+    return options_outer_div;
+}    
+
 function turnXMLIntoScreens (xmlDoc) {
     debug("Entering turn...");
     var ret = new Array();
@@ -66,13 +76,41 @@ function turnXMLIntoScreens (xmlDoc) {
 	question_div = copy.getElementsByTagName('div')[0];
 	question_div.getElementsByTagName('p')[0].firstChild.nodeValue = question_title;
 
-	// FIXME: Handle options
+	// Handle options
+	// FIXME: Hard-coded options stuff ignores options template
 
 	var options = question.getElementsByTagName('option');
-	
+
+	var options_div = document.createElement("div");
+	options_div.className = "question-options";
+
 	for (var j = 0 ; j < options.length ; j++) {
+	    var this_option = document.createElement("div");
+	    this_option.className = "option";
 	    
+	    var form_div = document.createElement("div");
+	    form_div.className = "option-input";
+
+	    var input = document.createElement("input");
+	    input.type = "radio"; // FIXME: slurp from the option in question
+	    input.onclick = "hideDiv('error');";
+	    input.name = "FIXME";
+	    input.value = options[j].firstChild.nodeValue;
+
+	    form_div.appendChild(input);
+	    this_option.appendChild(form_div);
+
+	    var text_div = document.createElement('div');
+	    text_div.className = 'option-text';
+	    text_div.appendChild(document.createTextNode(options[j].firstChild.nodeValue));
+
+	    this_option.appendChild(text_div);
+	    options_div.appendChild(this_option);
 	}
+
+	// Now, let's find the original options_div in copy and replace it with this sucka
+	replace_me = findOptionTemplate(copy);
+	question_div.replaceChild(options_div, replace_me);
 
 	// Now append it to the list of things for returning
 	ret.push(copy);
