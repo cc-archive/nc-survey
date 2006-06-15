@@ -12,6 +12,31 @@ var grantors = new Array;
 
 var jump_points = new Array;
 
+/* This function is poorly-named.  I'm sorry.
+ *
+ * It takes a screen number as input, and returns another HTML element
+ * as output.  Unless it returns null because it found nothing.
+ */
+function determine_jump_or_not(screen_num) {
+    
+    // Grab the current screen, then look at its inputs, and see if any are selected
+    // FIXME: I wonder if this works with non-radio buttons
+    var this_screen = document.getElementById("screen_" + screen_num);
+    
+    // For each input, for each mention in jump_points, see if it matches
+    var inputs = this_screen.getElementByTagName('input');
+    
+    for (var i = 0 ; i < inputs.length; i++) {
+	var input = inputs[i];
+	var clean_name = input.name.strip();
+	for (place in jump_points) {
+	    if (clean_name == place.strip()) {
+		return jump_points[place];
+	    }
+	}
+    }
+}
+
 /* Asheesh likes assertions */
 function assert(fact) {
      if (!fact) {
@@ -245,10 +270,16 @@ function tot(node) {
 	// Set a backtrail...
 	back_list().push(screen);
 
+	// Desetination:
+	var next;
+
 	// If the option specified an "onselect", then we should honor that
-	// 
-	
-	var next = document.getElementById('screen_' + (screen_num + 1));
+	var hope = determine_jump_or_not(screen_num);
+	if (hope != null) {
+	    next = hope;
+	}
+
+	next = document.getElementById('screen_' + (screen_num + 1));
 	// Now, is there a next screen?  If not, look for the "submit" div.
 	if (next == null) { next = document.getElementById('submit'); }
 	// ... and then jump ahead:
