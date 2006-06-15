@@ -22,7 +22,7 @@
 	  </title>
 	  <options>
 	    <option>Yes</option>
-	    <option onchoose="fail">No</option>
+	    <option onselect="fail">No</option>
 	  </options>
 	</question>
       </questions>
@@ -37,7 +37,7 @@
 	    for third party products or services?
 	  </title>
 	  <options>
-	    <option onchoose="fail">Yes</option>
+	    <option onselect="fail">Yes</option>
 	    <option>No</option>
 	  </options>
 	</question>
@@ -55,7 +55,7 @@
 	    advertising)?
 	  </title>
 	  <options>
-	    <option onchoose="fail">Yes</option>
+	    <option onselect="fail">Yes</option>
 	    <option>No</option>
 	  </options>
 	</question>
@@ -73,7 +73,7 @@
 	    substantial amount, both qualitatively and quantitatively?
 	  </title>
 	  <options>
-	    <option onchoose="fail">Yes</option>
+	    <option onselect="fail">Yes</option>
 	    <option>No</option>
 	  </options>
 	</question>
@@ -94,7 +94,7 @@
 	    <option>
 	      Yes
 	    </option>
-	    <option onchoose="Section D">
+	    <option onselect="Section D">
 	      No
 	    </option>
 	  </options>
@@ -116,7 +116,7 @@
 	    educational institutions)?
 	  </title>
 	  <options>
-	    <option onchoose="success">
+	    <option onselect="success"> <!-- FIXME: really? -->
 	      Yes
 	    </option>
 	    <option>
@@ -140,28 +140,29 @@
 	      NC-licensed work in at least four ways:
 	  </title>
 	  <options>
-	    <option onchoose="fail">
+	    <option onselect="fail">
 	      As a condition of using the NC-licensed work
 	    </option>
-	    <option onchoose="fail">
+	    <option onselect="fail">
 	      As a condition of using another work that includes an
 	      NC-licensed work, where the NC-licensed work is either
 	      the primary draw or a substantial amount (whether
 	      qualitatively or quantitatively) of the primary draw
 	    </option>
-	    <option> <!-- check with Mia --> As a condition of using
-	    another work that includes a verbatim NC-licensed work,
-	    where the NC-licensed work is not the primary draw or is
-	    an insubstantial amount, both qualitatively and
-	    quantitatively, as long as there is no charge for
-	    accessing the NC-licensed work
+	    <!-- check with Mia --> 	    <option>
+	      As a condition of using
+	      another work that includes a verbatim NC-licensed work,
+	      where the NC-licensed work is not the primary draw or is
+	      an insubstantial amount, both qualitatively and
+	      quantitatively, as long as there is no charge for
+	      accessing the NC-licensed work
 	    </option>
-	    <option> <!-- check with Mia -->
-	      As an optional contribution (e.g., a tip jar, donations,
-	      membership drive) for an allowed NC user (diverges from
-	      PDF!) that uses the verbatim NC-licensed work or another
-	      work that includes a verbatim NC-licensed work
-	    </option>
+	     <!-- check with Mia --> <option>
+	       As an optional contribution (e.g., a tip jar, donations,
+	       membership drive) for an allowed NC user (diverges from
+	       PDF!) that uses the verbatim NC-licensed work or another
+	       work that includes a verbatim NC-licensed work
+	     </option>
 	  </options>
 	</question>
       </questions>
