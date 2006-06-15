@@ -10,7 +10,9 @@ var authors = new Array;
 var author_index = 0;
 var grantors = new Array;
 
-var jump_points = new Array;
+var jump_points = new Array();
+
+
 
 /* This function is poorly-named.  I'm sorry.
  *
@@ -22,17 +24,21 @@ function determine_jump_or_not(screen_num) {
     // Grab the current screen, then look at its inputs, and see if any are selected
     // FIXME: I wonder if this works with non-radio buttons
     var this_screen = document.getElementById("screen_" + screen_num);
-    
+
+    var question_title = this_screen.getElementsByTagName('p')[0].firstChild.nodeValue;
+
+    var this_answer_map = jump_points[question_title.strip()]; // I hope!  Either strip or don't!
+
     // For each *checked* input, for each mention in jump_points, see if it matches
     var inputs = this_screen.getElementsByTagName('input');
     
     for (var i = 0 ; i < inputs.length; i++) {
 	var input = inputs[i];
-	var clean_name = input.name.strip();
+	var clean_name = input.value.strip();
 	if (input.checked) {
-		for (place in jump_points) {
-		    if (clean_name == place.strip()) {
-			return jump_points[place];
+		for (answer in this_answer_map) {
+		    if (clean_name == answer.strip()) {
+			return this_answer_map[answer];
 		    }
 		}
 	}
@@ -54,6 +60,7 @@ function assert(fact) {
  * returns a div that can be enable()d or disable()d
  */
 function findJumpPoint(s) {
+    debug("Trying to find jump point for " + s);
     s = s.trim(); // Just in case...?
 
     // First, ID
@@ -136,7 +143,6 @@ function findOptionTemplate(template) {
 }    
 
 function turnXMLIntoScreens (xmlDoc) {
-    debug("Entering turn...");
     var ret = new Array();
     var template = document.getElementById("screen_template");
     var xml_screens = xmlDoc.getElementsByTagName("screen");
@@ -225,18 +231,6 @@ function loadXMLDoc(uri)
     }
 }
 
-function populateJumpPoints(xmlDoc) {
-    debug("pop");
-    var options = xmlDoc.getElementsByTagName('option');
-    for (var i = 0 ; i < options.length ; i++) {
-	var option = options[i];
-	if (option.onselect) {
-	    jump_points[option.firstChild.nodeValue] = option.onselect;
-	}
-    }
-    // Egad, that might be it.
-}
-
 function processReqChange() 
 {
     // only if req shows "complete"
@@ -249,11 +243,7 @@ function processReqChange()
 	    var add_this = turnXMLIntoScreens(xmlDoc);
 	    
 	    for (var i = 0 ; i < add_this.length; i++) {
-		if (i == 0) {
-		    debug("Doing appendChild for the first time.");
-		}
 		screens.appendChild(add_this[i]);
-		
 	    }
 	    // And...
 	    populateJumpPoints(req.responseXML.documentElement);
@@ -317,3 +307,33 @@ function getScreenID (node) {
     }
     return null;
 }
+
+function populateJumpPoints(xmlDoc) {
+    // jump_points is an Array() that maps strings (question titles) onto
+    // an Array() of ["Yes" => "...", "No" => "..."
+
+    // To generate it, we loop through the questions then.
+    var questions =  xmlDoc.getElementsByTagName('question');
+
+    for (var i = 0 ; i < questions.length ; i++) {
+	var question = questions[i];
+	var question_text = question.getElementsByTagName('title')[0].firstChild.nodeValue;
+
+	var answer_map = Array();
+	var options = question.getElementsByTagName("option");
+	for (var j = 0 ; j < options.length; j++) {
+	    var option = options[j];
+	    var option_text = options[j].firstChild.nodeValue;
+
+	    if (option.attributes.getNamedItem('onselect')) {
+		var attrib_value = option.attributes.getNamedItem('onselect').value;
+		answer_map[option_text] = attrib_value;
+	    }
+	}
+	
+	// FIXME: only add answer_map if it's not empty
+	jump_points[question_text.strip()] = answer_map;
+    } // end for each question
+}
+
+
