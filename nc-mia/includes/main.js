@@ -337,5 +337,3 @@ function populateJumpPoints(xmlDoc) {
 	jump_points[question_text.strip()] = answer_map;
     } // end for each question
 }
-
-
