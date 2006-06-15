@@ -52,7 +52,7 @@
         help explain what qualifies</h2>
 
         <form id="term_form" name="term_form" action="http://www.quirksmode.org/cgi-bin/show_params.cgi" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="work_for_hire" value="unset" />
+<!--          <input type="hidden" name="work_for_hire" value="unset" />
           <input type="hidden" name="back_list" value="" />
           <input type="hidden" name="cdate" value="" />
           <input type="hidden" name="gdate" value="" />
@@ -61,10 +61,10 @@
           <input type="hidden" name="twclose" value="" />
           <input type="hidden" name="nwopen" value="" />
           <input type="hidden" name="nwclose" value="" />
-          <input type="hidden" id="num_authors" name="num_authors" value="" />
+          <input type="hidden" id="num_authors" name="num_authors" value="" /> -->
 
           <div id="history">
-            <div id="h-wfh-emp" class="unselected"><h2>Employee Created Work: <span id="h-wfh-emp-ans" class="answer">YES/NO</span></h2></div>
+<!--            <div id="h-wfh-emp" class="unselected"><h2>Employee Created Work: <span id="h-wfh-emp-ans" class="answer">YES/NO</span></h2></div>
             <div id="h-wfh-com" class="unselected"><h2>Commissioned Work: <span id="h-wfh-com-ans" class="answer">YES/NO</span></h2></div>
             <div id="h-wfh-pre" class="unselected"><h2>Work Created Before 1978: <span id="h-wfh-pre-ans" class="answer">YES/NO</span></h2></div>
             <div id="h-wfh-wri" class="unselected"><h2>Signed Written Agreement: <span id="h-wfh-wri-ans" class="answer">YES/NO</span></h2></div>
@@ -89,7 +89,7 @@
               <h2>Spouse Alive: <span id="h-auth-info-spouse-alive">YES/NO</span></h2>
               <h2>Number of Children: <span id="h-auth-info-num-children">9999</span></h2>
             </div>
-
+	    -->
           </div>
 
           <div id="screens">
@@ -158,10 +158,16 @@
 
             <div id="fail" class="unselected">
               <div class="question">
-		<h2 class="term-optional-title">You suck
-		intended use qualifies as non-commercial</h2>
+		<h2 class="term-optional-title">Your intended use does not qualify
+		</h2>
                 <p class="question-text">
-		  Wait a moment for the "Next" button.
+		  Based on
+		  the <a
+		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">guidelines</a>,
+		  we believe that your intended use does not qualify
+		  as non-commercial.  You may use the "back" button to
+		  return to the questions, or you may go "next" to
+		  submit your answers to us with comments.
                 </p>
 
                 <div class="question-options">
@@ -180,8 +186,8 @@
 
               </div>
               <div class="continue">
-                <button type="button" class="button-continue" onclick="tot(this);">Next</button>
-                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+                <button type="button" class="button-continue" onclick="selectNode(document.getElementById('submit'));">Next</button>
+                <button type="button" class="button-continue" onclick="deselectNode(document.getElementById('submit')); back(this);">Back</button>
               </div>
 
               <br clear="all"/>
@@ -189,10 +195,16 @@
 
             <div id="succeed" class="unselected">
               <div class="question">
-		<h2 class="term-optional-title">Woo hoo! an
-		intended use qualifies as non-commercial</h2>
+		<h2 class="term-optional-title">Your intended use qualifies</h2>
                 <p class="question-text">
-		  Wait a moment for the "Next" button.
+		  Based on
+		  the <a
+		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">guidelines</a>,
+		  we believe that your intended use does qualify as
+		  non-commercial.  You may use the "back" button to
+		  return to the questions, or you may go "next" to
+		  submit your answers to us with comments.
+
                 </p>
 
                 <div class="question-options">
@@ -211,8 +223,8 @@
 
               </div>
               <div class="continue">
-                <button type="button" class="button-continue" onclick="tot(this);">Next</button>
-                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+                <button type="button" class="button-continue" onclick="selectNode(document.getElementById('submit'));">Next</button>
+                <button type="button" class="button-continue" onclick="deselectNode(document.getElementById('submit')); back(this);">Back</button>
               </div>
 
               <br clear="all"/>
@@ -222,12 +234,19 @@
 	      <div  class="question">
 		<h2 class="term-optional-title">Thanks for taking the time!</h2>
 		<p class="question-text">
-		  Now click the button at the bottom to submit the survey!
+		  If you have any comments, please leave them in the form field below.
 		</p>
+	
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+		      <textarea name="survey-final comments"></textarea>
+                    </div>
+                  </div>
+		</div>
 		
 		<div  class="continue">
 		  <button class="button-continue" lang="en" xml:lang="en" dir="ltr" name="submit" value="submit" type="submit" tabindex="9" accesskey="B">Submit</button>
-		  <button type="button" class="button-continue" onclick="back(this);">Back</button>
 		</div>
 		
 		<br clear="all"/>
