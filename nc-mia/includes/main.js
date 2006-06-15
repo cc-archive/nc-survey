@@ -283,11 +283,13 @@ function tot(node) {
 
 	// If the option specified an "onselect", then we should honor that
 	var hope = determine_jump_or_not(screen_num);
+	debug("first hope is " + hope);
 	if (hope != null) {
-	    next = hope;
+	    next = findJumpPoint(hope);
 	}
-
-	next = document.getElementById('screen_' + (screen_num + 1));
+	else {
+	    next = document.getElementById('screen_' + (screen_num + 1));
+	}
 	// Now, is there a next screen?  If not, look for the "submit" div.
 	if (next == null) { next = document.getElementById('submit'); }
 	// ... and then jump ahead:
