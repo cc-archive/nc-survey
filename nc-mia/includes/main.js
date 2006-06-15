@@ -80,7 +80,7 @@ function findJumpPoint(s) {
 	if (h2_text.begins_with(s)) {
 	    var screen_number = getScreenID(h2);
 	    if (screen_number != null) {
-		return document.getElementById("screen_" + screen_number);
+		return document.getElementById(screen_number);
 	    }
 	}
 	
@@ -96,7 +96,7 @@ function findJumpPoint(s) {
 	if (paragraph_text.begins_with(s)) {
 	    var screen_number = getScreenID(paragraph);
 	    if (screen_number != null) {
-		return document.getElementById('screen_' + screen_number);
+		return document.getElementById(screen_number);
 	    }
 	    // FIXME: Could be fused with above code perhaps?
 	}
@@ -328,7 +328,7 @@ function populateJumpPoints(xmlDoc) {
 	    var option_text = options[j].firstChild.nodeValue;
 
 	    if (option.attributes.getNamedItem('onselect')) {
-		var attrib_value = option.attributes.getNamedItem('onselect').value;
+		var attrib_value = option.attributes.getNamedItem('onselect').value.strip();
 		answer_map[option_text] = attrib_value;
 	    }
 	}
