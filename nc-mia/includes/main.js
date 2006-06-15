@@ -99,6 +99,8 @@ function findJumpPoint(s) {
 		return document.getElementById(screen_number);
 	    }
 	    // FIXME: Could be fused with above code perhaps?
+	    // Yeah, by just making a master list that is h2s + paragraphs
+	    // The internal code is element-agnostic.
 	}
     }
 
@@ -113,19 +115,19 @@ function debug(statement) {
 }
 
 function extract_screen_id(s) {
-   if (s.substr(0, 7) == "screen_") {
-       return (s.substr(7) * 1); // times one to typecast
+    if (s.substr(0, 7) == "screen_") {
+	return (s.substr(7) * 1); // times one to typecast
     }
     return null;
 }
 
 
 function getScreenID (node) {
-   var indicator = "";
-   while (node && node.parentNode) {
-       indicator = extract_screen_id(node.parentNode.id);
-       if (indicator != null) {
-           return node.parentNode.id;
+    var indicator = "";
+    while (node && node.parentNode) {
+	indicator = extract_screen_id(node.parentNode.id);
+	if (indicator != null) {
+	    return node.parentNode.id;
 	}
 	node = node.parentNode;
     }
@@ -138,7 +140,7 @@ function findOptionTemplate(template) {
     assert(question.className == 'question');
     options_outer_div = question.getElementsByTagName('div')[0];
     assert(options_outer_div.className == 'question-options');
-
+    
     return options_outer_div;
 }    
 
@@ -167,7 +169,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	question_div.getElementsByTagName('p')[0].firstChild.nodeValue = question_title;
 
 	// Handle options
-	// FIXME: Hard-coded options stuff ignores options template
+	// FIXME: Hard-coded options stuff ignores options template.  Oh, well.
 
 	var options = question.getElementsByTagName('option');
 
