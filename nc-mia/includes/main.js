@@ -2,7 +2,7 @@
 var req; // this is for the XmlHttpRequest
 
 var xmlsource = "../file-format/is-it-nc.xml";
-var debugging = 1;
+var debugging = 0;
 
 var template_ran = 0;
 
@@ -24,11 +24,11 @@ function determine_jump_or_not(screen_num) {
     // Grab the current screen, then look at its inputs, and see if any are selected
     // FIXME: I wonder if this works with non-radio buttons
     var this_screen = document.getElementById("screen_" + screen_num);
-
+    
     var question_title = this_screen.getElementsByTagName('p')[0].firstChild.nodeValue;
-
+    
     var this_answer_map = jump_points[question_title.strip()]; // I hope!  Either strip or don't!
-
+    
     // For each *checked* input, for each mention in jump_points, see if it matches
     var inputs = this_screen.getElementsByTagName('input');
     
@@ -36,20 +36,20 @@ function determine_jump_or_not(screen_num) {
 	var input = inputs[i];
 	var clean_name = input.value.strip();
 	if (input.checked) {
-		for (answer in this_answer_map) {
-		    if (clean_name == answer.strip()) {
+	    for (answer in this_answer_map) {
+		if (clean_name == answer.strip()) {
 			return this_answer_map[answer];
-		    }
 		}
+	    }
 	}
     }
 }
 
 /* Asheesh likes assertions */
 function assert(fact) {
-     if (!fact) {
-          alert("Assert failure!");
-     }
+    if (!fact) {
+	alert("Assert failure!");
+    }
 }
 
 /** Given a string s, try to find a div that matches in this order:
@@ -62,21 +62,21 @@ function assert(fact) {
 function findJumpPoint(s) {
     debug("Trying to find jump point for " + s);
     s = s.trim(); // Just in case...?
-
+    
     // First, ID
     var hope;
     hope = document.getElementById(s);
     if (hope != null) {
 	return hope;
     }
-
+    
     // Second try: screen
     var h2s = document.getElementsByTagName('h2');
     for (var i = 0 ; i < h2s.length ; i++) {
 	var h2 = h2s[i];
 	var h2_text = h2.firstChild.nodeValue;
 	h2_text = h2_text.strip();
-
+	
 	if (h2_text.begins_with(s)) {
 	    var screen_number = getScreenID(h2);
 	    if (screen_number != null) {
@@ -85,13 +85,13 @@ function findJumpPoint(s) {
 	}
 	
     }
-
+    
     // Third try: question
     var paragraphs = document.getElementsByTagName('p');
     for (var i = 0 ; i < paragraphs.length ; i++) {
 	var paragraph = paragraphs[i];
 	var paragraph_text = paragraph.firstChild.nodeValue;
-
+	
 	paragraph_text = paragraph_text.strip();
 	if (paragraph_text.begins_with(s)) {
 	    var screen_number = getScreenID(paragraph);
@@ -103,7 +103,7 @@ function findJumpPoint(s) {
 	    // The internal code is element-agnostic.
 	}
     }
-
+    
     // Else, be very confused.
     assert("You should not get to this code.");
 }
@@ -148,64 +148,64 @@ function turnXMLIntoScreens (xmlDoc) {
     var ret = new Array();
     var template = document.getElementById("screen_template");
     var xml_screens = xmlDoc.getElementsByTagName("screen");
-
+    
     for (var i = 0 ; i < xml_screens.length ; i++) {
 	var data = xml_screens[i];
 	var copy = template.cloneNode(true); // deep clone = true
-
+	
 	// I'm going to use lots of temporary variables for clarity's sake.
-
+	
 	var screen_title = data.getElementsByTagName('title')[0].firstChild.nodeValue;
 	// HACK: Only guaranteed correct if each <screen> has exactly one <question>
 	// UNHACK: Replace this with a loop of sorts.
 	var question = data.getElementsByTagName('question')[0];
 	var question_title = question.getElementsByTagName('title')[0].firstChild.nodeValue;
-
+	
 	// Now populate the template
 	copy.id = "screen_" + i;
 	copy.className = "unselected";
 	copy.getElementsByTagName('h2')[0].firstChild.nodeValue = screen_title;
 	question_div = copy.getElementsByTagName('div')[0];
 	question_div.getElementsByTagName('p')[0].firstChild.nodeValue = question_title;
-
+	
 	// Handle options
 	// FIXME: Hard-coded options stuff ignores options template.  Oh, well.
-
+	
 	var options = question.getElementsByTagName('option');
-
+	
 	var options_div = document.createElement("div");
 	options_div.className = "question-options";
 
 	for (var j = 0 ; j < options.length ; j++) {
 	    var option_text = options[j].firstChild.nodeValue;
-
+	    
 	    var this_option = document.createElement("div");
 	    this_option.className = "option";
 	    
 	    var form_div = document.createElement("div");
 	    form_div.className = "option-input";
-
+	    
 	    var input = document.createElement("input");
 	    input.type = "radio"; // FIXME: slurp from the option in question
 	    input.onclick = "hideDiv('error');";
 	    input.name = question_title;
 	    input.value = option_text;
-
+	    
 	    form_div.appendChild(input);
 	    this_option.appendChild(form_div);
 
 	    var text_div = document.createElement('div');
 	    text_div.className = 'option-text';
 	    text_div.appendChild(document.createTextNode(option_text));
-
+	    
 	    this_option.appendChild(text_div);
 	    options_div.appendChild(this_option);
 	}
-
+	
 	// Now, let's find the original options_div in copy and replace it with this sucka
 	replace_me = findOptionTemplate(copy);
 	question_div.replaceChild(options_div, replace_me);
-
+	
 	// Now append it to the list of things for returning
 	ret.push(copy);
     }
@@ -260,10 +260,10 @@ function processReqChange()
  * This is what gets called every update to the slick DHTML thing.
  */
 function tot(node) {
-
+    
     // When do we bother initializing the XML?
     // On the first call to tot().
-   
+    
     // async means this should be enough
     if (template_ran == 0) {
 	selectNode(document.getElementById('screen_-1') );
@@ -272,17 +272,43 @@ function tot(node) {
     }
     
     var screen = getScreenID(node);
-    
+
     // By default, the transition is serial, one to the next
     if (typeof(screen) == 'string') {
+
+	// But we simply can't proceed if the user selected nothing.
+	// if the screen ID is a number >= 0, then we check that at least one <input> is checked
+	var can_continue = true;
+	var screen_number = extract_screen_id(screen);
+
+	if (screen_number > -1) {
+	    can_continue = false;
+	    var inputs = document.getElementById(screen).getElementsByTagName('input');
+	    for (var k = 0 ; k < inputs.length; k++) {
+		if ( ! can_continue) {
+		    var input = inputs[k];
+		    if (input.checked) {
+			can_continue = true;
+		    }
+		}
+	    }
+	    
+	}
+       
+	if (! can_continue) {
+	    alert("Can't continue!");
+	    return;
+	}
+    
+
 	var screen_num = extract_screen_id(screen);
 	
 	// Set a backtrail...
 	back_list().push(screen);
-
+	
 	// Desetination:
 	var next;
-
+	
 	// If the option specified an "onselect", then we should honor that
 	var hope = determine_jump_or_not(screen_num);
 	debug("first hope is " + hope);
@@ -315,20 +341,20 @@ function getScreenID (node) {
 function populateJumpPoints(xmlDoc) {
     // jump_points is an Array() that maps strings (question titles) onto
     // an Array() of ["Yes" => "...", "No" => "..."
-
+    
     // To generate it, we loop through the questions then.
     var questions =  xmlDoc.getElementsByTagName('question');
-
+    
     for (var i = 0 ; i < questions.length ; i++) {
 	var question = questions[i];
 	var question_text = question.getElementsByTagName('title')[0].firstChild.nodeValue;
-
+	
 	var answer_map = Array();
 	var options = question.getElementsByTagName("option");
 	for (var j = 0 ; j < options.length; j++) {
 	    var option = options[j];
 	    var option_text = options[j].firstChild.nodeValue;
-
+	    
 	    if (option.attributes.getNamedItem('onselect')) {
 		var attrib_value = option.attributes.getNamedItem('onselect').value.strip();
 		answer_map[option_text] = attrib_value;
