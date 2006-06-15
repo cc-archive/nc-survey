@@ -2,7 +2,7 @@
 var req; // this is for the XmlHttpRequest
 
 var xmlsource = "../file-format/is-it-nc.xml";
-var debugging = 0;
+var debugging = 1;
 
 var template_ran = 0;
 
@@ -23,16 +23,18 @@ function determine_jump_or_not(screen_num) {
     // FIXME: I wonder if this works with non-radio buttons
     var this_screen = document.getElementById("screen_" + screen_num);
     
-    // For each input, for each mention in jump_points, see if it matches
-    var inputs = this_screen.getElementByTagName('input');
+    // For each *checked* input, for each mention in jump_points, see if it matches
+    var inputs = this_screen.getElementsByTagName('input');
     
     for (var i = 0 ; i < inputs.length; i++) {
 	var input = inputs[i];
 	var clean_name = input.name.strip();
-	for (place in jump_points) {
-	    if (clean_name == place.strip()) {
-		return jump_points[place];
-	    }
+	if (input.checked) {
+		for (place in jump_points) {
+		    if (clean_name == place.strip()) {
+			return jump_points[place];
+		    }
+		}
 	}
     }
 }
@@ -223,6 +225,18 @@ function loadXMLDoc(uri)
     }
 }
 
+function populateJumpPoints(xmlDoc) {
+    debug("pop");
+    var options = xmlDoc.getElementsByTagName('option');
+    for (var i = 0 ; i < options.length ; i++) {
+	var option = options[i];
+	if (option.onselect) {
+	    jump_points[option.firstChild.nodeValue] = option.onselect;
+	}
+    }
+    // Egad, that might be it.
+}
+
 function processReqChange() 
 {
     // only if req shows "complete"
@@ -239,8 +253,12 @@ function processReqChange()
 		    debug("Doing appendChild for the first time.");
 		}
 		screens.appendChild(add_this[i]);
+		
 	    }
-        } else {
+	    // And...
+	    populateJumpPoints(req.responseXML.documentElement);
+	}
+	else {
             alert("There was a problem retrieving the XML data:\n" + req.statusText);
         }
     }
