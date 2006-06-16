@@ -175,7 +175,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	options_div.className = "question-options";
 
 	for (var j = 0 ; j < options.length ; j++) {
-	    var option_text = options[j].firstChild.nodeValue;
+	    var option_text = options[j].firstChild.nodeValue.trim();
 	    
 	    var this_option = document.createElement("div");
 	    this_option.className = "option";
