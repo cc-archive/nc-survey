@@ -21,13 +21,14 @@
                  margin: 20px;
                  }
 .question-options {
-                    /*float:left;*/
+                    /* float:left;*/
                     margin-left: 35%;
                     margin-bottom: 0px;
+                    padding: 10px;
                     }
 .answer { font-style: italic; }
 .option {
-          float:left;
+/*          float:left;*/
           margin: 0 30px 0 0;
           font-size: 1.25em;
           width: 400px; 
