@@ -10,6 +10,24 @@ var grantors = new Array;
 
 var jump_points = new Array();
 
+/**
+ * turn the <title> in the <question> into a big XHTML tree
+ * or at least a <p> tag
+ */
+function xmlquestiontitle2xhtml(title) {
+    var text = allText(title);
+   
+    // if there's < and > in this text, let's guess it's supposed to
+    // be an HTML fragment
+
+    if ( (text.search('<') > -1) &&
+	 (text.search('>') > -1) ) {
+	return text;
+    }
+
+    // otherwise, wrap it in a <p>
+    return "<p>" + text + "</p>";
+}
 
 
 /* This function is poorly-named.  I'm sorry.
