@@ -269,7 +269,6 @@ function initApp() {
  * This is what gets called every update to the slick DHTML thing.
  */
 function next(node) {
-    
     var screen = getScreenID(node);
 
     // By default, the transition is serial, one to the next
