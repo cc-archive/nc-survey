@@ -73,7 +73,7 @@ function findJumpPoint(s) {
     for (var i = 0 ; i < h2s.length ; i++) {
 	var h2 = h2s[i];
 	var h2_text = h2.firstChild.nodeValue;
-	h2_text = h2_text.strip();
+	h2_text = h2_text.trim();
 	
 	if (h2_text.begins_with(s)) {
 	    var screen_number = getScreenID(h2);
@@ -90,7 +90,7 @@ function findJumpPoint(s) {
 	var paragraph = paragraphs[i];
 	var paragraph_text = paragraph.firstChild.nodeValue;
 	
-	paragraph_text = paragraph_text.strip();
+	paragraph_text = paragraph_text.trim();
 	if (paragraph_text.begins_with(s)) {
 	    var screen_number = getScreenID(paragraph);
 	    if (screen_number != null) {
@@ -353,12 +353,12 @@ function populateJumpPoints(xmlDoc) {
 	    var option_text = options[j].firstChild.nodeValue;
 	    
 	    if (option.attributes.getNamedItem('onselect')) {
-		var attrib_value = option.attributes.getNamedItem('onselect').value.strip();
+		var attrib_value = option.attributes.getNamedItem('onselect').value.trim();
 		answer_map[option_text] = attrib_value;
 	    }
 	}
 	
 	// FIXME: only add answer_map if it's not empty
-	jump_points[question_text.strip()] = answer_map;
+	jump_points[question_text.trim()] = answer_map;
     } // end for each question
 }
