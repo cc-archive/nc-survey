@@ -41,7 +41,7 @@ function determine_jump_or_not(screen_num) {
     // FIXME: I wonder if this works with non-radio buttons
     var this_screen = document.getElementById("screen_" + screen_num);
     
-    var question_title = this_screen.getElementsByTagName('p')[0].firstChild.nodeValue.trim();
+    var question_title = allText(this_screen.getElementsByTagName('p')[0]).trim();
     
     var this_answer_map = jump_points[question_title.trim()]; // I hope!  Either strip or don't!
     
@@ -90,7 +90,7 @@ function findJumpPoint(s) {
     var h2s = document.getElementsByTagName('h2');
     for (var i = 0 ; i < h2s.length ; i++) {
 	var h2 = h2s[i];
-	var h2_text = h2.firstChild.nodeValue.trim();
+	var h2_text = allText(h2).trim();
 	h2_text = h2_text.trim();
 	
 	if (h2_text.begins_with(s)) {
@@ -106,7 +106,7 @@ function findJumpPoint(s) {
     var paragraphs = document.getElementsByTagName('p');
     for (var i = 0 ; i < paragraphs.length ; i++) {
 	var paragraph = paragraphs[i];
-	var paragraph_text = paragraph.firstChild.nodeValue.trim();
+	var paragraph_text = allText(paragraph).trim();
 	
 	paragraph_text = paragraph_text.trim();
 	if (paragraph_text.begins_with(s)) {
@@ -171,11 +171,11 @@ function turnXMLIntoScreens (xmlDoc) {
 	
 	// I'm going to use lots of temporary variables for clarity's sake.
 	
-	var screen_title = data.getElementsByTagName('title')[0].firstChild.nodeValue.trim();
+	var screen_title = allText(data.getElementsByTagName('title')[0]).trim();
 	// HACK: Only guaranteed correct if each <screen> has exactly one <question>
 	// UNHACK: Replace this with a loop of sorts.
 	var question = data.getElementsByTagName('question')[0];
-	var question_title = question.getElementsByTagName('title')[0].firstChild.nodeValue.trim();
+	var question_title = allText(question.getElementsByTagName('title')[0]).trim();
 	
 	// Now populate the template
 	copy.id = "screen_" + i;
@@ -193,7 +193,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	options_div.className = "question-options";
 
 	for (var j = 0 ; j < options.length ; j++) {
-	    var option_text = options[j].firstChild.nodeValue.trim();
+	    var option_text = allText(options[j]).trim();
 	    
 	    var this_option = document.createElement("div");
 	    this_option.className = "option";
@@ -362,13 +362,13 @@ function populateJumpPoints(xmlDoc) {
     
     for (var i = 0 ; i < questions.length ; i++) {
 	var question = questions[i];
-	var question_text = question.getElementsByTagName('title')[0].firstChild.nodeValue.trim();
+	var question_text = allText(question.getElementsByTagName('title')[0]).trim();
 	
 	var answer_map = Array();
 	var options = question.getElementsByTagName("option");
 	for (var j = 0 ; j < options.length; j++) {
 	    var option = options[j];
-	    var option_text = options[j].firstChild.nodeValue.trim();
+	    var option_text = allText(options[j]).trim();
 	    
 	    if (option.attributes.getNamedItem('onselect')) {
 		var attrib_value = option.attributes.getNamedItem('onselect').value.trim();
