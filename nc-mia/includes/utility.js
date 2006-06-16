@@ -420,3 +420,29 @@ String.prototype.ltrim=function(){
 String.prototype.rtrim=function(){
     return this.replace(/\s*$/g,'');
 }
+    
+/** My own invention. */
+    function escape_quotes(s) {
+	return s.replace(/\"/g, "\\\"");
+    }
+
+/**
+ * From http://tag-strategia.com/blog/archives/2006/02/ie-dom-bugs/
+ */
+function createElement(type, name) {
+    name = escape_quotes(name);
+       
+   var element = null;
+
+   try {
+      // First try the IE way; if this fails then use the standard way
+       element = document.createElement('<'+type+' name="'+name+'">');
+   } catch (e) {
+      // Probably failed because we’re not running on IE
+   }
+   if (!element) {
+      element = document.createElement(type);
+      element.name = name;
+   }
+   return element;
+}

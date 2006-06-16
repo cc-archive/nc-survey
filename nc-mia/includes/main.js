@@ -183,10 +183,9 @@ function turnXMLIntoScreens (xmlDoc) {
 	    var form_div = document.createElement("div");
 	    form_div.className = "option-input";
 	    
-	    var input = document.createElement("input");
+	    var input = createElement("input", question_title);
 	    input.type = "radio"; // FIXME: slurp from the option in question
 	    input.onclick = "hideDiv('error');";
-	    input.name = question_title;
 	    input.value = option_text;
 	    
 	    form_div.appendChild(input);
