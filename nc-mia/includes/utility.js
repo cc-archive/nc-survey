@@ -465,3 +465,16 @@ function allText(node) {
     
     return ret;
 }
+
+function getDivsByClassName(node, className) {
+    var divs = node.getElementsByTagName('div');
+    
+    var ret = new Array();
+    for (var i = 0 ; i < divs.length ; i++) {
+	var div = divs[i];
+	if (div.className == className) {
+	    ret.push(div);
+	}
+    }
+    return ret;
+}

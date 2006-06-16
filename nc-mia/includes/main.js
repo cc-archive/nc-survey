@@ -41,7 +41,7 @@ function determine_jump_or_not(screen_num) {
     // FIXME: I wonder if this works with non-radio buttons
     var this_screen = document.getElementById("screen_" + screen_num);
     
-    var question_title = allText(this_screen.getElementsByTagName('p')[0]).trim();
+    var question_title = allText(getDivsByClassName(this_screen, 'question-text')[0]).trim();
     
     var this_answer_map = jump_points[question_title.trim()]; // I hope!  Either strip or don't!
     
@@ -103,7 +103,7 @@ function findJumpPoint(s) {
     }
     
     // Third try: question
-    var paragraphs = document.getElementsByTagName('p');
+    var paragraphs = getDivsByClassName(document, 'question-text');
     for (var i = 0 ; i < paragraphs.length ; i++) {
 	var paragraph = paragraphs[i];
 	var paragraph_text = allText(paragraph).trim();
@@ -182,7 +182,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	copy.className = "unselected";
 	copy.getElementsByTagName('h2')[0].firstChild.nodeValue = screen_title;
 	question_div = copy.getElementsByTagName('div')[0];
-	question_div.getElementsByTagName('p')[0].firstChild.nodeValue = question_title;
+	getDivsByClassName(question_div, 'question-text')[0].firstChild.nodeValue = question_title;
 	
 	// Handle options
 	// FIXME: Hard-coded options stuff ignores options template.  Oh, well.
