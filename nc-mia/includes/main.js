@@ -296,7 +296,7 @@ function tot(node) {
 	}
        
 	if (! can_continue) {
-	    alert("Can't continue!");
+	    alert("Can't continue!"); // FIXME
 	    return;
 	}
     
