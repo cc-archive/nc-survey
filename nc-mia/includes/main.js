@@ -23,7 +23,7 @@ function determine_jump_or_not(screen_num) {
     // FIXME: I wonder if this works with non-radio buttons
     var this_screen = document.getElementById("screen_" + screen_num);
     
-    var question_title = this_screen.getElementsByTagName('p')[0].firstChild.nodeValue;
+    var question_title = this_screen.getElementsByTagName('p')[0].firstChild.nodeValue.trim();
     
     var this_answer_map = jump_points[question_title.strip()]; // I hope!  Either strip or don't!
     
@@ -72,7 +72,7 @@ function findJumpPoint(s) {
     var h2s = document.getElementsByTagName('h2');
     for (var i = 0 ; i < h2s.length ; i++) {
 	var h2 = h2s[i];
-	var h2_text = h2.firstChild.nodeValue;
+	var h2_text = h2.firstChild.nodeValue.trim();
 	h2_text = h2_text.trim();
 	
 	if (h2_text.begins_with(s)) {
@@ -88,7 +88,7 @@ function findJumpPoint(s) {
     var paragraphs = document.getElementsByTagName('p');
     for (var i = 0 ; i < paragraphs.length ; i++) {
 	var paragraph = paragraphs[i];
-	var paragraph_text = paragraph.firstChild.nodeValue;
+	var paragraph_text = paragraph.firstChild.nodeValue.trim();
 	
 	paragraph_text = paragraph_text.trim();
 	if (paragraph_text.begins_with(s)) {
@@ -344,13 +344,13 @@ function populateJumpPoints(xmlDoc) {
     
     for (var i = 0 ; i < questions.length ; i++) {
 	var question = questions[i];
-	var question_text = question.getElementsByTagName('title')[0].firstChild.nodeValue;
+	var question_text = question.getElementsByTagName('title')[0].firstChild.nodeValue.trim();
 	
 	var answer_map = Array();
 	var options = question.getElementsByTagName("option");
 	for (var j = 0 ; j < options.length; j++) {
 	    var option = options[j];
-	    var option_text = options[j].firstChild.nodeValue;
+	    var option_text = options[j].firstChild.nodeValue.trim();
 	    
 	    if (option.attributes.getNamedItem('onselect')) {
 		var attrib_value = option.attributes.getNamedItem('onselect').value.trim();
