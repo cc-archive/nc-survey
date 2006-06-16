@@ -2,16 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:py="http://purl.org/kid/ns#"
 >
-<div id="${screen['name']}" class="unselected" py:for="screen in screens">
-  <div showOn="select" class="question" style="{'display: none' if screen is not screens[0]}">
-    <h2 class="term-optional-title">What can be terminated? Part 1 (of 7) of Section 1</h2>
-    <p class="question-text">
+<div id="${name}" class="unselected">
+  <div class="question">
+    <h2 class="term-optional-title" py:replace="screen_title">What can be terminated? Part 1 (of 7) of Section 1</h2>
+    <p class="question-text" py:replace="question_title">
       Did you, or the author or artist, create the <a href="glossary#work">work</a> within the 
       <a href="glossary#scope_of_employment">scope of your, or his or her, employment</a>?
     </p>
     
     <div class="question-options">
-      <div class="option">
+      <div class="option" py:for="option in options">
         <div class="option-input">
           <input onclick="hideDiv('${screen['name']}-error');" type="radio" name="${screen['name']}" value="Yes" />
         </div>
