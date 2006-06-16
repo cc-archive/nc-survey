@@ -1,39 +1,45 @@
 .term-title {
-  margin: 5px;
-
-	color: #1C82B9;
-}
+              margin: 5px;
+              
+              color: #1C82B9;
+              }
 .term-optional-title {
-  font-weight: bold;
-  font-size: 1.3em;
-}
+                       font-weight: bold;
+                       font-size: 1.3em;
+                       }
 .question {
-  /*margin: 5px;*/
-/*	background-color: #55b3e5;
-	color: #fff;
-	font-size: 135%;
-*/	font-weight: normal;
-}
+            /*margin: 5px;*/
+            /*	background-color: #55b3e5;
+               color: #fff;
+               font-size: 135%;
+               */	font-weight: normal;
+            }
 .question-footer {
-  clear: both;
-}
+                   clear: both;
+                   }
 .question-text {
-  margin: 20px;
-}
+                 margin: 20px;
+                 }
 .question-options {
-  /*float:left;*/
-		margin-left: 35%;
-		margin-bottom: 0px;
-}
+                    /*float:left;*/
+                    margin-left: 35%;
+                    margin-bottom: 0px;
+                    }
 .answer { font-style: italic; }
 .option {
-  float:left;
-  margin: 0 30px 0 0;
-  font-size: 1.25em;
-}
+          float:left;
+          margin: 0 30px 0 0;
+          font-size: 1.25em;
+          width: 400px; 
+          clear: both;
+          }
 .option-input {
+                float: left;
+                width: 5%;
 }
 .option-text {
+               width: 80%;
+               float: left;
 }
 .question-error {
   float: left;
@@ -190,3 +196,4 @@
 #history div {
   /* display: none; */
 }
+

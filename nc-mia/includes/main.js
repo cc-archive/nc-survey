@@ -4,8 +4,6 @@ var req; // this is for the XmlHttpRequest
 var xmlsource = "../file-format/is-it-nc.xml";
 var debugging = 0;
 
-var template_ran = 0;
-
 var authors = new Array;
 var author_index = 0;
 var grantors = new Array;
@@ -257,19 +255,20 @@ function processReqChange()
 }
 
 /**
+ * This gets called on page load.
+ * It selectNode()s screen_-1 and it also starts the XML loading.
+ */
+function initApp() {
+    // async means this should be enough
+    selectNode(document.getElementById('screen_-1') );
+    loadXMLDoc(xmlsource);
+}
+
+
+/**
  * This is what gets called every update to the slick DHTML thing.
  */
 function tot(node) {
-    
-    // When do we bother initializing the XML?
-    // On the first call to tot().
-    
-    // async means this should be enough
-    if (template_ran == 0) {
-	selectNode(document.getElementById('screen_-1') );
-	loadXMLDoc(xmlsource);
-	template_ran = 1;
-    }
     
     var screen = getScreenID(node);
 
