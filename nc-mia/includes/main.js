@@ -153,11 +153,11 @@ function turnXMLIntoScreens (xmlDoc) {
 	
 	// I'm going to use lots of temporary variables for clarity's sake.
 	
-	var screen_title = data.getElementsByTagName('title')[0].firstChild.nodeValue;
+	var screen_title = data.getElementsByTagName('title')[0].firstChild.nodeValue.trim();
 	// HACK: Only guaranteed correct if each <screen> has exactly one <question>
 	// UNHACK: Replace this with a loop of sorts.
 	var question = data.getElementsByTagName('question')[0];
-	var question_title = question.getElementsByTagName('title')[0].firstChild.nodeValue;
+	var question_title = question.getElementsByTagName('title')[0].firstChild.nodeValue.trim();
 	
 	// Now populate the template
 	copy.id = "screen_" + i;

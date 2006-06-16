@@ -410,7 +410,8 @@ String.prototype.begins_with = function(s) {
  * Source: http://www.codingforums.com/showthread.php?s=7d47022d2b81ab7d46d3fe9e8473eef4&p=178098#post178098 */
 
 String.prototype.trim=function(){
-    return this.replace(/^\s*|\s*$/g,'');
+    var halfway = this.replace(/^\s*|\s*$/g,'');
+    return halfway.replace(/\s+/g, " ");
 }
 
 String.prototype.ltrim=function(){
