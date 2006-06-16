@@ -190,32 +190,6 @@ function back (node) {
    }
 }
 
-function next (node,nextid) {
-
-   var nextElem;
-   if (!nextid) {
-     nextElem = nextElement(node.parentNode, 'div');
-   } else {
-     nextElem = document.getElementById(nextid);
-   }
-   if (!nextElem) {
-     var form = getForm(node);
-     if(form.back_list) {
-       back_list().push(node.parentNode.id);
-       form.back_list.value = "'" + back_list().join("','") + "'";
-     }
-     window.name='next';
-     form.submit();
-   } else {
-     /* node.parentNode.style.display='none'; */
-     deselectNode(node.parentNode);
-     /* nextElem.style.display = 'block'; */
-     selectNode(nextElem);
-     back_list().push(node.parentNode.id);
-     return true;
-   }
-}
-
 function clearNode (node) {
    // alert('Clearing node: ' + node.id + ' (' + node + ')' + "\n" + 'has children: ' + node.hasChildNodes() + "\n" + 'Children: ' + node.childNodes.length);
    if ( !node.hasChildNodes() || node.childNodes.length == 0 ) {

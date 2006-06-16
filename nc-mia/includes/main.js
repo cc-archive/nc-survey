@@ -268,7 +268,7 @@ function initApp() {
 /**
  * This is what gets called every update to the slick DHTML thing.
  */
-function tot(node) {
+function next(node) {
     
     var screen = getScreenID(node);
 
