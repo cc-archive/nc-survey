@@ -447,3 +447,21 @@ function createElement(type, name) {
    }
    return element;
 }
+
+/** Input: a node
+ * output: a string with all text children appended
+ */
+function allText(node) {
+    var childs = node.childNodes;
+    var ret = "";
+
+    for (var i = 0 ; i < childs.length ; i++) {
+	var child = childs[i];
+
+	if (child.nodeType == 3 || child.nodeType == 4) { // 3 == Text, 4 == CDATA
+	    ret += child.nodeValue;
+	}
+    }
+    
+    return ret;
+}
