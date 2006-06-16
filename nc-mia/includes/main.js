@@ -43,17 +43,17 @@ function determine_jump_or_not(screen_num) {
     
     var question_title = this_screen.getElementsByTagName('p')[0].firstChild.nodeValue.trim();
     
-    var this_answer_map = jump_points[question_title.strip()]; // I hope!  Either strip or don't!
+    var this_answer_map = jump_points[question_title.trim()]; // I hope!  Either strip or don't!
     
     // For each *checked* input, for each mention in jump_points, see if it matches
     var inputs = this_screen.getElementsByTagName('input');
     
     for (var i = 0 ; i < inputs.length; i++) {
 	var input = inputs[i];
-	var clean_name = input.value.strip();
+	var clean_name = input.value.trim();
 	if (input.checked) {
 	    for (answer in this_answer_map) {
-		if (clean_name == answer.strip()) {
+		if (clean_name == answer.trim()) {
 			return this_answer_map[answer];
 		}
 	    }
