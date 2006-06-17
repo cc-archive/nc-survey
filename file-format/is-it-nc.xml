@@ -10,15 +10,19 @@
       <questions>
 	<question>
 	  <title>
-	    Is the user an “allowable NC user” under the noncommercial
-	    license condition?  Allowable NC users are: (a) an
-	    individual, (b) a nonprofit educational
+	    <![CDATA[
+
+	    Is <strong>the user</strong> an “allowable NC user” under
+	    the noncommercial license condition?  Allowable NC users
+	    are: (a) an individual, (b) a nonprofit educational
 	    institution/library, (c) Nonprofit organization as defined
 	    under US1 or equivalent law, (together with (1) and (2)
 	    “allowable NC users”), or (d) A copy shop, ISP or similar
 	    service provider who, in the course of providing a service
 	    at the direction of the allowable NC user, may exercise a
 	    right licensed under the Creative Commons license.
+
+]]>
 	  </title>
 	  <option>Yes</option>
 	  <option onselect="fail">No</option>
