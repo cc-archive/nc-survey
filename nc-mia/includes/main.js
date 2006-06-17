@@ -39,6 +39,7 @@ function determine_jump_or_not(screen_num) {
     
     // Grab the current screen, then look at its inputs, and see if any are selected
     // FIXME: I wonder if this works with non-radio buttons
+    
     var this_screen = document.getElementById("screen_" + screen_num);
     
     var question_title = allText(getDivsByClassName(this_screen, 'question-text')[0]).trim();
@@ -182,7 +183,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	copy.className = "unselected";
 	copy.getElementsByTagName('h2')[0].firstChild.nodeValue = screen_title;
 	var question_div = copy.getElementsByTagName('div')[0];
-	getDivsByClassName(question_div, 'question-text')[0].firstChild.nodeValue = question_title;
+	getDivsByClassName(question_div, 'question-text')[0].innerHTML = question_title;
 	
 	// Handle options
 	// FIXME: Hard-coded options stuff ignores options template.  Oh, well.
