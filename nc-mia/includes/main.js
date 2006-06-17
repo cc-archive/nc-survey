@@ -42,9 +42,7 @@ function determine_jump_or_not(screen_num) {
     
     var this_screen = document.getElementById("screen_" + screen_num);
     
-    var question_title = allText(getDivsByClassName(this_screen, 'question-text')[0]).trim();
-    
-    var this_answer_map = jump_points[question_title.trim()]; // I hope!  Either strip or don't!
+    var this_answer_map = jump_points[screen_num]; // I hope!  Either strip or don't!
     
     // For each *checked* input, for each mention in jump_points, see if it matches
     var inputs = this_screen.getElementsByTagName('input');
@@ -355,7 +353,7 @@ function getScreenID (node) {
 }
 
 function populateJumpPoints(xmlDoc) {
-    // jump_points is an Array() that maps strings (question titles) onto
+    // jump_points is an Array() that maps numbers (screen number) onto
     // an Array() of ["Yes" => "...", "No" => "..."
     
     // To generate it, we loop through the questions then.
@@ -363,7 +361,6 @@ function populateJumpPoints(xmlDoc) {
     
     for (var i = 0 ; i < questions.length ; i++) {
 	var question = questions[i];
-	var question_text = allText(question.getElementsByTagName('title')[0]).trim();
 	
 	var answer_map = Array();
 	var options = question.getElementsByTagName("option");
@@ -378,6 +375,6 @@ function populateJumpPoints(xmlDoc) {
 	}
 	
 	// FIXME: only add answer_map if it's not empty
-	jump_points[question_text.trim()] = answer_map;
+	jump_points[i] = answer_map;
     } // end for each question
 }
