@@ -154,7 +154,7 @@ function findOptionTemplate(template) {
     assert(template.id.substr(0,7) == "screen_");
     question = template.getElementsByTagName('div')[0];
     assert(question.className == 'question');
-    options_outer_div = question.getElementsByTagName('div')[0];
+    options_outer_div = question.getElementsByTagName('div')[1];
     assert(options_outer_div.className == 'question-options');
     
     return options_outer_div;
@@ -181,7 +181,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	copy.id = "screen_" + i;
 	copy.className = "unselected";
 	copy.getElementsByTagName('h2')[0].firstChild.nodeValue = screen_title;
-	question_div = copy.getElementsByTagName('div')[0];
+	var question_div = copy.getElementsByTagName('div')[0];
 	getDivsByClassName(question_div, 'question-text')[0].firstChild.nodeValue = question_title;
 	
 	// Handle options
