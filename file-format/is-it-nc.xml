@@ -249,7 +249,7 @@
     <screen isfinal="yes">
       <title>Your intended use does qualify</title>
       <questions>
-	<question isfinal="yes">
+	<question>
 	  <title>
 
 	    <![CDATA[
