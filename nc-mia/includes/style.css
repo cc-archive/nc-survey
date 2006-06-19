@@ -31,16 +31,20 @@
 /*          float:left;*/
           margin: 0 30px 0 0;
           font-size: 1.25em;
-          width: 400px; 
+          width: 320px; 
           clear: both;
+          padding-bottom: 10px;
+
           }
 .option-input {
                 float: left;
                 width: 5%;
+                padding-right: 10px;
 }
 .option-text {
                width: 80%;
-               float: left;
+               float: left
+
 }
 .question-error {
   float: left;
@@ -204,3 +208,6 @@
   /* display: none; */
 }
 
+textarea {  
+           width: 500px;
+           }
