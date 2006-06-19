@@ -120,7 +120,7 @@ function findJumpPoint(s) {
     }
     
     // Else, be very confused.
-    assert("You should not get to this code.");
+    alert("You should not get to this code.  Please consult your system administrator or support group.");
 }
 
 function debug(statement) {
