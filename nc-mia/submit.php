@@ -17,17 +17,28 @@ if (DB::isError ($conn))
 
 // Stage 2: Create and prepare queries
 $form_submission_id = md5(uniqid(rand(), true)); // http://www.php.net/uniqid
-$date = $_SERVER['REQUEST_TIME'];
+$date = time();
 $canned_sql = $conn->prepare('INSERT INTO formresults (xmlpath, question, answer, date, uid) VALUES(?, ?, ?, ?, ?)');
 
 // Stage 3: Perform queries
 // For each element in _POST, submit it:
 foreach ($_POST as $key => $value) {
-  $conn->execute($canned_sql, array($xmlpath, $key, $value, $date, $form_submission_id));
+  $query = array();
+  $query['xmlpath'] = $xmlpath;
+  $query['question'] = $key;
+  $query['answer'] = $value;
+  $query['date'] = $date;
+  $query['uid'] = $form_submission_id;
+  $res = $conn->execute($canned_sql, $query);
+
+if (DB::isError($res)) {
+    // get the portable error string
+    echo $res->getMessage();
+}
+
 }
 
 // Stage 4: Get out of here based on if the queries worked or not
-
 
 exit;
 
