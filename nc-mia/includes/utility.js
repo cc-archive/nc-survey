@@ -430,22 +430,26 @@ String.prototype.rtrim=function(){
 /**
  * From http://tag-strategia.com/blog/archives/2006/02/ie-dom-bugs/
  */
-function createElement(type, name) {
+function createElement(element_type, name, type) {
     name = escape_quotes(name);
-       
-   var element = null;
-
-   try {
-      // First try the IE way; if this fails then use the standard way
-       element = document.createElement('<'+type+' name="'+name+'">');
-   } catch (e) {
-      // Probably failed because we’re not running on IE
-   }
-   if (!element) {
-      element = document.createElement(type);
-      element.name = name;
-   }
-   return element;
+    type = escape_quotes(type);
+    
+    var element = null;
+    
+    try {
+	// First try the IE way; if this fails then use the standard way
+	element = document.createElement('<'+element_type+
+					 ' type="'+type+'"' + 
+					 ' name="'+name+'">');
+    } catch (e) {
+	// Probably failed because we're not running on IE
+    }
+    if (!element) {
+	element = document.createElement(type);
+	element.name = name;
+	element.type = type;
+    }
+    return element;
 }
 
 /** Input: a node

@@ -212,7 +212,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	    var form_div = document.createElement("div");
 	    form_div.className = "option-input";
 	    
-	    var input = createElement("input", question_title);
+	    var input = createElement("input", question_title, "");
 	    input.type = "radio"; // FIXME: slurp from the option in question
 	    input.onclick = "hideDiv('error');";
 	    input.value = option_text;
@@ -234,10 +234,15 @@ function turnXMLIntoScreens (xmlDoc) {
 
 	// Finally, if it was a isfinal=true screen, change the title of the first button
 	if (is_final) {
-	    var stumbit_button = copy.getElementsByTagName('button')[0];
-	    stumbit_button.firstChild.nodeValue = 'Submit';
-	    stumbit_button.onclick = '';
-	    stumbit_button.type = 'submit';
+	    var next_button = copy.getElementsByTagName('button')[0];
+
+	    var stumbit_button = createElement("button", "", "submit");
+	    stumbit_button.appendChild(document.createTextNode("Submit"));
+	    stumbit_button.className = "button-continue";
+	    next_button.parentNode.replaceChild(stumbit_button, next_button);
+	    //stumbit_button.firstChild.nodeValue = 'Submit';
+	    //stumbit_button.onclick = '';
+	    //	    stumbit_button.type = 'submit';
 	}
 	
 	
