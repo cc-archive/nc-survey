@@ -263,6 +263,12 @@ function processReqChange()
 	    }
 	    // And...
 	    populateJumpPoints(req.responseXML.documentElement);
+
+	    // Finally, notify the user:
+	    var first = document.getElementById('screen_-1');
+	    var question = getElementsByTagAndClassName(first, 'question', 'div')[0];
+	    var qtext = getElementsByTagAndClassName(question, 'question-text', 'div')[0];
+	    qtext.firstChild.nodeValue = 'Please click "Next" to begin the survey.';
 	}
 	else {
             alert("There was a problem retrieving the XML data:\n" + req.statusText);
