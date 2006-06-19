@@ -120,7 +120,7 @@ function findJumpPoint(s) {
     }
     
     // Else, be very confused.
-    alert("You should not get to this code.  Please consult your system administrator or support group.");
+    alert("You should not get to this code.  Please consult webmaster@creativecommons.org or your local support group.");
 }
 
 function debug(statement) {
