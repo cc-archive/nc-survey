@@ -445,7 +445,7 @@ function createElement(element_type, name, type) {
 	// Probably failed because we're not running on IE
     }
     if (!element) {
-	element = document.createElement(type);
+	element = document.createElement(element_type);
 	element.name = name;
 	element.type = type;
     }
