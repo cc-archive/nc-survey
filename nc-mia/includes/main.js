@@ -283,21 +283,23 @@ function initApp() {
 
 /**
  * This is what gets called every update to the slick DHTML thing.
+ * QUALITY: There are repeated calls to extract_screen_id.  That could be cleaned up.
  */
 function next(node) {
-    var screen = getScreenID(node);
+    var screen_id = getScreenID(node);
 
     // By default, the transition is serial, one to the next
-    if (typeof(screen) == 'string') {
+    if (typeof(screen_id) == 'string') {
 
 	// But we simply can't proceed if the user selected nothing.
 	// if the screen ID is a number >= 0, then we check that at least one <input> is checked
 	var can_continue = true;
-	var screen_number = extract_screen_id(screen);
+	var screen_number = extract_screen_id(screen_id);
+	var screen = document.getElementById(screen_id);
 
 	if (screen_number > -1) {
 	    can_continue = false;
-	    var inputs = document.getElementById(screen).getElementsByTagName('input');
+	    var inputs = screen.getElementsByTagName('input');
 	    for (var k = 0 ; k < inputs.length; k++) {
 		if ( ! can_continue) {
 		    var input = inputs[k];
@@ -310,15 +312,19 @@ function next(node) {
 	}
        
 	if (! can_continue) {
-	    alert("Can't continue!"); // FIXME
+	    var error = getDivsByClassName(screen_id, "question-error")[0];
+	    var invisibles = getDivsByClassName(error, "invisible");
+	    for (var k = 0 ; k < invisibles.length; k++) {
+		invisibles[k].className = "";
+	    }
 	    return;
 	}
     
 
-	var screen_num = extract_screen_id(screen);
+	var screen_num = extract_screen_id(screen_id);
 	
 	// Set a backtrail...
-	back_list().push(screen);
+	back_list().push(screen_id);
 	
 	// Desetination:
 	var next;
@@ -336,7 +342,7 @@ function next(node) {
 	if (next == null) { next = document.getElementById('submit'); }
 	// ... and then jump ahead:
 	selectNode(next);
-	deselectNode(document.getElementById(screen));
+	deselectNode(screen);
     }
 }
 
