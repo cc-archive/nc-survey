@@ -9,6 +9,7 @@ var author_index = 0;
 var grantors = new Array;
 
 var jump_points = new Array();
+var final_screens = new Array();
 
 /**
  * turn the <title> in the <question> into a big XHTML tree
@@ -166,6 +167,17 @@ function turnXMLIntoScreens (xmlDoc) {
     
     for (var i = 0 ; i < xml_screens.length ; i++) {
 	var data = xml_screens[i];
+
+	// If it's a final screen, make a note.
+	var is_final = 0;
+	for (var attr_num = 0 ; attr_num < data.attributes.length; attr_num++) {
+	    var attr = data.attributes[attr_num];
+	    if (( attr.name == 'isfinal') &&(attr.value == 'yes')) {
+		is_final = 1;
+		final_screens.push("screen_" + i);
+	    }
+	}
+
 	var copy = template.cloneNode(true); // deep clone = true
 	
 	// I'm going to use lots of temporary variables for clarity's sake.
@@ -219,6 +231,12 @@ function turnXMLIntoScreens (xmlDoc) {
 	// Now, let's find the original options_div in copy and replace it with this sucka
 	replace_me = findOptionTemplate(copy);
 	question_div.replaceChild(options_div, replace_me);
+
+	// Finally, if it was a isfinal=true screen, change the title of the first button
+	if (is_final) {
+	    copy.getElementsByTagName('button')[0].firstChild.nodeValue = 'Submit';
+	}
+	
 	
 	// Now append it to the list of things for returning
 	ret.push(copy);
