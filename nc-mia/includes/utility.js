@@ -478,3 +478,12 @@ function getElementsByTagAndClassName(node, className, elName) {
     }
     return ret;
 }
+
+function array_contains(ra, thing) {
+    for (var i = 0 ; i < ra.length; ra++) {
+	if (ra[i] == thing) {
+	    return true;
+	}
+    }
+    return false;
+}

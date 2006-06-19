@@ -234,7 +234,10 @@ function turnXMLIntoScreens (xmlDoc) {
 
 	// Finally, if it was a isfinal=true screen, change the title of the first button
 	if (is_final) {
-	    copy.getElementsByTagName('button')[0].firstChild.nodeValue = 'Submit';
+	    var stumbit_button = copy.getElementsByTagName('button')[0];
+	    stumbit_button.firstChild.nodeValue = 'Submit';
+	    stumbit_button.onclick = '';
+	    stumbit_button.type = 'submit';
 	}
 	
 	
@@ -320,6 +323,9 @@ function next(node) {
 	var can_continue = true;
 	var screen_number = extract_screen_id(screen_id);
 	var screen = document.getElementById(screen_id);
+
+	if (array_contains(final_screens, screen_id))
+	    return; // Get out of here quick if this was final.
 
 	if (screen_number > -1) {
 	    can_continue = false;
