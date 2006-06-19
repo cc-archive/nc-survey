@@ -25,7 +25,7 @@
 ]]>
 	  </title>
 	  <option>Yes</option>
-	  <option onselect="fail">No</option>
+	  <option onselect="Your intended use does not qualify">No</option>
 	</question>
       </questions>
     </screen>
@@ -38,7 +38,7 @@
 	    Is the NC-licensed content being used in an advertisement
 	    for third party products or services?
 	  </title>
-	  <option onselect="fail">Yes</option>
+	  <option onselect="Your intended use does not qualify">Yes</option>
 	  <option>No</option>
 	</question>
       </questions>
@@ -54,7 +54,7 @@
 	    the NC-licensed content (eg. “click-through”
 	    advertising)?
 	  </title>
-	  <option onselect="fail">Yes</option>
+	  <option onselect="Your intended use does not qualify">Yes</option>
 	  <option>No</option>
 	</question>
       </questions>
@@ -70,7 +70,7 @@
 	    the NC-licensed work is the primary draw or a is
 	    substantial amount, both qualitatively and quantitatively?
 	  </title>
-	  <option onselect="fail">Yes</option>
+	  <option onselect="Your intended use does not qualify">Yes</option>
 	  <option>No</option>
 	</question>
       </questions>
@@ -131,10 +131,10 @@
 	    Money may change hands in connection with the use of an
 	    NC-licensed work in at least four ways:
 	  </title>
-	  <option onselect="fail">
+	  <option onselect="Your intended use does not qualify">
 	    As a condition of using the NC-licensed work
 	  </option>
-	  <option onselect="fail">
+	  <option onselect="Your intended use does not qualify">
 	    As a condition of using another work that includes an
 	    NC-licensed work, where the NC-licensed work is either
 	    the primary draw or a substantial amount (whether
@@ -198,20 +198,20 @@
 	    hands one of these four ways; select the one most
 	    appropriate to your use.
 	  </title>
-	  <option onselect="fail">
+	  <option onselect="Your intended use does not qualify">
 	    As a condition of using a derivative work based on an
 	    NC-licensed work, of which the original NC-licensed work
 	    is the primary draw or a substantial amount, whether
 	    qualitatively or quantitatively, of that derivative work
 	  </option>
-	  <option onselect="succeed">
+	  <option onselect="Your intended use does qualify">
 	    As a condition of using a derivative work based on an
 	    NC-licensed work, of which the original NC-licensed work
 	    is not the primary draw or is an insubstantial amount,
 	    both qualitatively and quantitatively, of that derivative
 	    work
 	  </option>
-	  <option onselect="succeed">
+	  <option onselect="Your intended use does qualify">
 	    As an optional contribution (e.g., a tip jar, donations,
 	    membership drive) for an allowed NC user (DIVERGES FROM
 	    PDF!) that uses the derivative work based on the
@@ -220,5 +220,58 @@
 	</question>
       </questions>
     </screen>
+
+    <screen>
+      <title>Your intended use does not qualify</title>
+      <questions>
+	<question isfinal="yes">
+	  <title>
+
+	    <![CDATA[
+<p>
+	    		  Based on
+		  the <a
+		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">guidelines</a>,
+		  we believe that your intended use does not qualify
+		  as non-commercial.  You may use the "back" button to
+		  return to the questions, or you may "submit" to
+		  submit your answers to us with comments.
+</p>
+
+		      <textarea name="survey-final comments" cols="20" rows="8"></textarea>
+
+]]>
+	    </title>
+	  </question>
+	</questions>
+      </screen>
+
+    <screen>
+      <title>Your intended use does qualify</title>
+      <questions>
+	<question isfinal="yes">
+	  <title>
+
+	    <![CDATA[
+<p>
+	    		  Based on
+		  the <a
+		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">guidelines</a>,
+		  we believe that your intended use does qualify
+		  as non-commercial.  You may use the "back" button to
+		  return to the questions, or you may "submit" to
+		  submit your answers to us with comments.
+</p>
+
+		      <textarea name="survey-final comments" cols="20" rows="8"></textarea>
+
+]]>
+	    </title>
+	  </question>
+	</questions>
+      </screen>
+
+
+
   </screens>
 </survey>
