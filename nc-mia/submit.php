@@ -1,8 +1,8 @@
 <?php
 
-print_r($_POST);
+$all_is_well = 1;
 
-// Configuration:
+// Configuration
 $xmlpath = "../file-formats/is-it-nc.xml";
 // FIXME: Should be in the HTML and passed to us by GET or something?
 
@@ -30,16 +30,27 @@ foreach ($_POST as $key => $value) {
   $query['date'] = $date;
   $query['uid'] = $form_submission_id;
   $res = $conn->execute($canned_sql, $query);
-
-if (DB::isError($res)) {
+  
+  if (DB::isError($res)) {
     // get the portable error string
+    $all_is_well = 0;
+    echo "<p>Error in database submission.  Data:</p>";
+    echo "<pre>";
+    print_r($query);
+    echo "</pre>";
     echo $res->getMessage();
+  }
+  
 }
 
-}
-
-// Stage 4: Get out of here based on if the queries worked or not
-
-exit;
+// Stage 4: If something broke, say so.  Otherwise, get out of here.
+if ($all_is_well) {
+  echo("Location: http://www.disney.com/");
+  exit;
+ }
+ else {
+   echo "<p>Something went wrong in submitting your information.  Please contact support@creativecommons.org with the <strong>full</strong> contents of this page.</p>";
+   exit;
+ }
 
 ?>
