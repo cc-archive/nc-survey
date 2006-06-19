@@ -221,10 +221,10 @@
       </questions>
     </screen>
 
-    <screen>
+    <screen isfinal="yes">
       <title>Your intended use does not qualify</title>
       <questions>
-	<question isfinal="yes">
+	<question>
 	  <title>
 
 	    <![CDATA[
@@ -246,7 +246,7 @@
 	</questions>
       </screen>
 
-    <screen>
+    <screen isfinal="yes">
       <title>Your intended use does qualify</title>
       <questions>
 	<question isfinal="yes">
