@@ -1,7 +1,6 @@
 /* GLOBALS */
 var req; // this is for the XmlHttpRequest
 
-var xmlsource = "../file-format/is-it-nc.xml";
 var debugging = 0;
 
 var authors = new Array;
@@ -309,7 +308,7 @@ function processReqChange()
 function initApp() {
     // async means this should be enough
     selectNode(document.getElementById('screen_-1') );
-    loadXMLDoc(xmlsource);
+    loadXMLDoc(document.getElementsByTagName('form')[0].elements['xmlsource'].value);
 }
 
 

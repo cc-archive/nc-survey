@@ -1,4 +1,7 @@
 <?php
+// Configuration
+$xmlpath = "../file-formats/is-it-nc.xml";
+
 
   /* Source: http://php.net/uniqid
    * Used with permission. */
@@ -18,14 +21,11 @@ function uuid() {
 		 ); 
   }
 
-$all_is_well = 1;
-
-// Configuration
-$xmlpath = "../file-formats/is-it-nc.xml";
 // FIXME: Should be in the HTML and passed to us by GET or something?
 
 // Stage 0: Requirements
 require_once('DB.php'); // PEAR DB.  Don't leave home without it.
+$all_is_well = 1;
 
 // Stage 1: Get access to the MySQL database
 $dsn = "mysql://root:@localhost/cc";
