@@ -466,14 +466,14 @@ function allText(node) {
     return ret;
 }
 
-function getDivsByClassName(node, className) {
-    var divs = node.getElementsByTagName('div');
+function getElementsByTagAndClassName(node, className, elName) {
+    var ells = node.getElementsByTagName(elName);
     
     var ret = new Array();
-    for (var i = 0 ; i < divs.length ; i++) {
-	var div = divs[i];
-	if (div.className == className) {
-	    ret.push(div);
+    for (var i = 0 ; i < ells.length ; i++) {
+	var ell = ells[i];
+	if (ell.className == className) {
+	    ret.push(ell);
 	}
     }
     return ret;

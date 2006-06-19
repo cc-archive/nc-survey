@@ -102,7 +102,7 @@ function findJumpPoint(s) {
     }
     
     // Third try: question
-    var paragraphs = getDivsByClassName(document, 'question-text');
+    var paragraphs = getElementsByTagAndClassName(document, 'question-text', 'div');
     for (var i = 0 ; i < paragraphs.length ; i++) {
 	var paragraph = paragraphs[i];
 	var paragraph_text = allText(paragraph).trim();
@@ -181,7 +181,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	copy.className = "unselected";
 	copy.getElementsByTagName('h2')[0].firstChild.nodeValue = screen_title;
 	var question_div = copy.getElementsByTagName('div')[0];
-	getDivsByClassName(question_div, 'question-text')[0].innerHTML = question_title;
+	getElementsByTagAndClassName(question_div, 'question-text', 'div')[0].innerHTML = question_title;
 	
 	// Handle options
 	// FIXME: Hard-coded options stuff ignores options template.  Oh, well.
@@ -312,8 +312,8 @@ function next(node) {
 	}
        
 	if (! can_continue) {
-	    var error = getDivsByClassName(screen_id, "question-error")[0];
-	    var invisibles = getDivsByClassName(error, "invisible");
+	    var error = getElementsByTagAndClassName(screen, "question-error", 'div')[0];
+	    var invisibles = getElementsByTagAndClassName(error, "invisible", 'span');
 	    for (var k = 0 ; k < invisibles.length; k++) {
 		invisibles[k].className = "";
 	    }
