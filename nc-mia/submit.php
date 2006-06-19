@@ -1,7 +1,5 @@
 <?php
-// Configuration
-$xmlpath = "../file-formats/is-it-nc.xml";
-
+  // Look, ma, no configuration!
 
   /* Source: http://php.net/uniqid
    * Used with permission. */
@@ -13,7 +11,7 @@ function uuid() {
 		 mt_rand(0, 65535), mt_rand(0, 65535), // 32 bits for "time_low"
 		 mt_rand(0, 65535), // 16 bits for "time_mid"
 		 mt_rand(0, 4095),  // 12 bits before the 0100 of (version) 4 for "time_hi_and_version"
-       bindec(substr_replace(sprintf('%016b', mt_rand(0, 65535)), '01', 6, 2)),
+		 bindec(substr_replace(sprintf('%016b', mt_rand(0, 65535)), '01', 6, 2)),
 		 // 8 bits, the last two of which (positions 6 and 7) are 01, for "clk_seq_hi_res"
 		 // (hence, the 2nd hex digit after the 3rd hyphen can only be 1, 5, 9 or d)
 		 // 8 bits for "clk_seq_low"
@@ -26,6 +24,8 @@ function uuid() {
 // Stage 0: Requirements
 require_once('DB.php'); // PEAR DB.  Don't leave home without it.
 $all_is_well = 1;
+$xmlpath = $_POST['xmlpath'];
+unset($_POST['xmlpath']);
 
 // Stage 1: Get access to the MySQL database
 $dsn = "mysql://root:@localhost/cc";

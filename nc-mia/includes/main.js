@@ -308,7 +308,7 @@ function processReqChange()
 function initApp() {
     // async means this should be enough
     selectNode(document.getElementById('screen_-1') );
-    loadXMLDoc(document.getElementsByTagName('form')[0].elements['xmlsource'].value);
+    loadXMLDoc(document.getElementsByTagName('form')[0].elements['xmlpath'].value);
 }
 
 
