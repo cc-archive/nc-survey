@@ -238,7 +238,14 @@
 		  submit your answers to us with comments.
 </p>
 
-		      <textarea name="survey-final comments" cols="20" rows="8"></textarea>
+
+                   <p>Do you agree or disagree with these results?  Let us know your comments about the survey.</p>
+
+		      <textarea name="agree-disagree-comments" cols="20" rows="8"></textarea>
+
+                   <p>If you would like to specify more details about your particular case, please use the box below.</p>
+
+		      <textarea name="particular-case-more-details" cols="20" rows="8"></textarea>
 
 ]]>
 	    </title>
@@ -263,7 +270,14 @@
 		  submit your answers to us with comments.
 </p>
 
-		      <textarea name="survey-final comments" cols="20" rows="8"></textarea>
+                   <p>Do you agree or disagree with these results?  Let us know your comments about the survey.</p>
+
+		      <textarea name="agree-disagree-comments" cols="20" rows="8"></textarea>
+
+                   <p>If you would like to specify more details about your particular case, please use the box below.</p>
+
+		      <textarea name="particular-case-more-details" cols="20" rows="8"></textarea>
+
 
 ]]>
 	    </title>
