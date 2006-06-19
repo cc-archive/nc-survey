@@ -4,7 +4,7 @@ CREATE TABLE formresults (
 	question VARCHAR(2560) NOT NULL,
 	answer VARCHAR(2560) NOT NULL,
 	date INT UNSIGNED NOT NULL,
-	uid INT NOT NULL,
+	uid VARCHAR(36) NOT NULL,
 	PRIMARY KEY id (id)
 ) TYPE = MyISAM COMMENT ='';
 
