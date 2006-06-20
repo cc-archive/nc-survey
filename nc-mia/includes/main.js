@@ -234,7 +234,9 @@ function turnXMLIntoScreens (xmlDoc) {
 	// Finally, if it was a isfinal=true screen, change the title of the first button
 	if (is_final) {
 	    var next_button = copy.getElementsByTagName('button')[0];
+	    next_button.replaceChild(document.createTextNode("Stubmit"), next_button.firstChild);
 
+	    /*
 	    var stumbit_button = createElement("button", "", "submit");
 	    stumbit_button.appendChild(document.createTextNode("Submit"));
 	    stumbit_button.className = "button-continue";
@@ -242,6 +244,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	    //stumbit_button.firstChild.nodeValue = 'Submit';
 	    //stumbit_button.onclick = '';
 	    //	    stumbit_button.type = 'submit';
+	    */
 	}
 	
 	
@@ -329,7 +332,10 @@ function next(node) {
 	var screen = document.getElementById(screen_id);
 
 	if (array_contains(final_screens, screen_id))
-	    return; // Get out of here quick if this was final.
+	    {
+		// Let's prepare the form for submission
+		return; // Get out of here quick if this was final.
+	    }
 
 	if (screen_number > -1) {
 	    can_continue = false;
