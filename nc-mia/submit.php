@@ -1,8 +1,10 @@
 <?php
-  // Look, ma, no configuration!
+  // Look, ma, only one configuration line!
+$MAIL_TO="paulproteus@localhost";
+$MAIL_FROM="form@creativecommons.org";
 
-  /* Source: http://php.net/uniqid
-   * Used with permission. */
+/* Source: http://php.net/uniqid
+ * Used with permission. */
 function uuid() {
   
   // The field names refer to RFC 4122 section 4.1.2
@@ -17,25 +19,46 @@ function uuid() {
 		 // 8 bits for "clk_seq_low"
 		 mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535) // 48 bits for "node" 
 		 ); 
-  }
+}
 
-// FIXME: Should be in the HTML and passed to us by GET or something?
+function form2email($data, $from, $to, $form_submission_id) {
+  $recipients = array("To" => $to);
+  $params['sendmail_path'] = '/usr/sbin/sendmail';
+  $mailer = Mail::factory("sendmail", $params);
+  $headers = array();
+  $headers["From"] = $from;
+  $headers["Subject"] = "Form submitted at " . $_SERVER['REQUEST_URI'];
+  $headers["To"] = $to;
+  
+  $body = "This submission is available as UUID " . $form_submission_id . "\n\n";
+  
+  foreach ($_POST as $key => $value) {
+    $body .= "Question: $key\n";
+    $body .= "Provided answer: $value\n\n";	
+  }
+  
+  $mailer->send($recipients, $headers, $body);
+}
 
 // Stage 0: Requirements
 require_once('DB.php'); // PEAR DB.  Don't leave home without it.
-$all_is_well = 1;
-$xmlpath = $_POST['xmlpath'];
-unset($_POST['xmlpath']);
+require_once('Mail.php'); // PEAR Mail.  Because I don't want to be sending out spam.
 
-// Stage 1: Get access to the MySQL database
+// Stage 1: Get access to the MySQL database and set other state variables
 $dsn = "mysql://root:@localhost/cc";
 $conn =& DB::connect ($dsn);
 if (DB::isError ($conn))
   die ("Cannot connect: " . $conn->getMessage () . "\n");
-
-// Stage 2: Create and prepare queries
+$all_is_well = 1;
 $form_submission_id = uuid(); // http://www.php.net/uniqid
 $date = time();
+
+// Stage 1.5: Send email
+form2email($_POST, $MAIL_FROM, $MAIL_TO, $form_submission_id);
+
+// Stage 2: Create and prepare queries
+$xmlpath = $_POST['xmlpath'];
+unset($_POST['xmlpath']);
 $canned_sql = $conn->prepare('INSERT INTO formresults (xmlpath, question, answer, date, uid) VALUES(?, ?, ?, ?, ?)');
 
 // Stage 3: Perform queries
