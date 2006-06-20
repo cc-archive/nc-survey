@@ -234,7 +234,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	// Finally, if it was a isfinal=true screen, change the title of the first button
 	if (is_final) {
 	    var next_button = copy.getElementsByTagName('button')[0];
-	    next_button.replaceChild(document.createTextNode("Stubmit"), next_button.firstChild);
+	    next_button.firstChild.nodeValue = "Stumbit";
 
 	    /*
 	    var stumbit_button = createElement("button", "", "submit");
@@ -254,25 +254,25 @@ function turnXMLIntoScreens (xmlDoc) {
     return ret;
 }
 
-/* source: http://www.xml.com/pub/a/2005/02/09/xml-http-request.html */
-function loadXMLDoc(uri) 
-{
+function makeXHR() {
+    var ret;
     // branch for native XMLHttpRequest object
     if (window.XMLHttpRequest) {
-        req = new XMLHttpRequest();
-        req.onreadystatechange = processReqChange;
-        req.open("GET", uri, true);
-        req.send(null);
+        ret = new XMLHttpRequest();
     }
     // branch for IE/Windows ActiveX version
     else if (window.ActiveXObject) {
-        req = new ActiveXObject("Microsoft.XMLHTTP");
-        if (req) {
-            req.onreadystatechange = processReqChange;
-            req.open("GET", uri, true);
-            req.send();
-        }
+        ret = new ActiveXObject("Microsoft.XMLHTTP");
     }
+    return ret;
+}
+
+function loadXMLDoc(uri) 
+{
+    req = makeXHR();
+    req.onreadystatechange = processReqChange;
+    req.open("GET", uri, true);
+    req.send(null); // IE doesn't need the "null" arg, but it doesn't hurt.
 }
 
 function processReqChange() 
@@ -329,17 +329,47 @@ function next(node) {
 	// if the screen ID is a number >= 0, then we check that at least one <input> is checked
 	var can_continue = true;
 	var screen_number = extract_screen_id(screen_id);
-	var screen = document.getElementById(screen_id);
+	var this_screen = document.getElementById(screen_id);
 
 	if (array_contains(final_screens, screen_id))
 	    {
 		// Let's prepare the form for submission
+		var send2server = formData2QueryString(document.forms[0]);
+		
+		// Let's tell the user we're about to submit the form
+
+		// First, remove the options from view
+		var options = getElementsByTagAndClassName(this_screen, 'question-options', 'div')[0];
+		options.style.display = 'none';
+
+		// Let's make a question-text div that we'll put our
+		// messages into
+		var our_messages = document.createElement("div");
+		our_messages.className = "question-text";
+		our_messages.appendChild(document.createTextNode("Please wait while your form is submitted."));
+		var throbber = document.createElement('img');
+		throbber.src = 'includes/throbber.gif';
+		our_messages.appendChild(throbber);
+
+		// Now look for the question-text div and make it hidden
+		// (To protect form fields whose existence relies on those
+		var existing_qtext = getElementsByTagAndClassName(this_screen, 'question-text', 'div')[0];
+		existing_qtext.style.display = 'none';
+		existing_qtext.parentNode.appendChild(our_messages);
+
+		// Now hide the buttons, 'cause there's no turning back.
+		var buttons = getElementsByTagAndClassName(this_screen, 'continue', 'div')[0];
+		buttons.style.display=  'none';
+
+		// Now do the AJAXy POST request
+		
+		
 		return; // Get out of here quick if this was final.
 	    }
 
 	if (screen_number > -1) {
 	    can_continue = false;
-	    var inputs = screen.getElementsByTagName('input');
+	    var inputs = this_screen.getElementsByTagName('input');
 	    for (var k = 0 ; k < inputs.length; k++) {
 		if ( ! can_continue) {
 		    var input = inputs[k];
@@ -352,7 +382,7 @@ function next(node) {
 	}
        
 	if (! can_continue) {
-	    var error = getElementsByTagAndClassName(screen, "question-error", 'div')[0];
+	    var error = getElementsByTagAndClassName(this_screen, "question-error", 'div')[0];
 	    var invisibles = getElementsByTagAndClassName(error, "invisible", 'span');
 	    for (var k = 0 ; k < invisibles.length; k++) {
 		invisibles[k].className = "";
@@ -382,7 +412,7 @@ function next(node) {
 	if (next == null) { next = document.getElementById('submit'); }
 	// ... and then jump ahead:
 	selectNode(next);
-	deselectNode(screen);
+	deselectNode(this_screen);
     }
 }
 
