@@ -1,7 +1,8 @@
 <?php
-  // Look, ma, only one configuration line!
+  // Look, ma, only three configuration lines!
 $MAIL_TO="paulproteus@localhost";
 $MAIL_FROM="form@creativecommons.org";
+$THANKS_TEXT = "Thanks for filling out our survey!";
 
 /* Source: http://php.net/uniqid
  * Used with permission. */
@@ -86,7 +87,7 @@ foreach ($_POST as $key => $value) {
 
 // Stage 4: If something broke, say so.  Otherwise, get out of here.
 if ($all_is_well) {
-  echo("Location: http://www.disney.com/");
+  echo($THANKS_TEXT);
   exit;
  }
  else {
