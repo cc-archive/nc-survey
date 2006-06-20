@@ -333,9 +333,6 @@ function next(node) {
 
 	if (array_contains(final_screens, screen_id))
 	    {
-		// Let's prepare the form for submission
-		var send2server = formData2QueryString(document.forms[0]);
-		
 		// Let's tell the user we're about to submit the form
 
 		// First, remove the options from view
@@ -348,7 +345,7 @@ function next(node) {
 		our_messages.className = "question-text";
 		our_messages.appendChild(document.createTextNode("Please wait while your form is submitted."));
 		var throbber = document.createElement('img');
-		throbber.src = 'includes/throbber.gif';
+		throbber.src = 'images/throbber.gif';
 		our_messages.appendChild(throbber);
 
 		// Now look for the question-text div and make it hidden
@@ -361,8 +358,9 @@ function next(node) {
 		var buttons = getElementsByTagAndClassName(this_screen, 'continue', 'div')[0];
 		buttons.style.display=  'none';
 
-		// Now do the AJAXy POST request
-		
+		// Now do the AJAXy POST request, but let the AJAX handler
+		// remember the text div to change later on
+		submitResults(our_messages);
 		
 		return; // Get out of here quick if this was final.
 	    }
@@ -453,4 +451,28 @@ function populateJumpPoints(xmlDoc) {
 	// FIXME: only add answer_map if it's not empty
 	jump_points[i] = answer_map;
     } // end for each question
+}
+
+function submitResults(textElement) {
+    /* Set up the request */
+    var xmlhttp =  makeXHR();
+    xmlhttp.open('POST', document.forms[0].action, true);
+    
+    /* The callback function */
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4) {
+            if (xmlhttp.status == 200) {
+		var replacement = document.createElement('div');
+		replacement.className = textElement.className;
+		replacement.appendChild(document.createTextNode(xmlhttp.responseText));
+		textElement.parentNode.replaceChild(replacement, textElement);
+	    }
+        }
+    }
+    
+    /* Send the POST request */
+    xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    // Let's prepare the form for submission
+    var send2server = formData2QueryString(document.forms[0]);
+    xmlhttp.send(send2server);
 }
