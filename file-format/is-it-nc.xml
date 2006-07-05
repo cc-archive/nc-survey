@@ -241,11 +241,11 @@
 
                    <p>Do you agree or disagree with these results?  Let us know your comments about the survey.</p>
 
-		      <textarea name="agree-disagree-comments" cols="20" rows="8"></textarea>
+		      <textarea name="does-not-qualify-agree-disagree-comments" cols="20" rows="8"></textarea>
 
                    <p>If you would like to specify more details about your particular case, please use the box below.</p>
 
-		      <textarea name="particular-case-more-details" cols="20" rows="8"></textarea>
+		      <textarea name="does-not-qualify-particular-case-more-details" cols="20" rows="8"></textarea>
 
 ]]>
 	    </title>
@@ -272,11 +272,11 @@
 
                    <p>Do you agree or disagree with these results?  Let us know your comments about the survey.</p>
 
-		      <textarea name="agree-disagree-comments" cols="20" rows="8"></textarea>
+		      <textarea name="does-qualify-agree-disagree-comments" cols="20" rows="8"></textarea>
 
                    <p>If you would like to specify more details about your particular case, please use the box below.</p>
 
-		      <textarea name="particular-case-more-details" cols="20" rows="8"></textarea>
+		      <textarea name="does-qualify-particular-case-more-details" cols="20" rows="8"></textarea>
 
 
 ]]>

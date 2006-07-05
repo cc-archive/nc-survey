@@ -33,7 +33,13 @@ function form2email($data, $from, $to, $form_submission_id) {
   
   $body = "This submission is available as UUID " . $form_submission_id . "\n\n";
   
-  foreach ($_POST as $key => $value) {
+  foreach ($data as $key => $value) {
+    $key = str_replace("_", " ", $key);
+    // Keys are INPUT NAMEs in HTML, which can be only alphanumeric or _
+    // So be nice and turn _ into ' '
+
+    // values should come in properly escaped.
+      
     $body .= "Question: $key\n";
     $body .= "Provided answer: $value\n\n";	
   }
@@ -53,6 +59,19 @@ if (DB::isError ($conn))
 $all_is_well = 1;
 $form_submission_id = uuid(); // http://www.php.net/uniqid
 $date = time();
+
+// Stage 1.25: Clean up $_POST
+foreach ($_POST as $key => $value) {
+    $nicekey = str_replace("_", " ", $key);
+    // Keys are INPUT NAMEs in HTML, which can be only alphanumeric or _
+    // So be nice and turn _ into ' '
+
+    // values should come in properly escaped.
+    unset($_POST[$key]);
+    $_POST[$nicekey] = $value;
+  }
+
+
 
 // Stage 1.5: Send email
 form2email($_POST, $MAIL_FROM, $MAIL_TO, $form_submission_id);
