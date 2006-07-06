@@ -1,8 +1,9 @@
 <?php
-  // Look, ma, only three configuration lines!
+  // Look, ma, only four configuration lines!
 $MAIL_TO="paulproteus@localhost";
 $MAIL_FROM="form@creativecommons.org";
 $THANKS_TEXT = "Thanks for filling out our survey!";
+$dsn = "mysql://root:@localhost/cc";
 
 /* Source: http://php.net/uniqid
  * Used with permission. */
@@ -52,7 +53,6 @@ require_once('DB.php'); // PEAR DB.  Don't leave home without it.
 require_once('Mail.php'); // PEAR Mail.  Because I don't want to be sending out spam.
 
 // Stage 1: Get access to the MySQL database and set other state variables
-$dsn = "mysql://root:@localhost/cc";
 $conn =& DB::connect ($dsn);
 if (DB::isError ($conn))
   die ("Cannot connect: " . $conn->getMessage () . "\n");
