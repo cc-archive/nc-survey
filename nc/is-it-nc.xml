@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey>
+  <title>
+    PROPOSED BEST PRACTICE GUIDELINES TO CLARIFY THE MEANING OF
+    “NONCOMMERCIAL” IN THE CREATIVE COMMONS LICENSES
+  </title>
+  <screens>
+    <screen>
+      <title>Section A: Nature of the user</title>
+      <questions>
+	<question>
+	  <title>
+	    <![CDATA[
+
+	    Is <strong>the user</strong> an “allowable NC user” under
+	    the noncommercial license condition?  Allowable NC users
+	    are: (a) an individual, (b) a nonprofit educational
+	    institution/library, (c) Nonprofit organization as defined
+	    under US1 or equivalent law, (together with (1) and (2)
+	    “allowable NC users”), or (d) A copy shop, ISP or similar
+	    service provider who, in the course of providing a service
+	    at the direction of the allowable NC user, may exercise a
+	    right licensed under the Creative Commons license.
+
+]]>
+	  </title>
+	  <option>Yes</option>
+	  <option onselect="Your intended use does not qualify">No</option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>Section B. Nature of the use: Advertising</title>
+      <questions>
+	<question>
+	  <title>
+	    Is the NC-licensed content being used in an advertisement
+	    for third party products or services?
+	  </title>
+	  <option onselect="Your intended use does not qualify">Yes</option>
+	  <option>No</option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>Section B. Nature of the use: Advertising</title>
+      <questions>
+	<question>
+	  <title>
+	    Is viewing of an advertisement for third party products or
+	    services required as a condition of accessing or viewing
+	    the NC-licensed content (eg. “click-through”
+	    advertising)?
+	  </title>
+	  <option onselect="Your intended use does not qualify">Yes</option>
+	  <option>No</option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>Section B. Nature of the use: Advertising</title>
+      <questions>
+	<question>
+	  <title>
+	    Is the NC-licensed work being used in connection with
+	    advertisements for third party products or services where
+	    the NC-licensed work is the primary draw or a is
+	    substantial amount, both qualitatively and quantitatively?
+	  </title>
+	  <option onselect="Your intended use does not qualify">Yes</option>
+	  <option>No</option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>
+	Section C. Conditions on Use: For Services Provided
+      </title>
+      <questions>
+	<question>
+	  <title>
+	    Is money changing hands in exchange for a service provided
+	    in connection with the NC-licensed work?
+	  </title>
+	  <option>
+	    Yes
+	  </option>
+	  <!-- check with Mia -->	    <option onselect="Section E">
+	    No
+	  </option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>
+	Section C. Conditions on Use: For Services Provided
+      </title>
+      <questions>
+	<question>
+	  <title>
+	    Is money changing hands for a service being provided to
+	    (in the case of, for example, a for-profit copy shop) or
+	    by an allowable NC user incidental to the use of the
+	    NC-licensed work (e.g. course packs provided by an
+	    educational institutions)?
+	  </title>
+	  <option onselect="success"> <!-- FIXME: really? -->
+	    Yes
+	  </option>
+	  <option>
+	    No
+	  </option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>
+	Section D. Conditions on Use: Original Work
+      </title>
+      <questions>
+	<question>
+	  <title>
+	    Is there any money changing hands in connection with the
+	    use of the NC licensed work?
+	    Money may change hands in connection with the use of an
+	    NC-licensed work in at least four ways:
+	  </title>
+	  <option onselect="Your intended use does not qualify">
+	    As a condition of using the NC-licensed work
+	  </option>
+	  <option onselect="Your intended use does not qualify">
+	    As a condition of using another work that includes an
+	    NC-licensed work, where the NC-licensed work is either
+	    the primary draw or a substantial amount (whether
+	    qualitatively or quantitatively) of the primary draw
+	  </option>
+	  <!-- check with Mia --> 	    <option>
+	    As a condition of using
+	    another work that includes a verbatim NC-licensed work,
+	    where the NC-licensed work is not the primary draw or is
+	    an insubstantial amount, both qualitatively and
+	    quantitatively, as long as there is no charge for
+	    accessing the NC-licensed work
+	  </option>
+	  <!-- check with Mia --> <option>
+	    As an optional contribution (e.g., a tip jar, donations,
+	    membership drive) for an allowed NC user (diverges from
+	    PDF!) that uses the verbatim NC-licensed work or another
+	    work that includes a verbatim NC-licensed work
+	  </option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>
+	Section E. Conditions on Use: Derivative Works
+      </title>
+      <questions>
+	<question>
+	  <title>
+	    Does the work use a ShareAlike license condition?
+	  </title>
+	  <option onselect="Does the creation of derivative works">Yes</option>
+	  <option onselect="Is the money changing hands">No</option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>Section E. Conditions on Use: Derivative Works
+      </title>
+      <questions>
+	<question>
+	  <title>
+	    Does the creation of derivative works match with the terms
+	    given in Section D?
+	  </title>
+	  <option>Yes</option>
+	  <option>No</option>
+	</question>
+      </questions>
+    </screen>
+    
+    <screen>
+      <title>Section E. Conditions on Use: Derivative Works</title>
+      <questions>
+	<question>
+	  <title>
+	    Is the money changing hands in connection with a
+	    derivative use of an NC licensed work?  Money can change
+	    hands one of these four ways; select the one most
+	    appropriate to your use.
+	  </title>
+	  <option onselect="Your intended use does not qualify">
+	    As a condition of using a derivative work based on an
+	    NC-licensed work, of which the original NC-licensed work
+	    is the primary draw or a substantial amount, whether
+	    qualitatively or quantitatively, of that derivative work
+	  </option>
+	  <option onselect="Your intended use does qualify">
+	    As a condition of using a derivative work based on an
+	    NC-licensed work, of which the original NC-licensed work
+	    is not the primary draw or is an insubstantial amount,
+	    both qualitatively and quantitatively, of that derivative
+	    work
+	  </option>
+	  <option onselect="Your intended use does qualify">
+	    As an optional contribution (e.g., a tip jar, donations,
+	    membership drive) for an allowed NC user (DIVERGES FROM
+	    PDF!) that uses the derivative work based on the
+	    NC-licensed work
+	  </option>
+	</question>
+      </questions>
+    </screen>
+
+    <screen isfinal="yes">
+      <title>Your intended use does not qualify</title>
+      <questions>
+	<question>
+	  <title>
+
+	    <![CDATA[
+<p>
+	    		  Based on
+		  the <a
+		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">guidelines</a>,
+		  we believe that your intended use does not qualify
+		  as non-commercial.  You may use the "back" button to
+		  return to the questions, or you may "submit" to
+		  submit your answers to us with comments.
+</p>
+
+
+                   <p>Do you agree or disagree with these results?  Let us know your comments about the survey.</p>
+
+		      <textarea name="does-not-qualify-agree-disagree-comments" cols="20" rows="8"></textarea>
+
+                   <p>If you would like to specify more details about your particular case, please use the box below.</p>
+
+		      <textarea name="does-not-qualify-particular-case-more-details" cols="20" rows="8"></textarea>
+
+]]>
+	    </title>
+	  </question>
+	</questions>
+      </screen>
+
+    <screen isfinal="yes">
+      <title>Your intended use does qualify</title>
+      <questions>
+	<question>
+	  <title>
+
+	    <![CDATA[
+<p>
+	    		  Based on
+		  the <a
+		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">guidelines</a>,
+		  we believe that your intended use does qualify
+		  as non-commercial.  You may use the "back" button to
+		  return to the questions, or you may "submit" to
+		  submit your answers to us with comments.
+</p>
+
+                   <p>Do you agree or disagree with these results?  Let us know your comments about the survey.</p>
+
+		      <textarea name="does-qualify-agree-disagree-comments" cols="20" rows="8"></textarea>
+
+                   <p>If you would like to specify more details about your particular case, please use the box below.</p>
+
+		      <textarea name="does-qualify-particular-case-more-details" cols="20" rows="8"></textarea>
+
+
+]]>
+	    </title>
+	  </question>
+	</questions>
+      </screen>
+
+
+
+  </screens>
+</survey>
