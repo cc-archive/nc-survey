@@ -1,9 +1,11 @@
 <?php
+include_once('secret.php');
+
   // Look, ma, only four configuration lines!
 $MAIL_TO="paulproteus@localhost";
 $MAIL_FROM="form@creativecommons.org";
 $THANKS_TEXT = "Thanks for filling out our survey!";
-$dsn = "mysql://ncsurvey:hoiR0eeh@localhost/ncsurvey";
+$dsn = "mysql://ncsurvey:$SECRET@localhost/ncsurvey";
 
 /* Source: http://php.net/uniqid
  * Used with permission. */
