@@ -3,7 +3,7 @@
 $MAIL_TO="paulproteus@localhost";
 $MAIL_FROM="form@creativecommons.org";
 $THANKS_TEXT = "Thanks for filling out our survey!";
-$dsn = "mysql://root:@localhost/cc";
+$dsn = "mysql://ncsurvey:SECRET@localhost/ncsurvey";
 
 /* Source: http://php.net/uniqid
  * Used with permission. */
