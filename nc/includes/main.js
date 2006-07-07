@@ -234,7 +234,7 @@ function turnXMLIntoScreens (xmlDoc) {
 	// Finally, if it was a isfinal=true screen, change the title of the first button
 	if (is_final) {
 	    var next_button = copy.getElementsByTagName('button')[0];
-	    next_button.firstChild.nodeValue = "Stumbit";
+	    next_button.firstChild.nodeValue = "Submit";
 
 	    /*
 	    var stumbit_button = createElement("button", "", "submit");
