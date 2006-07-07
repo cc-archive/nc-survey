@@ -37,13 +37,13 @@ function formData2QueryString(docForm) {
       case 'password':
       case 'textarea':
       case 'select-one':
-        submitContent += formElem.name + '=' + escape(formElem.value) + '&'
+        submitContent += escape(formElem.name) + '=' + escape(formElem.value) + '&'
         break;
         
       // Radio buttons
       case 'radio':
         if (formElem.checked) {
-          submitContent += formElem.name + '=' + escape(formElem.value) + '&'
+          submitContent += escape(formElem.name) + '=' + escape(formElem.value) + '&'
         }
         break;
         
@@ -60,7 +60,7 @@ function formData2QueryString(docForm) {
             submitContent += ',' + escape(formElem.value);
           }
           else {
-            submitContent += formElem.name + '=' + escape(formElem.value);
+            submitContent += escape(formElem.name) + '=' + escape(formElem.value);
           }
           submitContent += '&';
           lastElemName = formElem.name;
@@ -73,3 +73,4 @@ function formData2QueryString(docForm) {
   submitContent = submitContent.substr(0, submitContent.length - 1);
   return submitContent;
 }
+
