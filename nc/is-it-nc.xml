@@ -113,7 +113,7 @@
 	    NC-licensed work (e.g. course packs provided by an
 	    educational institutions)?
 	  </title>
-	  <option onselect="success"> <!-- FIXME: really? -->
+	  <option onselect="Your intended use does qualify"> 
 	    Yes
 	  </option>
 	  <option>
