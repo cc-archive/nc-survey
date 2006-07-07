@@ -1,6 +1,10 @@
 <?php
 include_once('secret.php');
 
+function clean_whitespace($s) {
+	return preg_replace("/\s+/", ' ', $s);
+}
+
   // Look, ma, only four configuration lines!
 $MAIL_TO="paulproteus@localhost";
 $MAIL_FROM="form@creativecommons.org";
@@ -41,6 +45,8 @@ function form2email($data, $from, $to, $form_submission_id) {
     // Keys are INPUT NAMEs in HTML, which can be only alphanumeric or _
     // So be nice and turn _ into ' '
 
+    $key = clean_whitespace($key);
+    $value = clean_whitespace($value);
     // values should come in properly escaped.
       
     $body .= "Question: $key\n";
