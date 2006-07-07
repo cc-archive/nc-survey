@@ -484,7 +484,7 @@ function getElementsByTagAndClassName(node, className, elName) {
 }
 
 function array_contains(ra, thing) {
-    for (var i = 0 ; i < ra.length; ra++) {
+    for (var i = 0 ; i < ra.length; i++) {
 	if (ra[i] == thing) {
 	    return true;
 	}
