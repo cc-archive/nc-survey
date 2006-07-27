@@ -6,7 +6,7 @@ function clean_whitespace($s) {
 }
 
   // Look, ma, only four configuration lines!
-$MAIL_TO="paulproteus@localhost";
+$MAIL_TO="info@creativecommons.org";
 $MAIL_FROM="form@creativecommons.org";
 $THANKS_TEXT = "Thanks for filling out our survey!";
 $dsn = "mysql://ncsurvey:$SECRET@localhost/ncsurvey";
