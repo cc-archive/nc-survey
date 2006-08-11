@@ -28,7 +28,7 @@
 ]]>
 	  </title>
 	  <option>Yes</option>
-	  <option onselect="Your intended use does not qualify">No</option>
+	  <option onselect="The proposed use would be a Commercial Use">No</option>
 	</question>
       </questions>
     </screen>
@@ -41,7 +41,7 @@
 	    Is the NC-licensed content being used in an advertisement
 	    for third party products or services?  For example, is Brian’s CC BY-NC licensed photo of the Eiffel Tower being used to advertise bottled water made by Shaun’s company.
 	  </title>
-	  <option onselect="Your intended use does not qualify">Yes</option>
+	  <option onselect="The proposed use would be a Commercial Use">Yes</option>
 	  <option>No</option>
 	</question>
       </questions>
@@ -57,7 +57,7 @@
 	    the NC-licensed content (eg. “click-through”
 	    advertising)?  For example, in order to view Mary’s CC BY-NC-ND licensed article, does a person first see an advertisement for a car.
 	  </title>
-	  <option onselect="Your intended use does not qualify">Yes</option>
+	  <option onselect="The proposed use would be a Commercial Use">Yes</option>
 	  <option>No</option>
 	</question>
       </questions>
@@ -73,7 +73,7 @@
 	    the NC-licensed work is the primary draw or a is
 	    substantial amount, both qualitatively and quantitatively?  For example, does a podcast consisting solely of CC BY-NC-SA licensed music have ads for a record store at the start and end of the podcast.
 	  </title>
-	  <option onselect="Your intended use does not qualify">Yes</option>
+	  <option onselect="The proposed use would be a Commercial Use">Yes</option>
 	  <option>No</option>
 	</question>
       </questions>
@@ -112,7 +112,7 @@
 	    NC-licensed work (e.g. course packs provided by an
 	    educational institutions)?
 	  </title>
-	  <option onselect="Your intended use does qualify"> 
+	  <option onselect="The proposed use would be a NonCommercial Use"> 
 	    Yes
 	  </option>
 	  <option>
@@ -132,11 +132,11 @@
 	    Is there any money changing hands in any one of the following ways in connection with the verbatim
 	    use of the NC licensed work?
 	  </title>
-	  <option onselect="Your intended use does not qualify">
+	  <option onselect="The proposed use would be a Commercial Use">
 	    As a condition of using the NC-licensed work
 	    (e.g., by levying a direct charge or charging subscription fees for access to NC-licensed work(s))
 	  </option>
-	  <option onselect="Your intended use does not qualify">
+	  <option onselect="The proposed use would be a Commercial Use">
 	    As a condition of using another work that includes an
 	    NC-licensed work, where the NC-licensed work is either
 	    the primary draw or a substantial amount, whether
@@ -202,14 +202,14 @@
 	    hands one of these four ways; select the one most
 	    appropriate to your use.
 	  </title>
-	  <option onselect="Your intended use does not qualify">
+	  <option onselect="The proposed use would be a Commercial Use">
 	    As a condition of using a derivative work based on an
 	    NC-licensed work, of which the original NC-licensed work
 	    is the primary draw or a substantial amount, whether
 	    qualitatively or quantitatively, of that derivative work
 	    (eg. where a commercially released short film is made using a CC BY-NC licensed piece of music and the music is the sole audio component of the film)
 	  </option>
-	  <option onselect="Your intended use does qualify">
+	  <option onselect="The proposed use would be a NonCommercial Use">
 	    As a condition of using a derivative work based on an
 	    NC-licensed work, of which the original NC-licensed work
 	    is not the primary draw or is an insubstantial amount,
@@ -217,7 +217,7 @@
 	    work
 	    (e.g., a commercially released mash-up is made of a piece of CC BY-NC licensed music that is used only incidentally in the mash-up)
 	  </option>
-	  <option onselect="Your intended use does qualify">
+	  <option onselect="The proposed use would be a NonCommercial Use">
 	    As an optional contribution (e.g. a tip jar, donations,
 	    membership drive) for an individual, an educational
 	    institution or nonprofit organization that uses the
@@ -229,7 +229,7 @@
     </screen>
 
     <screen isfinal="yes">
-      <title>Your intended use does not qualify</title>
+      <title>The proposed use would be a Commercial Use (license violation)</title>
       <questions>
 	<question>
 	  <title>
@@ -237,10 +237,12 @@
 	    <![CDATA[
 <p>
 	    		  Based on
-		  the <a
-		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">guidelines</a>,
-		  we believe that your intended use does not qualify
-		  as non-commercial.  You may use the "back" button to
+		  the responses you gave, under the <a
+		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">current DiscussioN Draft of the NonCommercial Guidelines</a>,
+		  the proposed use would be a commercial use and <strong>not</strong> permitted under the terms of the Attribution-NonCommercial, Attribution-NonCommercial-ShareAlike and Attribution-NonCommercial-NoDerivatives licenses.</p>
+
+<p>
+                  You may use the "back" button to
 		  return to the questions, or you may "submit" to
 		  submit your answers to us with comments.
 </p>
@@ -248,12 +250,9 @@
 
                    <p>Do you agree or disagree with these results?  Let us know your comments about the survey.</p>
 
-		      <textarea name="does-not-qualify-agree-disagree-comments" cols="20" rows="8"></textarea>
-
                    <p>If you would like to specify more details about your particular case, please use the box below.</p>
 
-		      <textarea name="does-not-qualify-particular-case-more-details" cols="20" rows="8"></textarea>
-
+		      <textarea name="does-not-qualify--comments" cols="20" rows="8"></textarea>
 ]]>
 	    </title>
 	  </question>
@@ -261,7 +260,7 @@
       </screen>
 
     <screen isfinal="yes">
-      <title>Your intended use does qualify</title>
+      <title>The proposed use would be a NonCommercial Use</title>
       <questions>
 	<question>
 	  <title>
@@ -269,22 +268,20 @@
 	    <![CDATA[
 <p>
 	    		  Based on
-		  the <a
-		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">guidelines</a>,
-		  we believe that your intended use does qualify
-		  as non-commercial.  You may use the "back" button to
+		  the responses you gave, under the <a
+		  href="http://lists.ibiblio.org/pipermail/cc-licenses/attachments/20060110/02d7a271/NonCommercialGuidelinesclean-0001.pdf">current Discussion Draft of the NonCommercial Guidelines</a>,
+		  the proposed use would be a non-commercial
+		  and permitted under either the Attribution-NonCommercial, Attribution-NonCommercial-ShareAlike and Attribution-NonCommercial-NoDerivatives licenses.
+
+                  You may use the "back" button to
 		  return to the questions, or you may "submit" to
 		  submit your answers to us with comments.
 </p>
 
                    <p>Do you agree or disagree with these results?  Let us know your comments about the survey.</p>
-
-		      <textarea name="does-qualify-agree-disagree-comments" cols="20" rows="8"></textarea>
-
                    <p>If you would like to specify more details about your particular case, please use the box below.</p>
 
-		      <textarea name="does-qualify-particular-case-more-details" cols="20" rows="8"></textarea>
-
+		      <textarea name="does-qualify-comments" cols="20" rows="8"></textarea>
 
 ]]>
 	    </title>
