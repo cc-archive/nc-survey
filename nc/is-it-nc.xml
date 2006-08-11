@@ -39,7 +39,7 @@
 	<question>
 	  <title>
 	    Is the NC-licensed content being used in an advertisement
-	    for third party products or services?  For example, is Brian’s CC BY-NC licensed photo of the Eiffel Tower being used to advertise bottled water made by Shaun’s company.
+	    for third party products or services?  For example, Brian’s CC BY-NC licensed photo of the Eiffel Tower being used to advertise bottled water made by Shaun’s company.
 	  </title>
 	  <option onselect="The proposed use would be a Commercial Use">Yes</option>
 	  <option>No</option>
@@ -71,7 +71,7 @@
 	    Is the NC-licensed work being used in connection with
 	    advertisements for third party products or services where
 	    the NC-licensed work is the primary draw or a is
-	    substantial amount, both qualitatively and quantitatively?  For example, does a podcast consisting solely of CC BY-NC-SA licensed music have ads for a record store at the start and end of the podcast.
+	    substantial amount, both qualitatively and quantitatively?  For example, a podcast consisting solely of CC BY-NC-SA licensed music have ads for a record store at the start and end of the podcast.
 	  </title>
 	  <option onselect="The proposed use would be a Commercial Use">Yes</option>
 	  <option>No</option>
@@ -87,7 +87,7 @@
 	<question>
 	  <title>
 	    Is money changing hands in exchange for a service provided
-	    in connection with the NC-licensed work?  For example, is a copy shop charging for the service of making a copy or is a search engine receiving ad revenue for ads served up when searching for NC-licensed content.
+	    in connection with the NC-licensed work?  For example, a copy shop charging for the service of making a copy or a search engine receiving ad revenue for ads served up when searching for NC-licensed content.
 	  </title>
 	  <option>
 	    Yes
@@ -219,8 +219,7 @@
 	  </option>
 	  <option onselect="The proposed use would be a NonCommercial Use">
 	    As an optional contribution (e.g. a tip jar, donations,
-	    membership drive) for an individual, an educational
-	    institution or nonprofit organization that uses the
+	    membership drive) for an allowed NC user that uses the
 	    verbatim NC-licensed work or another work that includes a
 	    verbatim NC-licensed work
 	  </option>
