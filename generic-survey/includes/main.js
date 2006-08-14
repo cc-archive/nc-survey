@@ -292,11 +292,10 @@ function processReqChange()
 	    // And...
 	    populateJumpPoints(req.responseXML.documentElement);
 
-	    // Finally, notify the user:
-	    var first = document.getElementById('screen_-1');
-	    var question = getElementsByTagAndClassName(first, 'question', 'div')[0];
-	    var qtext = getElementsByTagAndClassName(question, 'question-text', 'div')[0];
-	    qtext.firstChild.nodeValue = 'Please click "Next" to begin the survey.';
+	    // Finally, load the first screen
+	    // This means that screen_-1 is only ever a template
+	    deselectNode(document.getElementById('screen_-1'));
+	    selectNode(document.getElementById('screen_0'));
 	}
 	else {
             alert("There was a problem retrieving the XML data:\n" + req.statusText);
