@@ -365,7 +365,12 @@ function next(node) {
 	    }
 
 	if (screen_number > -1) {
-	    can_continue = false;
+	    if (inputs.length > 0) {
+		can_continue = false;
+	    }
+	    else {
+		can_continue = true;
+	    }
 	    var inputs = this_screen.getElementsByTagName('input');
 	    for (var k = 0 ; k < inputs.length; k++) {
 		if ( ! can_continue) {
