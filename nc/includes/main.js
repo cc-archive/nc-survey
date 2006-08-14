@@ -365,7 +365,7 @@ function next(node) {
 	    }
 
 	if (screen_number > -1) {
-	    if (inputs.length > 0) {
+	    if (inputs) {
 		can_continue = false;
 	    }
 	    else {
