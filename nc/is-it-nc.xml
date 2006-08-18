@@ -44,6 +44,81 @@ button so that we receive these comments.</p>
     </screen>
 
     <screen>
+      <title>Section Z: Your use of this survey</title>
+      <questions>
+	<question>
+	  <title>
+	    Have you applied one or more of the following Creative
+	    Commons licenses to your work — Attribution-NonCommercial,
+	    Attribution-NonCommercial-ShareAlike,
+	    Attribution-NonCommercial-NoDerivatives?
+	    </title>
+	  <option onselect="Section Z: Your use of this survey (a)">Yes</option>
+	  <option onselect="Section Z: Your use of this survey (b)">No</option>
+	</question>
+      </questions>
+    </screen>
+
+    <screen>
+      <!-- This "a" version is for "Yes, applied is true" -->
+      <!-- Both yes and no, therefore, can continue on to the next section -->
+      <title>Section Z: Your use of this survey (a)</title>
+      <questions>
+	<question>
+	  <title>
+	    Have you used a work that is licensed under one or more of
+	    the following Creative Commons licenses to your work —
+	    Attribution-NonCommercial, Attribution-NonCommercial-ShareAlike,
+	    Attribution-NonCommercial-NoDerivatives?
+	  </title>
+	  <option onselect="Section A">Yes</option>
+	  <option onselect="Section A">No</option>
+	</question>
+      </questions>
+    </screen>
+
+    <screen>
+      <!-- This "b" version is for "No, applied is false" -->
+      <!-- "Yes", therefore, can continue on to the next section -->
+      <!-- but "No" has to have us ask "Why are you here?" -->
+      <title>Section Z: Your use of this survey (b)</title>
+      <questions>
+	<question>
+	  <title>
+	    Have you used a work that is licensed under one or more of
+	    the following Creative Commons licenses to your work —
+	    Attribution-NonCommercial, Attribution-NonCommercial-ShareAlike,
+	    Attribution-NonCommercial-NoDerivatives?
+	  </title>
+	  <option onselect="Section A">Yes</option>
+	  <option>No</option>
+	</question>
+      </questions>
+    </screen>
+
+    <screen>
+      <title>Section Z: Your use of this survey</title>
+      <questions>
+	<question>
+	  <title>
+
+	    <![CDATA[
+<p>	    
+	    If you are not a licensee or licensor of a Creative
+	    Commons license that contains a NonCommercial license
+	    limitation, can you provide some reasons as to why you are
+	    completing this survey?
+
+</p>
+            <textarea name="why-submitting-comments" cols="20" rows="8"></textarea>
+
+	    ]]>
+	    </title>
+	  </question>
+	</questions>
+      </screen>
+
+    <screen>
       <title>Section A: Nature of the user</title>
       <questions>
 	<question>
