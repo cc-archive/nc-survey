@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st March 2002), see www.w3.org" />
+    <meta http-equiv="Content-Type" content=
+    "text/html;charset=utf-8" />
+
+    <title>Non-commercial use</title>
+
+    <link rel="stylesheet" href="includes/front-new.css" type="text/css" />
+    <link rel="stylesheet" href="includes/style.css" type="text/css" />
+
+
+    <script type="text/javascript" src="includes/prototype.js"></script>
+    <script type="text/javascript" src="includes/scriptaculous.js?load=effects"></script>
+    <script type="text/javascript" src="includes/utility.js"></script>
+    <script type="text/javascript" src="includes/formdata2querystring.js"></script>
+    <script type="text/javascript" src="includes/main.js"></script>
+
+  </head>
+  <body>
+
+      <div id="banner">
+        <div style="float:left;width:48%;">
+          <a href=
+	     "http://creativecommons.org/"><img
+	     src="images/top-logo.gif" border="0" width="149"
+	     height="75" alt="Creative Commons" /></a>
+	</div>
+	
+	<div style="float:left;width:50%;text-align:right;">
+	  <div style="margin-bottom:10px;">
+            <a href="http://creativecommons.org/support/"><img src=
+            "images/support-commons.gif" alt="Support the Commons"
+            width="194" height="35" border="0" /></a>
+          </div>
+
+          <div style="margin:0px;margin-bottom:4px;">
+            <a href="http://creativecommons.org/worldwide/"><img src="images/worldwide.gif"
+            width="130" height="12" border="0" alt=
+            "Creative Commons Worldwide" /></a>
+          </div>
+        </div>
+      </div>
+      <div id="page-body">
+        <a name="documentContent"></a> 
+
+        <h2 class="term-title">
+        NonCommercial Use: Creative Commons' survey</h2>
+
+        <form id="term_form" name="term_form" action="submit.php" method="post" enctype="multipart/form-data">
+	  <input type="hidden" name="xmlpath" value="is-it-nc.xml" />
+
+          <div id="history">
+          </div>
+
+          <div id="screens">
+
+            <div id="screen_-1" class="unselected">
+              <div class="question">
+		<h2 class="term-optional-title">Welcome to the
+		NonCommercial Survey</h2>
+                <div class="question-text">
+		  Please wait a moment while the survey loads.
+                </div>
+		
+		<div class="question-options" style="display: none;">
+		  <div class="option" style="display: none;">
+		    <div class="option-input">
+		      <input onclick="hideDiv('employee-error');" type="radio" name="employee" value="No" />
+		    </div>
+		    
+		    <div class="option-text">
+		      <label class="option-text">Zippedee doo-dah, zippedee ORM!  My, oh, my, what a wonderful form.</label>
+		    </div>
+		    <br clear="all" />
+		  </div>
+		  
+		</div>
+		
+		<div class="question-error">
+		  <span class="invisible">Required Field</span>
+		</div>
+		
+	      </div>
+	      <div class="continue">
+                <button type="button" class="button-continue" onclick="next(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+	      
+              <br clear="all"/>
+            </div><!-- screen_-1 -->
+
+            <div id="screen_template" class="unselected">
+              <div class="question">
+		<h2 class="term-optional-title">Survey is loading</h2>
+                <div class="question-text">
+		  Wait a moment for the "Next" button.
+                </div>
+
+                <div class="question-options">
+                  <div class="option" style="display: none;">
+                    <div class="option-input">
+                      <input onclick="hideDiv('employee-error');" type="radio" name="employee" value="Yes" />
+                    </div>
+		    
+                    <div class="option-text">Yes</div>
+                  </div>
+		</div>
+
+                <div class="question-error">
+                  <span class="invisible">Required Field</span>
+                </div>
+
+              </div>
+              <div class="continue">
+                <button type="button" class="button-continue" onclick="next(this);">Next</button>
+                <button type="button" class="button-continue" onclick="back(this);">Back</button>
+              </div>
+
+              <br clear="all"/>
+	      <div style="text-align: right;">
+		To better-understand what the results of this survey mean, <a href="explanation.html">click here</a>.
+	      </div>
+              <br clear="all"/>
+
+            </div><!-- screen_template -->
+
+	    <div id="submit" class="unselected">
+	      <div  class="question">
+		<h2 class="term-optional-title">Thanks for taking the time!</h2>
+		<div class="question-text">
+		  If you have any comments, please leave them in the form field below.
+		</div>
+	
+                <div class="question-options">
+                  <div class="option">
+                    <div class="option-input">
+                    </div>
+                  </div>
+		</div>
+		
+		<div  class="continue">
+		  <button class="button-continue" lang="en" xml:lang="en" dir="ltr" name="submit" value="submit" type="submit" tabindex="9" accesskey="B">Submit</button>
+		</div>
+		
+		<br clear="all"/>
+	      </div>
+	    </div>
+
+           </div><!-- screens -->
+
+           <script type="text/javascript">
+            //<![CDATA[
+            if (window.name == 'back' && back_list().length > 0) {
+              showDiv(back_list().pop());
+            } else {
+              if (window.name == 'next') { while(back_list().pop()); }
+              //showFirstScreen();
+            }
+	    initApp();
+            //]]>
+           </script>
+        </form>
+      </div>
+      <div id="footer" align="center">
+        <a href="/about/">About</a> |
+        <a href="/contact">Contact</a> |
+        <a href="/sitemap">Sitemap &amp; Site Search</a> |
+        <a href="/policies">Policies</a> |
+        <a href="/privacy">Privacy</a>
+      </div>
+
+    <div id="tinyfoot" align="center">
+      <div id="cc-footer">
+        <p>
+          <a rel="license" href=
+          "http://creativecommons.org/licenses/by/2.5/"><img src=
+          "http://creativecommons.org/images/public/somerights20.png"
+           width="88" height="31" alt="Creative Commons License"
+          style="border:none" /></a><br />
+          Except where otherwise <a class="subfoot" href=
+          "/policies#license">noted</a>, this site is<br />
+          licensed under a <a rel="license" href=
+          "http://creativecommons.org/licenses/by/2.5/" class=
+          "subfoot">Creative Commons Attribution 2.5
+          License</a>
+        </p>
+
+        <!--
+          <rdf:RDF xmlns="http://web.resource.org/cc/"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <Work rdf:about="">
+          <license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
+          </Work>
+          <License rdf:about="http://creativecommons.org/licenses/by/2.5/">
+             <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+             <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+             <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+             <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+             <requires rdf:resource="http://web.resource.org/cc/Notice" />
+          </License>
+          </rdf:RDF>
+        -->
+
+      </div>
+    </div>
+  </body>
+</html>
