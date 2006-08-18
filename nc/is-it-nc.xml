@@ -238,18 +238,20 @@ button so that we receive these comments.</p>
     <screen>
       <title>
 	Section $. Money
-	</title>
+      </title>
       <questions>
 	<question>
-	  Is money changing hands in relation to use of the work?
+	  <title>
+	    Is money changing hands in relation to use of the work?
+	    </title>
+	  <option onselect="Section D">
+	    In connection with verbatim use of an NC-licensed work
+	  </option>
+	  <option onselect="Section E">
+	    In connection with derivative use of an NC-licensed work
+	  </option>
+	  <option onselect="The proposed use would be a NonCommercial Use">Not at all</option>
 	</question>
-	<option onselect="Section D">
-	  In connection with verbatim use of an NC-licensed work
-	</option>
-	<option onselect="Section E">
-	  In connection with derivative use of an NC-licensed work
-	</option>
-	<option onselect="The proposed use would be a NonCommercial Use">Not at all</option>
       </questions>
     </screen>
 
