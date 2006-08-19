@@ -2,7 +2,7 @@
   // Look, ma, only three configuration lines!
 $MAIL_TO="paulproteus@localhost";
 $MAIL_FROM="form@creativecommons.org";
-$THANKS_TEXT = "Thanks for filling out our survey!";
+$THANKS_TEXT = "Thanks for filling out our survey!  If you want to try again, reload the page in your browser.";
 
 /* Source: http://php.net/uniqid
  * Used with permission. */

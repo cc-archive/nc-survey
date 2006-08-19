@@ -8,7 +8,7 @@ function clean_whitespace($s) {
   // Look, ma, only four configuration lines!
 $MAIL_TO="info@creativecommons.org";
 $MAIL_FROM="form@creativecommons.org";
-$THANKS_TEXT = "Thanks for filling out our survey!";
+$THANKS_TEXT = "Thanks for filling out our survey!  If you want to try again, reload the page in your browser.";
 $dsn = "mysql://ncsurvey:$SECRET@localhost/ncsurvey";
 
 /* Source: http://php.net/uniqid
