@@ -42,7 +42,7 @@ button so that we receive these comments.</p>
     </screen>
 
     <screen>
-      <title>Section Z: Your use of this survey</title>
+      <title>Section A: Your use of this survey</title>
       <questions>
 	<question>
 	  <title>
@@ -51,8 +51,8 @@ button so that we receive these comments.</p>
 	    Attribution-NonCommercial-ShareAlike,
 	    Attribution-NonCommercial-NoDerivatives?
 	    </title>
-	  <option onselect="Section Z: Your use of this survey (a)">Yes</option>
-	  <option onselect="Section Z: Your use of this survey (b)">No</option>
+	  <option onselect="Section A: Your use of this survey (a)">Yes</option>
+	  <option onselect="Section A: Your use of this survey (b)">No</option>
 	</question>
       </questions>
     </screen>
@@ -60,7 +60,7 @@ button so that we receive these comments.</p>
     <screen>
       <!-- This "a" version is for "Yes, applied is true" -->
       <!-- Both yes and no, therefore, can continue on to the next section -->
-      <title>Section Z: Your use of this survey (a)</title>
+      <title>Section A: Your use of this survey (a)</title>
       <questions>
 	<question>
 	  <title>
@@ -69,8 +69,8 @@ button so that we receive these comments.</p>
 	    Attribution-NonCommercial, Attribution-NonCommercial-ShareAlike,
 	    Attribution-NonCommercial-NoDerivatives?
 	  </title>
-	  <option onselect="Section A">Yes</option>
-	  <option onselect="Section A">No</option>
+	  <option onselect="Section B">Yes</option>
+	  <option onselect="Section B">No</option>
 	</question>
       </questions>
     </screen>
@@ -79,7 +79,7 @@ button so that we receive these comments.</p>
       <!-- This "b" version is for "No, applied is false" -->
       <!-- "Yes", therefore, can continue on to the next section -->
       <!-- but "No" has to have us ask "Why are you here?" -->
-      <title>Section Z: Your use of this survey (b)</title>
+      <title>Section A: Your use of this survey (b)</title>
       <questions>
 	<question>
 	  <title>
@@ -88,14 +88,14 @@ button so that we receive these comments.</p>
 	    Attribution-NonCommercial, Attribution-NonCommercial-ShareAlike,
 	    Attribution-NonCommercial-NoDerivatives?
 	  </title>
-	  <option onselect="Section A">Yes</option>
+	  <option onselect="Section B">Yes</option>
 	  <option>No</option>
 	</question>
       </questions>
     </screen>
 
     <screen>
-      <title>Section Z: Your use of this survey</title>
+      <title>Section A: Your use of this survey</title>
       <questions>
 	<question>
 	  <title>
@@ -117,7 +117,7 @@ button so that we receive these comments.</p>
       </screen>
 
     <screen>
-      <title>Section A: Nature of the user</title>
+      <title>Section B: Nature of the user</title>
       <questions>
 	<question>
 	  <title>
@@ -145,7 +145,7 @@ button so that we receive these comments.</p>
     </screen>
     
     <screen>
-      <title>Section B. Nature of the use: Advertising</title>
+      <title>Section C. Nature of the use: Advertising</title>
       <questions>
 	<question>
 	  <title>
@@ -159,7 +159,7 @@ button so that we receive these comments.</p>
     </screen>
     
     <screen>
-      <title>Section B. Nature of the use: Advertising</title>
+      <title>Section C. Nature of the use: Advertising</title>
       <questions>
 	<question>
 	  <title>
@@ -175,7 +175,7 @@ button so that we receive these comments.</p>
     </screen>
     
     <screen>
-      <title>Section B. Nature of the use: Advertising</title>
+      <title>Section C. Nature of the use: Advertising</title>
       <questions>
 	<question>
 	  <title>
@@ -192,7 +192,7 @@ button so that we receive these comments.</p>
     
     <screen>
       <title>
-	Section C. Conditions on Use: For Services Provided
+	Section D. Conditions on Use: For Services Provided
       </title>
       <questions>
 	<question>
@@ -200,10 +200,10 @@ button so that we receive these comments.</p>
 	    Is money changing hands in exchange for a service provided
 	    in connection with the NC-licensed work?  For example, a copy shop charging for the service of making a copy or a search engine receiving ad revenue for ads served up when searching for NC-licensed content.
 	  </title>
-	  <option onselect="Section D">
+	  <option onselect="Section E">
 	    Yes
 	  </option>
-	  <!-- check with Mia -->	    <option onselect="Section E">
+	  <!-- check with Mia -->	    <option onselect="Section F">
 	    No
 	  </option>
 	</question>
@@ -212,7 +212,7 @@ button so that we receive these comments.</p>
     
     <screen>
       <title>
-	Section C. Conditions on Use: For Services Provided
+	Section D. Conditions on Use: For Services Provided
       </title>
       <questions>
 	<question>
@@ -242,10 +242,10 @@ button so that we receive these comments.</p>
 	  <title>
 	    Is money changing hands in relation to use of the work?
 	    </title>
-	  <option onselect="Section D">
+	  <option onselect="Section E">
 	    In connection with verbatim use of an NC-licensed work
 	  </option>
-	  <option onselect="Section E">
+	  <option onselect="Section F">
 	    In connection with derivative use of an NC-licensed work
 	  </option>
 	  <option onselect="The proposed use would be a NonCommercial Use">Not at all</option>
@@ -255,7 +255,7 @@ button so that we receive these comments.</p>
 
     <screen>
       <title>
-	Section D. Conditions on Use: Original Work
+	Section E. Conditions on Use: Original Work
       </title>
       <questions>
 	<question>
@@ -295,7 +295,7 @@ button so that we receive these comments.</p>
     
     <screen>
       <title>
-	Section E. Conditions on Use: Derivative Works
+	Section F. Conditions on Use: Derivative Works
       </title>
       <questions>
 	<question>
@@ -309,13 +309,13 @@ button so that we receive these comments.</p>
     </screen>
     
     <screen>
-      <title>Section E. Conditions on Use: Derivative Works
+      <title>Section F. Conditions on Use: Derivative Works
       </title>
       <questions>
 	<question>
 	  <title>
 	    Does the creation of derivative works match with the terms
-	    given in Section D?
+	    given in Section E?
 	  </title>
 	  <option>Yes</option>
 	  <option>No</option>
@@ -324,7 +324,7 @@ button so that we receive these comments.</p>
     </screen>
     
     <screen>
-      <title>Section E. Conditions on Use: Derivative Works</title>
+      <title>Section F. Conditions on Use: Derivative Works</title>
       <questions>
 	<question>
 	  <title>
