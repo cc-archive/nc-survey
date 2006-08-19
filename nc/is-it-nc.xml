@@ -235,17 +235,17 @@ button so that we receive these comments.</p>
 
     <screen>
       <title>
-	Section $. Money
+	Section E. Money
       </title>
       <questions>
 	<question>
 	  <title>
 	    Is money changing hands in relation to use of the work?
 	    </title>
-	  <option onselect="Section E">
+	  <option onselect="Section F">
 	    In connection with verbatim use of an NC-licensed work
 	  </option>
-	  <option onselect="Section F">
+	  <option onselect="Section G">
 	    In connection with derivative use of an NC-licensed work
 	  </option>
 	  <option onselect="The proposed use would be a NonCommercial Use">Not at all</option>
@@ -255,7 +255,7 @@ button so that we receive these comments.</p>
 
     <screen>
       <title>
-	Section E. Conditions on Use: Original Work
+	Section F. Conditions on Use: Original Work
       </title>
       <questions>
 	<question>
@@ -295,7 +295,7 @@ button so that we receive these comments.</p>
     
     <screen>
       <title>
-	Section F. Conditions on Use: Derivative Works
+	Section G. Conditions on Use: Derivative Works
       </title>
       <questions>
 	<question>
@@ -309,13 +309,13 @@ button so that we receive these comments.</p>
     </screen>
     
     <screen>
-      <title>Section F. Conditions on Use: Derivative Works
+      <title>Section G. Conditions on Use: Derivative Works
       </title>
       <questions>
 	<question>
 	  <title>
 	    Does the creation of derivative works match with the terms
-	    given in Section E?
+	    given in Section F?
 	  </title>
 	  <option>Yes</option>
 	  <option>No</option>
@@ -324,7 +324,7 @@ button so that we receive these comments.</p>
     </screen>
     
     <screen>
-      <title>Section F. Conditions on Use: Derivative Works</title>
+      <title>Section G. Conditions on Use: Derivative Works</title>
       <questions>
 	<question>
 	  <title>
