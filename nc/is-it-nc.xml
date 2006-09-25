@@ -465,12 +465,14 @@ button so that we receive these comments.</p>
       <questions>
 	<question>
 	  <title>
-	    Is the money changing hands
-	    As a condition of using a derivative work based on an
-	    NC-licensed work, of which the original NC-licensed work
-	    is the primary draw or a substantial amount, whether
-	    qualitatively or quantitatively, of that derivative work
-	    (eg. where a commercially released short film is made using a CC BY-NC licensed piece of music and the music is the sole audio component of the film) (COMM)
+	    Is money changing hands as a condition of using a
+	    derivative work based on an NC-licensed work, of which the
+	    original NC-licensed work is the primary draw or a
+	    substantial amount, whether qualitatively or
+	    quantitatively, of that derivative work (eg. where a
+	    commercially released short film is made using a CC BY-NC
+	    licensed piece of music and the music is the sole audio
+	    component of the film)?
 	  </title>
 	  <option onselect="The proposed use would be a Commercial Use">
 	    Yes
@@ -487,12 +489,14 @@ button so that we receive these comments.</p>
       <questions>
 	<question>
 	  <title>
-	    As a condition of using a derivative work based on an
-	    NC-licensed work, of which the original NC-licensed work
-	    is not the primary draw or is an insubstantial amount,
-	    both qualitatively and quantitatively, of that derivative
-	    work
-	    (e.g., a commercially released mash-up is made of a piece of CC BY-NC licensed music that is used only incidentally in the mash-up) (NONCOMM)
+	    Is money changing hands as a condition of using a
+	    derivative work based on an NC-licensed work, of which the
+	    original NC-licensed work is not the primary draw or is an
+	    insubstantial amount, both qualitatively and
+	    quantitatively, of that derivative work (e.g., a
+	    commercially released mash-up is made of a piece of CC
+	    BY-NC licensed music that is used only incidentally in the
+	    mash-up)?
 	  </title>
 	  <option onselect="The proposed use would be a NonCommercial Use">
 	    Yes
@@ -504,16 +508,15 @@ button so that we receive these comments.</p>
       </questions>
     </screen>
 
-
     <screen>
       <title>Section G. Conditions on Use: Derivative Works without the Share-Alike condition</title>
       <questions>
 	<question>
 	  <title>
-	    As an optional contribution (e.g. a tip jar, donations,
-	    membership drive) for an allowed NC user that uses the
-	    verbatim NC-licensed work or another work that includes a
-	    verbatim NC-licensed work (NONCOMM)
+	    Is money changing hands as an optional contribution
+	    (e.g. a tip jar, donations, membership drive) for an
+	    allowed NC user that uses the verbatim NC-licensed work or
+	    another work that includes a verbatim NC-licensed work?
 	  </title>
 	  <option onselect="The proposed use would be a NonCommercial Use">
 	    Yes
