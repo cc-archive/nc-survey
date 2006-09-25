@@ -391,14 +391,14 @@ button so that we receive these comments.</p>
       <questions>
 	<question>
 	  <title>
-	    Is there any money changing hands 
-	    as a condition of using another work that includes an
-	    SA-NC-licensed derivative work, where the SA-NC-licensed
-	    derivative work is either the primary draw or a
-	    substantial amount, whether qualitatively or
-	    quantitatively (e.g., where a SA-NC-licensed derivative
-	    image is used on the cover of and as a central part of a
-	    book that is sold commercially)?
+	    Is there any money changing hands as a condition of using
+	    another work that includes an SA-NC-licensed derivative
+	    work, where the SA-NC-licensed derivative work is either
+	    the primary draw or a substantial amount, whether
+	    qualitatively or quantitatively (e.g., where a
+	    SA-NC-licensed derivative image is used on the cover of
+	    and as a central part of a book that is sold
+	    commercially)?
 	  </title>
 	  <option onselect="The proposed use would be a Commercial Use">
 	    Yes
@@ -417,16 +417,15 @@ button so that we receive these comments.</p>
       <questions>
 	<question>
 	  <title>
-	    Is there any money changing hands 
-	    as a condition of using another work that includes a
-	    verbatim SA-NC-licensed derivative work, where the
-	    SA-NC-licensed derivative work is not the primary draw or
-	    is an insubstantial amount, both qualitatively and
-	    quantitatively, as long as there is no charge for
-	    accessing the SA-NC-licensed derivative work (e.g., where
-	    one SA-NC-licensed derivative image is used in a book that
-	    is sold commercially and the image is not a thematically
-	    significant part of the book)?
+	    Is there any money changing hands as a condition of using
+	    another work that includes a verbatim SA-NC-licensed
+	    derivative work, where the SA-NC-licensed derivative work
+	    is not the primary draw or is an insubstantial amount,
+	    both qualitatively and quantitatively, as long as there is
+	    no charge for accessing the SA-NC-licensed derivative work
+	    (e.g., where one SA-NC-licensed derivative image is used
+	    in a book that is sold commercially and the image is not a
+	    thematically significant part of the book)?
 	  </title>
 	  <option onselect="Provided there is no charge associated with directly accessing the work">
 	    Yes
@@ -445,12 +444,11 @@ button so that we receive these comments.</p>
       <questions>
 	<question>
 	  <title>
-	    Is there any money changing hands 
-	    as an optional contribution (e.g., a tip jar, donations,
-	    membership drive) for an allowed NC user 
-	    that uses the SA-NC-licensed derivative work or
-	    another work that includes a SA-NC-licensed derivative
-	    work?
+	    Is there any money changing hands as an optional
+	    contribution (e.g., a tip jar, donations, membership
+	    drive) for an allowed NC user that uses the SA-NC-licensed
+	    derivative work or another work that includes a
+	    SA-NC-licensed derivative work?
 	  </title>
 	  <option onselect="The proposed use would be a NonCommercial Use">
 	    Yes
