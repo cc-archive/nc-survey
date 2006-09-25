@@ -465,35 +465,66 @@ button so that we receive these comments.</p>
       <questions>
 	<question>
 	  <title>
-	    Is the money changing hands in connection with a
-	    derivative use of an SA-NC licensed work?  Money can change
-	    hands one of these three ways; select the one most
-	    appropriate to your use.
-	  </title>
-	  <option onselect="The proposed use would be a Commercial Use">
+	    Is the money changing hands
 	    As a condition of using a derivative work based on an
 	    NC-licensed work, of which the original NC-licensed work
 	    is the primary draw or a substantial amount, whether
 	    qualitatively or quantitatively, of that derivative work
-	    (eg. where a commercially released short film is made using a CC BY-NC licensed piece of music and the music is the sole audio component of the film)
+	    (eg. where a commercially released short film is made using a CC BY-NC licensed piece of music and the music is the sole audio component of the film) (COMM)
+	  </title>
+	  <option onselect="The proposed use would be a Commercial Use">
+	    Yes
 	  </option>
-	  <option onselect="The proposed use would be a NonCommercial Use">
+	  <option>
+	    No
+	  </option>
+	</question>
+      </questions>
+    </screen>
+
+    <screen>
+      <title>Section G. Conditions on Use: Derivative Works without the Share-Alike condition</title>
+      <questions>
+	<question>
+	  <title>
 	    As a condition of using a derivative work based on an
 	    NC-licensed work, of which the original NC-licensed work
 	    is not the primary draw or is an insubstantial amount,
 	    both qualitatively and quantitatively, of that derivative
 	    work
-	    (e.g., a commercially released mash-up is made of a piece of CC BY-NC licensed music that is used only incidentally in the mash-up)
-	  </option>
+	    (e.g., a commercially released mash-up is made of a piece of CC BY-NC licensed music that is used only incidentally in the mash-up) (NONCOMM)
+	  </title>
 	  <option onselect="The proposed use would be a NonCommercial Use">
-	    As an optional contribution (e.g. a tip jar, donations,
-	    membership drive) for an allowed NC user that uses the
-	    verbatim NC-licensed work or another work that includes a
-	    verbatim NC-licensed work
+	    Yes
+	  </option>
+	  <option>
+	    No
 	  </option>
 	</question>
       </questions>
     </screen>
+
+
+    <screen>
+      <title>Section G. Conditions on Use: Derivative Works without the Share-Alike condition</title>
+      <questions>
+	<question>
+	  <title>
+	    As an optional contribution (e.g. a tip jar, donations,
+	    membership drive) for an allowed NC user that uses the
+	    verbatim NC-licensed work or another work that includes a
+	    verbatim NC-licensed work (NONCOMM)
+	  </title>
+	  <option onselect="The proposed use would be a NonCommercial Use">
+	    Yes
+	  </option>
+	  <option onselect="The proposed use would be a NonCommercial Use">
+	    No
+	  </option>
+	</question>
+      </questions>
+    </screen>
+
 
     <screen isfinal="yes">
       <title>The proposed use would be a NonCommercial Use</title>
