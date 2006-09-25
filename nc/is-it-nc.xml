@@ -200,10 +200,10 @@ button so that we receive these comments.</p>
 	    Is money changing hands in exchange for a service provided
 	    in connection with the NC-licensed work?  For example, a copy shop charging for the service of making a copy or a search engine receiving ad revenue for ads served up when searching for NC-licensed content.
 	  </title>
-	  <option onselect="Section E">
+	  <option onselect="Is money changing hands for a service being provided to">
 	    Yes
 	  </option>
-	  <!-- check with Mia -->	    <option onselect="Section F">
+	  <!-- check with Mia -->	    <option onselect="Section E">
 	    No
 	  </option>
 	</question>
