@@ -309,18 +309,43 @@ button so that we receive these comments.</p>
     </screen>
     
     <screen>
-      <title>Section G. Conditions on Use: Derivative Works
-      </title>
-      <questions>
-	<question>
-	  <title>
-	    Does the creation of derivative works match with the terms
-	    given in Section F?
-	  </title>
-	  <option>Yes</option>
-	  <option>No</option>
-	</question>
-      </questions>
+	    <title>
+		    Section G. Conditions on Use: Derivative Works with the Share-Alike condition
+	    </title>
+	    <questions>
+		    <question>
+			    <title>
+				    Is there any money changing hands in any one of the following ways in connection with the verbatim
+				    use of the SA-NC licensed derivative work?
+			    </title>
+			    <option onselect="The proposed use would be a Commercial Use">
+				    As a condition of using the SA-NC-licensed derivative work
+				    (e.g., by levying a direct charge or charging subscription fees for access to SA-NC-licensed derivative work(s))
+			    </option>
+			    <option onselect="The proposed use would be a Commercial Use">
+				    As a condition of using another work that includes an
+				    SA-NC-licensed derivative work, where the SA-NC-licensed derivative work is either
+				    the primary draw or a substantial amount, whether
+				    qualitatively or quantitatively
+				    (e.g., where a SA-NC-licensed derivative image is used on the cover of and as a central part of a book that is sold commercially)
+			    </option>
+			    <option onselect="Provided that there is no charge associated with directly accessing the work">
+				    As a condition of using
+				    another work that includes a verbatim SA-NC-licensed derivative work,
+				    where the SA-NC-licensed derivative work is not the primary draw or is
+				    an insubstantial amount, both qualitatively and
+				    quantitatively, as long as there is no charge for
+				    accessing the SA-NC-licensed derivative work
+				    (e.g., where one SA-NC-licensed derivative image is used in a book that is sold commercially and the image is not a thematically significant part of the book) 
+			    </option>
+			    <option onselect="The proposed use would be a NonCommercial Use">
+				    As an optional contribution (e.g., a tip jar, donations,
+				    membership drive) for an allowed NC user (diverges from
+				    PDF!) that uses the SA-NC-licensed derivative work or another
+				    work that includes a SA-NC-licensed derivative work
+			    </option>
+		    </question>
+	    </questions>
     </screen>
     
     <screen>
@@ -330,7 +355,7 @@ button so that we receive these comments.</p>
 	  <title>
 	    Is the money changing hands in connection with a
 	    derivative use of an NC licensed work?  Money can change
-	    hands one of these four ways; select the one most
+	    hands one of these three ways; select the one most
 	    appropriate to your use.
 	  </title>
 	  <option onselect="The proposed use would be a Commercial Use">
