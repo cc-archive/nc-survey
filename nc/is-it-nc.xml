@@ -314,7 +314,7 @@ button so that we receive these comments.</p>
 	    as long as there is no charge for accessing the NC-licensed work
 	    (e.g., where one NC-licensed image is used in a book that is sold commercially)
 	  </title>
-	  <option onselect="Provided that there is no charge associated with diectly accessing the work">
+	  <option onselect="Provided that there is no charge associated with directly accessing the work">
 	    Yes
 	  </option>
 	  <option>
