@@ -427,7 +427,7 @@ button so that we receive these comments.</p>
 	    in a book that is sold commercially and the image is not a
 	    thematically significant part of the book)?
 	  </title>
-	  <option onselect="Provided there is no charge associated with directly accessing the work">
+	  <option onselect="Provided that there is no charge associated with directly accessing the work">
 	    Yes
 	  </option>
 	  <option>
