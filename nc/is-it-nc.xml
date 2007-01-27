@@ -368,10 +368,10 @@ button so that we receive these comments.</p>
 	<question>
 	  <title>
 	    Is there any money changing hands as a condition of using
-	    the SA-NC-licensed derivative work (e.g., by levying a
+	    the BY-NC-SA-licensed derivative work (e.g., by levying a
 	    direct charge or charging subscription fees for access to
-	    SA-NC-licensed derivative work(s))?  following ways in
-	    connection with the verbatim use of the SA-NC licensed
+	    BY-NC-SA-licensed derivative work(s))?  following ways in
+	    connection with the verbatim use of the BY-NC-SA licensed
 	    derivative work?
 	  </title>
 	  <option onselect="The proposed use would be a Commercial Use">
@@ -392,11 +392,11 @@ button so that we receive these comments.</p>
 	<question>
 	  <title>
 	    Is there any money changing hands as a condition of using
-	    another work that includes an SA-NC-licensed derivative
-	    work, where the SA-NC-licensed derivative work is either
+	    another work that includes an BY-NC-SA-licensed derivative
+	    work, where the BY-NC-SA-licensed derivative work is either
 	    the primary draw or a substantial amount, whether
 	    qualitatively or quantitatively (e.g., where a
-	    SA-NC-licensed derivative image is used on the cover of
+	    BY-NC-SA-licensed derivative image is used on the cover of
 	    and as a central part of a book that is sold
 	    commercially)?
 	  </title>
@@ -418,12 +418,12 @@ button so that we receive these comments.</p>
 	<question>
 	  <title>
 	    Is there any money changing hands as a condition of using
-	    another work that includes a verbatim SA-NC-licensed
-	    derivative work, where the SA-NC-licensed derivative work
+	    another work that includes a verbatim BY-NC-SA-licensed
+	    derivative work, where the BY-NC-SA-licensed derivative work
 	    is not the primary draw or is an insubstantial amount,
 	    both qualitatively and quantitatively, as long as there is
-	    no charge for accessing the SA-NC-licensed derivative work
-	    (e.g., where one SA-NC-licensed derivative image is used
+	    no charge for accessing the BY-NC-SA-licensed derivative work
+	    (e.g., where one BY-NC-SA-licensed derivative image is used
 	    in a book that is sold commercially and the image is not a
 	    thematically significant part of the book)?
 	  </title>
@@ -446,9 +446,9 @@ button so that we receive these comments.</p>
 	  <title>
 	    Is there any money changing hands as an optional
 	    contribution (e.g., a tip jar, donations, membership
-	    drive) for an allowed NC user that uses the SA-NC-licensed
+	    drive) for an allowed NC user that uses the BY-NC-SA-licensed
 	    derivative work or another work that includes a
-	    SA-NC-licensed derivative work?
+	    BY-NC-SA-licensed derivative work?
 	  </title>
 	  <option onselect="The proposed use would be a NonCommercial Use">
 	    Yes
