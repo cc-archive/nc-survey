@@ -519,7 +519,7 @@ button so that we receive these comments.</p>
 	  <option onselect="The proposed use would be a NonCommercial Use">
 	    Yes
 	  </option>
-	  <option onselect="The proposed use would be a NonCommercial Use">
+	  <option onselect="The proposed use would be a Commercial Use">
 	    No
 	  </option>
 	</question>
